@@ -5,7 +5,7 @@
  * s1094220
  * INF3C
  */
-`
+
 #include <avr/io.h>
 
 int main(void)
