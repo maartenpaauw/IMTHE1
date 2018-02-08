@@ -1,5 +1,5 @@
 /*
- * Opdracht 1
+ * Opdracht 1 - Blink Once To Accept
  * 
  * Maarten Paauw <s1094220@student.hsleiden.nl>
  * s1094220

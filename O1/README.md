@@ -2,7 +2,7 @@
 
 > Blink Once To Accept
 
-Maak een ‘Blink led’ programma, waar twee leds omenom aan en uit gaan. Het knipperen van de leds moet traag verlopen, zodat het knippereffect zichtbaar is met het blote oog.
+Maak een "Blink led" programma, waar twee leds om en om aan en uit gaan. Het knipperen van de leds moet traag verlopen, zodat het knipper-effect zichtbaar is met het blote oog.
 
 ## Aanpak en uitvoering
 
@@ -18,9 +18,11 @@ https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/setup.jpg
 
 ## Video
 
+[![setup](assets/youtube.png)](https://www.youtube.com/watch?v=_TIATMJMEbU)
+
 Deze video is ook te vinden op **Youtube**:
 
-https://www.youtube.com/
+https://www.youtube.com/watch?v=_TIATMJMEbU
 
 ## Breadboard Schema
 
@@ -33,12 +35,37 @@ https://github.com/maartenpaauw/IMTHE1/raw/master/O1/assets/fritzing/schema.fzz
 ## Code
 
 ```c
-#include <avr/io.h>
+/*
+ * Opdracht 1 - Blink Once To Accept
+ * 
+ * Maarten Paauw <s1094220@student.hsleiden.nl>
+ * s1094220
+ * INF3C
+ */
 
+#include <avr/io.h>
+#include <util/delay.h>
+
+// De main methode
 int main(void)
 {
+
+    // Defineer dat D5 een output pin is.
+    DDRD = 1 << 5;
+
+    // Defineer dat D7 een output pin is.
+    DDRD = 1 << 7;
+
     while (1)
     {
+        // Toggle de led op D5.
+        PORTD ^= 1 << 5;
+
+        // Wacht voor 1 seconden.
+        _delay_ms(1000);
+
+        // Toggle de led op D7.
+        PORTD ^= 1 << 7;
     }
 
     return 0;
