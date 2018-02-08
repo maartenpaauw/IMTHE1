@@ -1,4 +1,6 @@
-# Opdracht 1 (Blink Once To Accept)
+# Opdracht 1
+
+> Blink Once To Accept
 
 Maak een ‘Blink led’ programma, waar twee leds omenom aan en uit gaan. Het knipperen van de leds moet traag verlopen, zodat het knippereffect zichtbaar is met het blote oog.
 
@@ -20,7 +22,7 @@ Deze video is ook te vinden op **Youtube**:
 
 https://www.youtube.com/
 
-## Breadboard Schema (Fritzing)
+## Breadboard Schema
 
 [![schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/fritzing/schema.png)
 

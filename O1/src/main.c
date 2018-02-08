@@ -7,11 +7,28 @@
  */
 
 #include <avr/io.h>
+#include <util/delay.h>
 
+// De main methode
 int main(void)
 {
+
+    // Defineer dat D5 een output pin is.
+    DDRD = 1 << 5;
+
+    // Defineer dat D7 een output pin is.
+    DDRD = 1 << 7;
+
     while (1)
     {
+        // Toggle de led op D5.
+        PORTD ^= 1 << 5;
+
+        // Wacht voor 1 seconden.
+        _delay_ms(1000);
+
+        // Toggle de led op D7.
+        PORTD ^= 1 << 7;
     }
 
     return 0;
