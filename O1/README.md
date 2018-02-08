@@ -4,9 +4,9 @@
 
 Maak een "Blink led" programma, waar twee leds om en om aan en uit gaan. Het knipperen van de leds moet traag verlopen, zodat het knipper-effect zichtbaar is met het blote oog.
 
-## Aanpak en uitvoering
+## Aanpak en Uitvoering
 
-TODO.
+Omdat ik altijd de editor Visual Studio Code gebruikt wilde ik daar ook mijn opdrachten in gaan maken. Om er voor te zorgen dat dit morgelijk is moet er gebruik gemaakt worden van Platform IO. Platform IO heeft, net zoals in Arduino IDE, voorbeeld *sketches*. Een van de *sketches* is "Native Blink"[^1] (geschreven in C). Deze heb ik geopend, gebuild en geüpload naar mijn Arduino om Platform IO te testen. Deze code zorgt ervoor dat de *onboard* led aan en uit gaat. Deze code heb ik uitgebreid voor mijn opdracht.
 
 ## Afbeelding
 
@@ -82,4 +82,7 @@ Niet van toepassing.
 
 ## Bronvermelding
 
-Niet van toepassing.
+**1.** https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink
+
+[^1]: https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink
+
