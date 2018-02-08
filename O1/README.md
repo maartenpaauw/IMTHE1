@@ -12,7 +12,7 @@ TODO.
 
 De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
-
+https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/setup.jpg
 
 ## Video
 
