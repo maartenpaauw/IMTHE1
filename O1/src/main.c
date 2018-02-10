@@ -9,7 +9,6 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-// De main methode
 int main(void)
 {
 
