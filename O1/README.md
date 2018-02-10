@@ -6,7 +6,7 @@ Maak een "Blink led" programma, waar twee leds om en om aan en uit gaan. Het kni
 
 ## Aanpak en Uitvoering
 
-Omdat ik altijd de editor Visual Studio Code gebruikt wilde ik daar ook mijn opdrachten in gaan maken. Om er voor te zorgen dat dit mogelijk is moet er gebruik gemaakt worden van Platform IO. Platform IO heeft, net zoals in Arduino IDE, voorbeeld *sketches*. Een van de *sketches* is "Native Blink"[^1] (geschreven in C). Deze heb ik geopend, gebuild en geüpload naar mijn Arduino om Platform IO te testen. Deze code zorgt ervoor dat de *onboard* led aan en uit gaat. Deze code heb ik uitgebreid voor mijn opdracht.
+Omdat ik altijd de editor Visual Studio Code gebruik wilde ik daar ook mijn opdrachten in gaan maken. Om er voor te zorgen dat dit mogelijk is moet er gebruik worden gemaakt van Platform IO. Platform IO heeft, net zoals in Arduino IDE, voorbeeld *sketches*. Een van de *sketches* is ["Native Blink"][1] (geschreven in C). Deze heb ik geopend, gebuild en geüpload naar mijn Arduino om Platform IO te testen. Deze code zorgt ervoor dat de *onboard* led aan en uit gaat. Deze code heb ik uitgebreid voor het voltooien van deze opdracht.
 
 ## Afbeelding
 
@@ -31,6 +31,15 @@ Deze video is ook te vinden op **Youtube**:
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
 [https://github.com/maartenpaauw/IMTHE1/raw/master/O1/assets/fritzing/schema.fzz](https://github.com/maartenpaauw/IMTHE1/raw/master/O1/assets/fritzing/schema.fzz)
+
+### Hardware
+
+| Onderdelen                 |
+| -------------------------- |
+| 220Ω Resistor - 2×         |
+| Arduino Nano (v3.0) - 1×   |
+| Dupont kabel - 5×          |
+| Rode (633nm) LED - 2×      |
 
 ## Code
 
@@ -78,12 +87,18 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 ## Datasheet
 
-### Arduino Nano
+### Arduino Nano Pinout
 
-![nano](assets/nano.png)
+![Arduino Nano Pinout](assets/nano.png)
+
+De [Arduino Nano Pinout][2] is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
+
+[https://forum.arduino.cc/index.php?topic=147582.0][2]
 
 ## Bronvermelding
 
-* [https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink](^1)
+* [https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink][1] (Native Blink)
+* [https://forum.arduino.cc/index.php?topic=147582.0][2] (Arduino Nano Pinout)
 
-[^1]: https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink "Native Blink"
+[1]: https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink "Native Blink"
+[2]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
