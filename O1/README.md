@@ -14,7 +14,7 @@ Omdat ik altijd de editor Visual Studio Code gebruikt wilde ik daar ook mijn opd
 
 De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
-https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/setup.jpg
+[https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/setup.jpg](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/setup.jpg)
 
 ## Video
 
@@ -22,7 +22,7 @@ https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/setup.jpg
 
 Deze video is ook te vinden op **Youtube**:
 
-https://www.youtube.com/watch?v=_TIATMJMEbU
+[https://www.youtube.com/watch?v=_TIATMJMEbU](https://www.youtube.com/watch?v=_TIATMJMEbU)
 
 ## Breadboard Schema
 
@@ -30,7 +30,7 @@ https://www.youtube.com/watch?v=_TIATMJMEbU
 
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
-https://github.com/maartenpaauw/IMTHE1/raw/master/O1/assets/fritzing/schema.fzz
+[https://github.com/maartenpaauw/IMTHE1/raw/master/O1/assets/fritzing/schema.fzz](https://github.com/maartenpaauw/IMTHE1/raw/master/O1/assets/fritzing/schema.fzz)
 
 ## Code
 
@@ -74,7 +74,7 @@ int main(void)
 
 De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende link:
 
-https://github.com/maartenpaauw/IMTHE1/blob/master/O1/src/main.c
+[https://github.com/maartenpaauw/IMTHE1/blob/master/O1/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/O1/src/main.c)
 
 ## Datasheet
 
