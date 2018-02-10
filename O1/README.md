@@ -78,7 +78,9 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 ## Datasheet
 
-Niet van toepassing.
+### Arduino Nano
+
+![nano](assets/nano.png)
 
 ## Bronvermelding
 
