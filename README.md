@@ -27,4 +27,3 @@ In plaats van Eclipse maak ik gebruik van Platform IO. Dit omdat ik dan kan blij
 [O5]: O5 "Opdracht 5 - ET Phone Home"
 [EX]: EX "Extra opdracht"
 [EI]: EI "Eindopdracht - Show Your Moves"
-

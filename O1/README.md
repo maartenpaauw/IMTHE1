@@ -82,4 +82,6 @@ Niet van toepassing.
 
 ## Bronvermelding
 
+* [https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink](^1)
+
 [^1]: https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink
