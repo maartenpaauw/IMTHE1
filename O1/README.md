@@ -86,4 +86,4 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 * [https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink](^1)
 
-[^1]: https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink
+[^1]: https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink "1"
