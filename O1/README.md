@@ -10,7 +10,7 @@ Omdat ik altijd de editor Visual Studio Code gebruikt wilde ik daar ook mijn opd
 
 ## Afbeelding
 
-![setup](assets/setup.jpg)
+![Opdracht 1 - Blink Once To Accept - Afbeelding](assets/setup.jpg)
 
 De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
@@ -18,7 +18,7 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 ## Video
 
-[![setup](assets/youtube.png)](https://www.youtube.com/watch?v=_TIATMJMEbU)
+[![Opdracht 1 - Blink Once To Accept - Video](assets/youtube.png)](https://www.youtube.com/watch?v=_TIATMJMEbU)
 
 Deze video is ook te vinden op **Youtube**:
 
@@ -26,7 +26,7 @@ Deze video is ook te vinden op **Youtube**:
 
 ## Breadboard Schema
 
-[![schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/fritzing/schema.png)
+[![Opdracht 1 - Blink Once To Accept - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/fritzing/schema.png)
 
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
@@ -86,4 +86,4 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 * [https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink](^1)
 
-[^1]: https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink "1"
+[^1]: https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink "Native Blink"
