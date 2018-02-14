@@ -12,11 +12,8 @@
 int main(void)
 {
 
-    // Defineer dat D5 een output pin is.
-    DDRD = 1 << 5;
-
-    // Defineer dat D7 een output pin is.
-    DDRD = 1 << 7;
+    // Defineer dat D5 + D7 een output pin is.
+    DDRD = 0b10100000;
 
     while (1)
     {
