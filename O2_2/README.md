@@ -21,11 +21,11 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 ## Video
 
-[![Opdracht 2.2 - Count Me In - Video](assets/youtube.png)](https://www.youtube.com/watch?v=wHO4zX4rpPY)
+[![Opdracht 2.2 - Count Me In - Video](assets/youtube.png)](https://www.youtube.com/watch?v=ND9IHuDUiyA)
 
 Deze video is ook te vinden op **Youtube**:
 
-[https://www.youtube.com/watch?v=wHO4zX4rpPY](https://www.youtube.com/watch?v=wHO4zX4rpPY)
+[https://www.youtube.com/watch?v=ND9IHuDUiyA](https://www.youtube.com/watch?v=ND9IHuDUiyA)
 
 ## Breadboard Schema
 
