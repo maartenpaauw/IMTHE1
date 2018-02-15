@@ -1,5 +1,5 @@
 /*
- * Opdracht 2.1 - Count Me In
+ * Opdracht 2.2 - Count Me In
  * 
  * Maarten Paauw <s1094220@student.hsleiden.nl>
  * s1094220
