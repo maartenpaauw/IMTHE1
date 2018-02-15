@@ -19,7 +19,7 @@ Uitleg over hoe ik dit heb uitgezocht.
 
 ## Afbeelding
 
-![Opdracht 2 - Count Me In - Afbeelding](assets/setup.jpg)
+![Opdracht 2.1 - Count Me In - Afbeelding](assets/setup.jpg)
 
 De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
@@ -27,7 +27,7 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 ## Video
 
-[![Opdracht 2 - Count Me In - Video](assets/youtube.png)](https://www.youtube.com/watch?v=wHO4zX4rpPY)
+[![Opdracht 2.1 - Count Me In - Video](assets/youtube.png)](https://www.youtube.com/watch?v=wHO4zX4rpPY)
 
 Deze video is ook te vinden op **Youtube**:
 
@@ -35,7 +35,7 @@ Deze video is ook te vinden op **Youtube**:
 
 ## Breadboard Schema
 
-[![Opdracht 2 - Count Me In - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2/assets/fritzing/schema.png)
+[![Opdracht 2.1 - Count Me In - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_1/assets/fritzing/schema.png)
 
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
@@ -65,14 +65,14 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 /*
  * RIGHT DIGIT
  *
- * PD2 = A
- * PD3 = B
- * PD4 = C
- * PD5 = D
+ * PD2 = A = 11
+ * PD3 = B = 10
+ * PD4 = C = 8
+ * PD5 = D = 6
  * 
- * PC0 = E
- * PC1 = F
- * PC2 = G
+ * PC0 = E = 5
+ * PC1 = F = 12
+ * PC2 = G = 7
  */
 
 #include <avr/io.h>
@@ -108,19 +108,22 @@ int main(void)
     // Count
     int a = 0;
 
-    // Zet alle C pinnen op output.
-    DDRC = 0xFF;
+    // Zet de C pinnen op output.
+    DDRC = 0b00111111;
 
-    // Zet alle D pinnen op output.
-    DDRD = 0xFF;
+    // Zet de D pinnen op output.
+    DDRD = 0b00111100;
 
     while (1)
     {
+        // Rechter digit.
+        int right = numbers[a % 10];
+
         // Regel de C pinnen.
-        handleC(numbers[a % 10]);
+        handleC(right);
 
         // Regel de D pinnen.
-        handleD(numbers[a % 10]);
+        handleD(right);
 
         // Wacht 1 seconden.
         _delay_ms(1000);
@@ -162,5 +165,5 @@ De 7 Segment Display pinout heb ik gevonden op het internet via de volgende link
 * [https://en.wikipedia.org/wiki/Seven-segment_display][3] (7 Segment Display)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]: http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&amp;amp;amp;type=P&amp;amp;amp;query=A%2Fd5621A%2FB "7 Segment (D5621A/B) Datasheet"
+[2]: http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&amp;amp;amp;amp;type=P&amp;amp;amp;amp;query=A%2Fd5621A%2FB "7 Segment (D5621A/B) Datasheet"
 [3]: https://en.wikipedia.org/wiki/Seven-segment_display "7 Segment Display"

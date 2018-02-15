@@ -1,4 +1,4 @@
-# Opdracht 2.1
+# Opdracht 2.2
 
 > Count Me In
 
@@ -9,25 +9,19 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 
 ## Aanpak en Uitvoering
 
-### Vinden van een datasheet
-
-Uitleg over het vinden van de datasheet.
-
-### Common anode en cathode
-
-Uitleg over hoe ik dit heb uitgezocht.
+TODO.
 
 ## Afbeelding
 
-![Opdracht 2 - Count Me In - Afbeelding](assets/setup.jpg)
+![Opdracht 2.2 - Count Me In - Afbeelding](assets/setup.jpg)
 
 De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
-[https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_1/assets/setup.jpg](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_1/assets/setup.jpg)
+[https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_2/assets/setup.jpg](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_2/assets/setup.jpg)
 
 ## Video
 
-[![Opdracht 2 - Count Me In - Video](assets/youtube.png)](https://www.youtube.com/watch?v=wHO4zX4rpPY)
+[![Opdracht 2.2 - Count Me In - Video](assets/youtube.png)](https://www.youtube.com/watch?v=wHO4zX4rpPY)
 
 Deze video is ook te vinden op **Youtube**:
 
@@ -35,11 +29,11 @@ Deze video is ook te vinden op **Youtube**:
 
 ## Breadboard Schema
 
-[![Opdracht 2 - Count Me In - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2/assets/fritzing/schema.png)
+[![Opdracht 2.2 - Count Me In - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_2/assets/fritzing/schema.png)
 
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
-[https://github.com/maartenpaauw/IMTHE1/raw/master/O2_1/assets/fritzing/schema.fzz](https://github.com/maartenpaauw/IMTHE1/raw/master/O2_1/assets/fritzing/schema.fzz)
+[https://github.com/maartenpaauw/IMTHE1/raw/master/O2_2/assets/fritzing/schema.fzz](https://github.com/maartenpaauw/IMTHE1/raw/master/O2_2/assets/fritzing/schema.fzz)
 
 ### Hardware
 
@@ -47,7 +41,7 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 | ------------------------- |
 | Arduino Nano (v3.0) - 1×  |
 | 220Ω Resistor - 1×        |
-| Dupont Kabel - 10×        |
+| Dupont Kabel - 17×        |
 | 7 Segment (D5621A/B) - 1× |
 
 
@@ -55,7 +49,7 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
 ```c
 /*
- * Opdracht 2.1 - Count Me In
+ * Opdracht 2.2 - Count Me In
  * 
  * Maarten Paauw <s1094220@student.hsleiden.nl>
  * s1094220
@@ -63,29 +57,48 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
  */
 
 /*
+ * LEFT DIGIT
+ *
+ * PB0 = A = 16
+ * PB1 = B = 15
+ * PB2 = C = 3
+ * PB3 = D = 2
+ * 
+ * PC3 = E = 1
+ * PC4 = F = 18
+ * PC5 = G = 17
+ */
+
+/*
  * RIGHT DIGIT
  *
- * PD2 = A
- * PD3 = B
- * PD4 = C
- * PD5 = D
+ * PD2 = A = 11
+ * PD3 = B = 10
+ * PD4 = C = 8
+ * PD5 = D = 6
  * 
- * PC0 = E
- * PC1 = F
- * PC2 = G
+ * PC0 = E = 5
+ * PC1 = F = 12
+ * PC2 = G = 7
  */
 
 #include <avr/io.h>
 #include <util/delay.h>
 
+
+// Regel de B pinnen.
+void handleB (int right) {
+    PORTB =~ ((right << 4) >> 4);
+}
+
 // Regel de C pinnen.
-void handleC (int number) {
-    PORTC =~ ((number << 1) >> 5);
+void handleC (int left, int right) {
+    PORTC =~ ((((left << 1) >> 5) << 3) | ((right << 1) >> 5));
 }
 
 // Regel de D pinnen.
-void handleD (int number) {
-    PORTD =~ ((number << 4) >> 2);
+void handleD (int left) {
+    PORTD =~ ((left << 4) >> 2);
 }
 
 int main(void)
@@ -108,25 +121,39 @@ int main(void)
     // Count
     int a = 0;
 
-    // Zet alle C pinnen op output.
-    DDRC = 0xFF;
+    // Zet de B pinnen op output.
+    DDRB = 0b00001111;
 
-    // Zet alle D pinnen op output.
-    DDRD = 0xFF;
+    // Zet de C pinnen op output.
+    DDRC = 0b00111111;
+
+    // Zet de D pinnen op output.
+    DDRD = 0b00111100;
 
     while (1)
     {
+        int left  = numbers[a / 10];
+        int right = numbers[a % 10];
+
+        // Regel de B pinnen.
+        handleB(left);
+
         // Regel de C pinnen.
-        handleC(numbers[a % 10]);
+        handleC(left, right);
 
         // Regel de D pinnen.
-        handleD(numbers[a % 10]);
+        handleD(right);
 
         // Wacht 1 seconden.
         _delay_ms(1000);
 
         // Tel de A op.
         a++;
+
+        // Reset de count.
+        if (a > 99) {
+            a = 0;
+        }
     }
 
     return 0;
@@ -135,7 +162,7 @@ int main(void)
 
 De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende link:
 
-[https://github.com/maartenpaauw/IMTHE1/blob/master/O2_1/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/O2_1/src/main.c)
+[https://github.com/maartenpaauw/IMTHE1/blob/master/O2_2/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/O2_2/src/main.c)
 
 ## Datasheet
 
@@ -162,5 +189,5 @@ De 7 Segment Display pinout heb ik gevonden op het internet via de volgende link
 * [https://en.wikipedia.org/wiki/Seven-segment_display][3] (7 Segment Display)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]: http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&amp;amp;amp;amp;type=P&amp;amp;amp;amp;query=A%2Fd5621A%2FB "7 Segment (D5621A/B) Datasheet"
+[2]: http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&amp;amp;amp;amp;amp;type=P&amp;amp;amp;amp;amp;query=A%2Fd5621A%2FB "7 Segment (D5621A/B) Datasheet"
 [3]: https://en.wikipedia.org/wiki/Seven-segment_display "7 Segment Display"

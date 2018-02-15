@@ -9,14 +9,14 @@
 /*
  * RIGHT DIGIT
  *
- * PD2 = A
- * PD3 = B
- * PD4 = C
- * PD5 = D
+ * PD2 = A = 11
+ * PD3 = B = 10
+ * PD4 = C = 8
+ * PD5 = D = 6
  * 
- * PC0 = E
- * PC1 = F
- * PC2 = G
+ * PC0 = E = 5
+ * PC1 = F = 12
+ * PC2 = G = 7
  */
 
 #include <avr/io.h>
@@ -52,19 +52,22 @@ int main(void)
     // Count
     int a = 0;
 
-    // Zet alle C pinnen op output.
-    DDRC = 0xFF;
+    // Zet de C pinnen op output.
+    DDRC = 0b00111111;
 
-    // Zet alle D pinnen op output.
-    DDRD = 0xFF;
+    // Zet de D pinnen op output.
+    DDRD = 0b00111100;
 
     while (1)
     {
+        // Rechter digit.
+        int right = numbers[a % 10];
+
         // Regel de C pinnen.
-        handleC(numbers[a % 10]);
+        handleC(right);
 
         // Regel de D pinnen.
-        handleD(numbers[a % 10]);
+        handleD(right);
 
         // Wacht 1 seconden.
         _delay_ms(1000);
