@@ -34,6 +34,7 @@ void handleD (int number) {
 
 int main(void)
 {
+    // Segmenten als binair getal voor de cijfers 0 t/m 9.
     int numbers[10] = {
         // GFEDCBA
         0b00111111, // 0
@@ -72,6 +73,5 @@ int main(void)
         a++;
     }
 
-    // Because...
     return 0;
 }
