@@ -72,7 +72,7 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 ### Arduino Nano Pinout
 
-![Arduino Nano Pinout](assets/nano.png)
+![Arduino Nano Pinout](assets/data_sheets/nano.png)
 
 De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 
