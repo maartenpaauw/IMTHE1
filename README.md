@@ -3,7 +3,8 @@
 
 ## Opdrachten
 * [Opdracht 1 - Blink Once To Accept][O1]
-* [Opdracht 2 - Count Me In][O2]
+* [Opdracht 2.1 - Count Me In][O2_1]
+* [Opdracht 2.2 - Count Me In][O2_2]
 * [Opdracht 3 - ADC Baby!][O3]
 * [Opdracht 4 - Led There Be Light][O4]
 * [Opdracht 5 - ET Phone Home][O5]
@@ -21,7 +22,8 @@ Van elke opdracht is er een video gemaakt. Alle video's zijn terug te vinden in 
 In plaats van Eclipse maak ik gebruik van Platform IO. Dit omdat ik dan kan blijven programmeren in mijn favoriete editor Visual Studio Code. De map indeling (voor alle opdrachten) ziet er daarom iets anders uit vergeleken met een Eclipse project.
 
 [O1]: O1 "Opdracht 1 - Blink Once To Accept"
-[O2]: O2 "Opdracht 2 - Count Me In"
+[O2_1]: O2_1 "Opdracht 2.1 - Count Me In"
+[O2_2]: O2_2 "Opdracht 2.2 - Count Me In"
 [O3]: O3 "Opdracht 3 - ADC Baby!"
 [O4]: O4 "Opdracht 4 - Led There Be Light"
 [O5]: O5 "Opdracht 5 - ET Phone Home"
