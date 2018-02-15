@@ -75,7 +75,7 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 ### Arduino Nano Pinout
 
-![Arduino Nano Pinout](assets/nano.png)
+![Arduino Nano Pinout](assets/data_sheets/nano.png)
 
 De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 
@@ -84,5 +84,6 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
+* https://en.wikipedia.org/wiki/Seven-segment_display (7 Segment)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
