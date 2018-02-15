@@ -22,6 +22,16 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
+// Regel de C pinnen.
+void handleC (int number) {
+    PORTC =~ ((number << 1) >> 5);
+}
+
+// Regel de D pinnen.
+void handleD (int number) {
+    PORTD =~ ((number << 4) >> 2);
+}
+
 int main(void)
 {
     int numbers[10] = {
@@ -50,10 +60,10 @@ int main(void)
     while (1)
     {
         // Regel de C pinnen.
-        PORTC =~ ((numbers[a % 10] << 1) >> 5);
+        handleC(numbers[a % 10]);
 
         // Regel de D pinnen.
-        PORTD =~ ((numbers[a % 10] << 4) >> 2);
+        handleD(numbers[a % 10]);
 
         // Wacht 1 seconden.
         _delay_ms(1000);
