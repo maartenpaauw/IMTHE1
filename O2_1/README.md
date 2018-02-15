@@ -161,9 +161,9 @@ De 7 Segment Display pinout heb ik gevonden op het internet via de volgende link
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
-* [http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&type=P&query=A%2Fd5621A%2FB][2] (7 Segment Datasheet)
+* [http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&type=P&query=A%2Fd5621A%2FB][2] (7 Segment Display (D5621A/B) Datasheet)
 * [https://en.wikipedia.org/wiki/Seven-segment_display][3] (7 Segment Display)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]: http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&amp;amp;amp;amp;type=P&amp;amp;amp;amp;query=A%2Fd5621A%2FB "7 Segment (D5621A/B) Datasheet"
+[2]: http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&amp;amp;amp;amp;type=P&amp;amp;amp;amp;query=A%2Fd5621A%2FB "7 Segment Display (D5621A/B) Datasheet"
 [3]: https://en.wikipedia.org/wiki/Seven-segment_display "7 Segment Display"
