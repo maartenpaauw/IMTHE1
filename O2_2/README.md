@@ -88,16 +88,36 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
 // Regel de B pinnen.
 void handleB (int right) {
+    // 0b00111111
+    // 0b11110000
+    // 0b00001111 <- uitkomst voor 0.
     PORTB =~ ((right << 4) >> 4);
 }
 
 // Regel de C pinnen.
 void handleC (int left, int right) {
+    // Left
+    // 0b00111111
+    // 0b01111110
+    // 0b00011000 <- uitkomst voor de linker 0.
+    //
+    // Right
+    // 0b00111111
+    // 0b01111110
+    // 0b00000011 <- uitkomst voor de rechter 0.
+    //
+    // 0b00011000
+    // 0b00000011 |
+    // ----------
+    // 0b00011011 <- uitkomst voor 0.
     PORTC =~ ((((left << 1) >> 5) << 3) | ((right << 1) >> 5));
 }
 
 // Regel de D pinnen.
 void handleD (int left) {
+    // 0b00111111
+    // 0b11110000
+    // 0b00111100 <- uitkomst voor 0.
     PORTD =~ ((left << 4) >> 2);
 }
 
