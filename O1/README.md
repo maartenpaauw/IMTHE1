@@ -18,7 +18,7 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 ## Video
 
-[![Opdracht 1 - Blink Once To Accept - Video](assets/youtube.png)](https://www.youtube.com/watch?v=_TIATMJMEbU)
+[![Opdracht 1 - Blink Once To Accept - Video](https://img.youtube.com/vi/_TIATMJMEbU/maxresdefault.jpg)](https://www.youtube.com/watch?v=_TIATMJMEbU)
 
 Deze video is ook te vinden op **Youtube**:
 
