@@ -142,6 +142,11 @@ int main(void)
 
         // Tel de A op.
         a++;
+
+        // Reset de count.
+        if (a > 9) {
+            a = 0;
+        }
     }
 
     return 0;
