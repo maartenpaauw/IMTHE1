@@ -18,7 +18,7 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 ## Video
 
-[![Opdracht 0 - X - Video](assets/youtube.png)](https://www.youtube.com/)
+[![Opdracht 0 - X - Video](https://img.youtube.com/vi/XXX/maxresdefault.jpg)](https://www.youtube.com/)
 
 Deze video is ook te vinden op **Youtube**:
 
