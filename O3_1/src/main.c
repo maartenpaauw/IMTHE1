@@ -84,27 +84,35 @@ void side (int number) {
 
 int main(void)
 {
+    // Zet de B pinnen op input.
+    PORTB = (1 << PB0);
+
     // Zet de C pinnen op output.
     DDRC = 0b00111111;
 
     // Zet de D pinnen op output.
     DDRD = 0b11111100;
 
+    // Toon standaard 1.
+    int res = 1;
 
     while (1)
     {
-        // Genereer een random getal.
-        int res = dobbel();
+        // Controleer of de knop is ingedrukt.
+        if (bit_is_clear(PINB, PB0)) {
 
-        for (int i = 0; i < 1000; i++) {
-            side(res);
+            // Genereer een random getal.
+            res = dobbel();
+
+            // Leeg het display.
+            clear();
+
+            // Loop net zolang dat de button losgelaten is.
+            loop_until_bit_is_set(PINB, PB0);
         }
 
-        // Zet alle pinnen uit.
-        clear();
-
-        // Pauzeer van 1 seconden.
-        _delay_ms(1000);
+        // Toon het resultaat.
+        side(res);
     }
 
     return 0;
