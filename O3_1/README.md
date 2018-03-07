@@ -22,6 +22,8 @@ Pinnen die nodig zijn:
 | 2     | 15       |
 | 5     | 16       |
 
+*De pinnen zijn gesorteerd van links naar rechts op het component.*
+
 ## Afbeelding
 
 ![Opdracht 3.1 - ADC Baby! - Afbeelding](assets/setup.jpg)
@@ -48,9 +50,13 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
 ### Hardware
 
-| Onderdelen                 |
-| -------------------------- |
-| Arduino Nano (v3.0) - 1×   |
+| Onderdelen               |
+| ------------------------ |
+| Arduino Nano (v3.0) - 1× |
+| 220Ω Resistor - 6×       |
+| Push Button - 1×         |
+| 8×8 Matrix - 1×          |
+| Dupont kabels - 26×      |
 
 ## Code
 
@@ -190,8 +196,21 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
+### 8×8 Matrix Pinout
+
+![8×8 Matrix Pinout](assets/data_sheets/8x8_matrix.png)
+
+De [8×8 Matrix Pinout][2] is terug te vinden via de volgende link:
+
+[https://www.arduino.cc/en/Tutorial/RowColumnScanning][2]
+
+![8×8 Matrix Pinout - Gefilterd](assets/data_sheets/8x8_matrix_filtered.png)
+
+Voor het gemak heb ik voor mijzelf de pinnen gefilterd en met kleur aangegeven welke ik nodig heb (groen) en welke niet (rood).
+
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
+[2]: https://www.arduino.cc/en/Tutorial/RowColumnScanning "8×8 Matrix Pinout"
