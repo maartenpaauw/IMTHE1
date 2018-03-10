@@ -1,8 +1,11 @@
-# Opdracht 0
+# Opdracht 3.2
 
-> Titel
+> ADC Baby!
 
-Uitleg uit de module handleiding.
+Deze opdracht bestaat uit twee kleinere opdrachten:
+
+1. Maak een digitale dobbelsteen met 9 leds (zie plaatje). Als je op een knop drukt geven de leds een random waarde tussen 1 en 6 weer op de leds zoals je dat kent op een echte dobbelsteen. Hou bij het programma rekening met dender-gedrag. 
+2. **Maak een programma dat de waarde van een potentiometer vertaalt in een geluidssignaal tussen 100 en 10.000Hz. Laat dit signaal horen op de speaker.**
 
 ## Aanpak en Uitvoering
 
@@ -10,15 +13,15 @@ TODO
 
 ## Afbeelding
 
-![Opdracht 0 - X - Afbeelding](assets/setup.jpg)
+![Opdracht 3.2 - ADC Baby! - Afbeelding](assets/setup.jpg)
 
 De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
-[https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O0/assets/setup.jpg](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O0/assets/setup.jpg)
+[https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/setup.jpg](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/setup.jpg)
 
 ## Video
 
-[![Opdracht 0 - X - Video](https://img.youtube.com/vi/XXX/maxresdefault.jpg)](https://www.youtube.com/)
+[![Opdracht 3.2 - ADC Baby! - Video](https://img.youtube.com/vi/XXX/maxresdefault.jpg)](https://www.youtube.com/)
 
 Deze video is ook te vinden op **Youtube**:
 
@@ -26,11 +29,11 @@ Deze video is ook te vinden op **Youtube**:
 
 ## Breadboard Schema
 
-[![Opdracht 0 - X - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O0/assets/fritzing/schema.png)
+[![Opdracht 3.2 - ADC Baby! - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/fritzing/schema.png)
 
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
-[https://github.com/maartenpaauw/IMTHE1/raw/master/O0/assets/fritzing/schema.fzz](https://github.com/maartenpaauw/IMTHE1/raw/master/O0/assets/fritzing/schema.fzz)
+[https://github.com/maartenpaauw/IMTHE1/raw/master/O3_2/assets/fritzing/schema.fzz](https://github.com/maartenpaauw/IMTHE1/raw/master/O3_2/assets/fritzing/schema.fzz)
 
 ### Hardware
 
@@ -66,7 +69,7 @@ int main(void)
 
 De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende link:
 
-[https://github.com/maartenpaauw/IMTHE1/blob/master/O0/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/O0/src/main.c)
+[https://github.com/maartenpaauw/IMTHE1/blob/master/O3_2/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/O3_2/src/main.c)
 
 ## Datasheet
 
@@ -78,8 +81,18 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
+### RS 7243119 Pinout
+
+![RS 7243119 Pinout](assets/data_sheets/rs-7243119.png)
+
+De [rs-7243119 Pinout][2] heb ik gevonden in de specificaties bij een webshop en is terug te vinden via de volgende url:
+
+[https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf][2]
+
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
+* https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf (RS 7243119 Pinout)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
+[2]: https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf "RS 7243119"
