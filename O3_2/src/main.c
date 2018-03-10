@@ -51,9 +51,6 @@ int main(void)
     // B Bank initialiseren.
     DDRB  = (1 << PB5);
 
-    // Zet de D pin aan.
-    PORTD = (1 << PD2);
-
     // Initialiseer de potential meter.
     initADC();
 
@@ -66,14 +63,14 @@ int main(void)
         // Zet de B pin aan.
         PORTB = (1 << PB5);
 
-        // Wacht voor 2 ms.
-        _delay_ms(2);
+        // Wacht voor 1 ms.
+        _delay_ms(1);
 
         // Zet de B pin uit.
         PORTB = 0;
 
         // Wacht voor een X aantal ms.
-        delay(pwm / 100);
+        delay(100 + ((10000 - 100) / (1024 - 1)) * (pwm - 1));
     }
 
     return 0;
