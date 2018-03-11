@@ -26,7 +26,7 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 ## Video
 
-[![Opdracht 3.2 - ADC Baby! - Video](https://img.youtube.com/vi/gUwsOV7sM_M/maxresdefault.jpg)](https://www.youtube.com/)
+[![Opdracht 3.2 - ADC Baby! - Video](https://img.youtube.com/vi/gUwsOV7sM_M/maxresdefault.jpg)](https://www.youtube.com/watch?v=gUwsOV7sM_M)
 
 Deze video is ook te vinden op **Youtube**:
 
