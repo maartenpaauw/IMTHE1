@@ -83,14 +83,17 @@ int main(void)
         // Zet de B pin aan.
         PORTB = (1 << PB5);
 
-        // Wacht voor 1 ms.
-        _delay_ms(1);
+        // Bereken de delay.
+        uint16_t mapped = map(pwm, 1, 1024, 10000, 100) / 2;
+
+        // Wacht voor een X aantal µs.
+        delay(mapped);
 
         // Zet de B pin uit.
         PORTB = 0;
 
         // Wacht voor een X aantal µs.
-        delay(map(pwm, 1, 1024, 10000, 100));
+        delay(mapped);
     }
 
     return 0;

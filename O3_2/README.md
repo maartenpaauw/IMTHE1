@@ -26,11 +26,11 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 ## Video
 
-[![Opdracht 3.2 - ADC Baby! - Video](https://img.youtube.com/vi/XXX/maxresdefault.jpg)](https://www.youtube.com/)
+[![Opdracht 3.2 - ADC Baby! - Video](https://img.youtube.com/vi/PADTStclX-Y/maxresdefault.jpg)](https://www.youtube.com/)
 
 Deze video is ook te vinden op **Youtube**:
 
-[https://www.youtube.com/](https://www.youtube.com/)
+[https://www.youtube.com/watch?v=PADTStclX-Y](https://www.youtube.com/watch?v=PADTStclX-Y)
 
 ## Breadboard Schema
 
@@ -137,14 +137,17 @@ int main(void)
         // Zet de B pin aan.
         PORTB = (1 << PB5);
 
-        // Wacht voor 1 ms.
-        _delay_ms(1);
+        // Bereken de delay.
+        uint16_t mapped = map(pwm, 1, 1024, 10000, 100) / 2;
+
+        // Wacht voor een X aantal µs.
+        delay(mapped);
 
         // Zet de B pin uit.
         PORTB = 0;
 
         // Wacht voor een X aantal µs.
-        delay(map(pwm, 1, 1024, 10000, 100));
+        delay(mapped);
     }
 
     return 0;
@@ -176,7 +179,9 @@ De [RS 7243119 Pinout][2] heb ik gevonden in de specificaties bij een webshop en
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
-* https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf (RS 7243119 Pinout)
+* [https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf][2] (RS 7243119 Pinout)
+* [https://stackoverflow.com/questions/5731863/mapping-a-numeric-range-onto-another][3] (Mapping a Numeric Range Onto Another)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
 [2]: https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf "RS 7243119"
+[3]: https://stackoverflow.com/questions/5731863/mapping-a-numeric-range-onto-another "Mapping a Numeric Range Onto Another"
