@@ -8,6 +8,7 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
+#include <math.h>
 
 // Initialiseer de potential meter.
 void initADC () {
@@ -42,8 +43,27 @@ void delay (uint16_t time) {
     for (uint16_t i = 0; i < time; i++) {
 
         // Wacht voor 1 ms.
-        _delay_ms(1);
+        _delay_us(1);
     }
+}
+
+// Preciezere afronden.
+// https://stackoverflow.com/questions/5731863/mapping-a-numeric-range-onto-another
+double round (double d) {
+
+    // Tel er 0.5 bij op en rond het getal af.
+    return floor(d + 0.5);
+}
+
+// Map het getal van een range in een nieuwe range.
+// https://stackoverflow.com/questions/5731863/mapping-a-numeric-range-onto-another
+double map (int input, int input_start, int input_end, int output_start, int output_end) {
+    
+    // Defineer de slope.
+    double slope = 1.0 * (output_end - output_start) / (input_end - input_start);
+
+    // Geef het nieuwe getal terug.
+    return output_start + round(slope * (input - input_start));
 }
 
 int main(void)
@@ -69,8 +89,8 @@ int main(void)
         // Zet de B pin uit.
         PORTB = 0;
 
-        // Wacht voor een X aantal ms.
-        delay(100 + ((10000 - 100) / (1024 - 1)) * (pwm - 1));
+        // Wacht voor een X aantal µs.
+        delay(map(pwm, 1, 1024, 10000, 100));
     }
 
     return 0;
