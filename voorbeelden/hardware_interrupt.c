@@ -11,7 +11,7 @@ ISR (PCINT2_vect) {
 
 void initInterruptPCINT18 () {
   PCICR  |= (1 << PCIE2);          // Welke bank
-  PCMSK2 |= (1 << PCINT18);       // Welke 
+  PCMSK2 |= (1 << PCINT18);       // Welke mask
   sei();
 }
 
