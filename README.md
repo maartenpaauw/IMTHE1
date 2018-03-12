@@ -7,9 +7,12 @@
 * [Opdracht 2.2 - Count Me In][O2_2]
 * [Opdracht 3.1 - ADC Baby!][O3_1]
 * [Opdracht 3.2 - ADC Baby!][O3_2]
-* [Opdracht 4 - Led There Be Light][O4]
-* [Opdracht 5 - ET Phone Home][O5]
-* [Extra opdracht][EX]
+* [Opdracht 4.1 - Led There Be Light][O4_1]
+* [Opdracht 4.2 - Led There Be Light][O4_2]
+* [Opdracht 4.3 - Led There Be Light][O4_3]
+* [Opdracht 5.1 - ET Phone Home][O5_1]
+* [Opdracht 5.2 - ET Phone Home][O5_2]
+* [*Extra opdracht*][EX]
 * [Eindopdracht - Show Your Moves][EI]
 
 ## Video's
@@ -25,9 +28,12 @@ In plaats van Eclipse maak ik gebruik van Platform IO. Dit omdat ik dan kan blij
 [O1]: O1 "Opdracht 1 - Blink Once To Accept"
 [O2_1]: O2_1 "Opdracht 2.1 - Count Me In"
 [O2_2]: O2_2 "Opdracht 2.2 - Count Me In"
-[O3_1]: O3_1 "Opdracht 3 - ADC Baby!"
-[O3_2]: O3_2 "Opdracht 3 - ADC Baby!"
-[O4]: O4 "Opdracht 4 - Led There Be Light"
-[O5]: O5 "Opdracht 5 - ET Phone Home"
+[O3_1]: O3_1 "Opdracht 3.1 - ADC Baby!"
+[O3_2]: O3_2 "Opdracht 3.2 - ADC Baby!"
+[O4_1]: O4_1 "Opdracht 4.1 - Led There Be Light"
+[O4_2]: O4_2 "Opdracht 4.2 - Led There Be Light"
+[O4_3]: O4_3 "Opdracht 4.3 - Led There Be Light"
+[O5_1]: O5_1 "Opdracht 5.1 - ET Phone Home"
+[O5_2]: O5_2 "Opdracht 5.2 - ET Phone Home"
 [EX]: EX "Extra opdracht"
 [EI]: EI "Eindopdracht - Show Your Moves"
