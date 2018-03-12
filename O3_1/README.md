@@ -217,6 +217,7 @@ Voor het gemak heb ik voor mijzelf de pinnen gefilterd en met kleur aangegeven w
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
+* [https://www.arduino.cc/en/Tutorial/RowColumnScanning][2] (8×8 Matrix Pinout)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
 [2]: https://www.arduino.cc/en/Tutorial/RowColumnScanning "8×8 Matrix Pinout"
