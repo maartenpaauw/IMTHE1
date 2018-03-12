@@ -1,5 +1,5 @@
 /*
- * Opdracht 0 - X
+ * Opdracht 4.1 - Led There Be Light
  * 
  * Maarten Paauw <s1094220@student.hsleiden.nl>
  * s1094220
