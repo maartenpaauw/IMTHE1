@@ -17,7 +17,7 @@ In plaats van dat ik gebruik maak van 9 led's heb ik ervoor gekozen om het 8×8 
 
 In het hoofdstuk datasheet is er een datasheet opgenomen waarbij ik aangegeven heb welke LED's ik nodig heb en welke niet. Hieronder een tabel met welke pinnen ik nodig heb.
 
-###8×8 Matrix Pinnen
+### 8×8 Matrix Pinnen
 
 | Rijen | Kolommen |
 | ----- | -------- |
