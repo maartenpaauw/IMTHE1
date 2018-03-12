@@ -87,8 +87,18 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
+### RGB LED (Common Cathode) Pinout
+
+![RGB LED (Common Cathode) Pinout](assets/data_sheets/rgb_led.jpg)
+
+De [RGB LED (Common Cathode) Pinout][2] heb ik gevonden op het internet door te Googelen op afbeeldingen en kan terug gevonden worden via de volgende link:
+
+[https://i1.wp.com/wiki.jmoon.co/wp-content/uploads/2015/07/rgb-2.jpg][2]
+
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
+* [https://i1.wp.com/wiki.jmoon.co/wp-content/uploads/2015/07/rgb-2.jpg][1] (RGB LED (Common Cathode) Pinout)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
+[2]: https://i1.wp.com/wiki.jmoon.co/wp-content/uploads/2015/07/rgb-2.jpg "RGB LED (Common Cathode) Pinout"
