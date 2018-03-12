@@ -11,7 +11,13 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 
 ## Aanpak en Uitvoering
 
-Pinnen die nodig zijn:
+Tijdens de les van week 3 zijn wij bezig geweest met de push button en 1 led. Als de knop ingedrukt werd ging de led aan en als de knop weer werd losgelaten ging de led uit. Deze code heb ik verder uitgebreid om deze opdracht te halen. 
+
+In plaats van dat ik gebruik maak van 9 led's heb ik ervoor gekozen om het 8×8 matrix te gebruiken. Een oog van de dobbelsteen is 2×2 op het matrix. Zo hou je tussen de ogen één enkele led over. Om ervoor te zorgen dat er maar één oog aangaat staat elke oog, ook al zijn er meerdere nodig, 1 miliseconden aan. Dit is niet te zien met het blote oog.
+
+In het hoofdstuk datasheet is er een datasheet opgenomen waarbij ik aangegeven heb welke LED's ik nodig heb en welke niet. Hieronder een tabel met welke pinnen ik nodig heb.
+
+###8×8 Matrix Pinnen
 
 | Rijen | Kolommen |
 | ----- | -------- |
