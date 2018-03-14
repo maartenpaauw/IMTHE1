@@ -84,7 +84,7 @@ int main(void)
         PORTB = (1 << PB5);
 
         // Bereken de delay.
-        uint16_t mapped = map(pwm, 1, 1024, 10000, 100) / 2;
+        double mapped = map(pwm, 1, 1024, 10000, 100) / 2;
 
         // Wacht voor een X aantal µs.
         delay(mapped);
