@@ -35,17 +35,18 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-
 // Regel de B pinnen.
-void handleB (int right) {
+void handleB(int right)
+{
     // 0b00111111
     // 0b11110000
     // 0b00001111 <- uitkomst voor 0.
-    PORTB =~ ((right << 4) >> 4);
+    PORTB = ~((right << 4) >> 4);
 }
 
 // Regel de C pinnen.
-void handleC (int left, int right) {
+void handleC(int left, int right)
+{
     // Left
     // 0b00111111
     // 0b01111110
@@ -60,15 +61,16 @@ void handleC (int left, int right) {
     // 0b00000011 |
     // ----------
     // 0b00011011 <- uitkomst voor 0.
-    PORTC =~ ((((left << 1) >> 5) << 3) | ((right << 1) >> 5));
+    PORTC = ~((((left << 1) >> 5) << 3) | ((right << 1) >> 5));
 }
 
 // Regel de D pinnen.
-void handleD (int left) {
+void handleD(int left)
+{
     // 0b00111111
     // 0b11110000
     // 0b00111100 <- uitkomst voor 0.
-    PORTD =~ ((left << 4) >> 2);
+    PORTD = ~((left << 4) >> 2);
 }
 
 int main(void)
@@ -102,7 +104,7 @@ int main(void)
 
     while (1)
     {
-        int left  = numbers[a / 10];
+        int left = numbers[a / 10];
         int right = numbers[a % 10];
 
         // Regel de B pinnen.
@@ -121,7 +123,8 @@ int main(void)
         a++;
 
         // Reset de count.
-        if (a > 99) {
+        if (a > 99)
+        {
             a = 0;
         }
     }

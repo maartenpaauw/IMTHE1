@@ -11,37 +11,37 @@
 #include <math.h>
 
 // Initialiseer de potential meter.
-void initADC () {
-    
+void initADC()
+{
     // Zet op 5 volt.
-    ADMUX  |= (1 << REFS0);
-    
+    ADMUX |= (1 << REFS0);
+
     // Divider op 128 voor 10 bit precisie.
     ADCSRA |= ((1 << ADPS0) | (1 << ADPS1) | (1 << ADPS2));
-    
+
     // AD enable.
     ADCSRA |= (1 << ADEN);
 }
 
 // Lees de potential meter.
-uint16_t readADC () {
-    
+uint16_t readADC()
+{
     // Starten met lezen.
     ADCSRA |= (1 << ADSC);
-    
+
     // Loop totdat er een waarde is.
     loop_until_bit_is_clear(ADCSRA, ADSC);
-    
+
     // Geef de waarde terug.
     return ADC;
 }
 
 // Dynamische timeout.
-void delay (uint16_t time) {
-
+void delay(uint16_t time)
+{
     // For loop.
-    for (uint16_t i = 0; i < time; i++) {
-
+    for (uint16_t i = 0; i < time; i++)
+    {
         // Wacht voor 1 ms.
         _delay_us(1);
     }
@@ -49,16 +49,16 @@ void delay (uint16_t time) {
 
 // Preciezere afronden.
 // https://stackoverflow.com/questions/5731863/mapping-a-numeric-range-onto-another
-double round (double d) {
-
+double round(double d)
+{
     // Tel er 0.5 bij op en rond het getal af.
     return floor(d + 0.5);
 }
 
 // Map het getal van een range in een nieuwe range.
 // https://stackoverflow.com/questions/5731863/mapping-a-numeric-range-onto-another
-double map (int input, int input_start, int input_end, int output_start, int output_end) {
-    
+double map(int input, int input_start, int input_end, int output_start, int output_end)
+{
     // Defineer de slope.
     double slope = 1.0 * (output_end - output_start) / (input_end - input_start);
 
@@ -69,7 +69,7 @@ double map (int input, int input_start, int input_end, int output_start, int out
 int main(void)
 {
     // B Bank initialiseren.
-    DDRB  = (1 << PB5);
+    DDRB = (1 << PB5);
 
     // Initialiseer de potential meter.
     initADC();

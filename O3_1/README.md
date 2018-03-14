@@ -80,17 +80,20 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 #include <stdlib.h>
 
 // Genereer een random nummer tussen 1 en 6.
-int dobbel () {
+int dobbel()
+{
     return (rand() % 6) + 1;
 }
 
 // Regel de pinnen op de C bank.
-void handleC (int number) {
-    PORTC =~ number;
+void handleC(int number)
+{
+    PORTC = ~number;
 }
 
 // Regel de pinnen op de D bank.
-void handleD (int number) {
+void handleD(int number)
+{
 
     // Door de RX en TX pinnen begin ik pas op pin D2.
     // Daarom wordt er even 2x naar links gebitshift.
@@ -98,24 +101,26 @@ void handleD (int number) {
 }
 
 // Zet alle poorten uit.
-void clear () {
+void clear()
+{
     PORTC = 0b0000000;
     PORTD = 0b0000000;
 }
 
-void dot (int number) {
+void dot(int number)
+{
     number = number - 1;
 
     int dots[9][2] = {
-        { 0b00000011, 0b00000011 },     // LINKS    BOVEN
-        { 0b00001100, 0b00000011 },     // MIDDEN   BOVEN
-        { 0b00110000, 0b00000011 },     // RECHTS   BOVEN
-        { 0b00000011, 0b00001100 },     // LINKS    MIDDEN
-        { 0b00001100, 0b00001100 },     // MIDDEN   MIDDEN
-        { 0b00110000, 0b00001100 },     // RECHTS   MIDDEN
-        { 0b00000011, 0b00110000 },     // LINKS    ONDER
-        { 0b00001100, 0b00110000 },     // MIDDEN   ONDER
-        { 0b00110000, 0b00110000 }      // RECHTS   ONDER
+        {0b00000011, 0b00000011}, // LINKS    BOVEN
+        {0b00001100, 0b00000011}, // MIDDEN   BOVEN
+        {0b00110000, 0b00000011}, // RECHTS   BOVEN
+        {0b00000011, 0b00001100}, // LINKS    MIDDEN
+        {0b00001100, 0b00001100}, // MIDDEN   MIDDEN
+        {0b00110000, 0b00001100}, // RECHTS   MIDDEN
+        {0b00000011, 0b00110000}, // LINKS    ONDER
+        {0b00001100, 0b00110000}, // MIDDEN   ONDER
+        {0b00110000, 0b00110000}  // RECHTS   ONDER
     };
 
     // Zet de C pinnen aan.
@@ -125,16 +130,17 @@ void dot (int number) {
     handleD(dots[number][1]);
 }
 
-void side (int number) {
+void side(int number)
+{
 
     // Alle zijdes van een dobbelsteen met welke ogen er nodig zijn.
     int sides[6][6] = {
-        { 5 },                  // 1
-        { 1, 9 },               // 2
-        { 1, 5, 9 },            // 3
-        { 1, 3, 7, 9},          // 4
-        { 1, 3, 5, 7, 9},       // 5
-        { 1, 3, 4, 6, 7, 9 }    // 6
+        {5},               // 1
+        {1, 9},            // 2
+        {1, 5, 9},         // 3
+        {1, 3, 7, 9},      // 4
+        {1, 3, 5, 7, 9},   // 5
+        {1, 3, 4, 6, 7, 9} // 6
     };
 
     // Loop door de ogen heen.
@@ -168,7 +174,8 @@ int main(void)
     while (1)
     {
         // Controleer of de knop is ingedrukt.
-        if (bit_is_clear(PINB, PB0)) {
+        if (bit_is_clear(PINB, PB0))
+        {
 
             // Genereer een random getal.
             res = dobbel();

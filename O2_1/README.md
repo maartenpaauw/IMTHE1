@@ -85,19 +85,21 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 #include <util/delay.h>
 
 // Regel de C pinnen.
-void handleC (int number) {
+void handleC(int number)
+{
     // 0b00111111
     // 0b01111110
     // 0b00000011 <- uitkomst voor 0.
-    PORTC =~ ((number << 1) >> 5);
+    PORTC = ~((number << 1) >> 5);
 }
 
 // Regel de D pinnen.
-void handleD (int number) {
+void handleD(int number)
+{
     // 0b00111111
     // 0b11110000
     // 0b00111100 <- uitkomst voor 0.
-    PORTD =~ ((number << 4) >> 2);
+    PORTD = ~((number << 4) >> 2);
 }
 
 int main(void)
@@ -144,7 +146,8 @@ int main(void)
         a++;
 
         // Reset de count.
-        if (a > 9) {
+        if (a > 9)
+        {
             a = 0;
         }
     }
