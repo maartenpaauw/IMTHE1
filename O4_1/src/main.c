@@ -7,7 +7,6 @@
  */
 
 #include <avr/io.h>
-#include <avr/delay.h>
 #include <avr/interrupt.h>
 
 // LED pinnen.
@@ -18,53 +17,45 @@
 // RGB waardes.
 int RGB[3] = {255, 0, 0};
 
-// Rood als decrement.
-int dec = 0;
-
-// Groen als increment.
-int inc = 1;
+// Count.
+int count = 0;
 
 ISR(TIMER0_OVF_vect)
 {
+    // Deze variabele hebben we twee keer nodig.
+    int dec = decrement(count);
+
     // Trek R, G of B af.
     RGB[dec] -= 1;
 
     // Tel R, G of B af.
-    RGB[inc] += 1;
+    RGB[increment(count)] += 1;
 
     // Als de waarde van R, G of B helemaal terug is op 0.
     if (RGB[dec] <= 0)
     {
         // Tel op.
-        dec++;
-        inc++;
-
-        // Als de decrement groter dan 2 wordt.
-        if (dec > 2)
-        {
-            // Reset de opteller.
-            dec = 0;
-        }
-
-        // Als de increment groter dan 2 wordt.
-        if (inc > 2)
-        {
-            // Reset de opteller.
-            inc = 0;
-        }
+        count++;
     }
 
     else
     {
-        // Rode led waarde.
-        OCR1A = ~RGB[0];
-
-        // Groene led waarde.
-        OCR1B = ~RGB[1];
-
-        // Blauwe led waarde.
-        OCR2A = ~RGB[2];
+        OCR1A = ~RGB[0];    // Rode led waarde.
+        OCR1B = ~RGB[1];    // Groene led waarde.
+        OCR2A = ~RGB[2];    // Blauwe led waarde.
     }
+}
+
+// Bereken degene die opgeteld moet worden.
+int increment (int count)
+{
+    return (count + 1) % 3;
+}
+
+// Bereken degene die afgetrokken moet worden.
+int decrement (int count)
+{
+    return count % 3;
 }
 
 void initTimerOverflow()
@@ -87,11 +78,8 @@ void intPWMTimerLED()
     TCCR2A |= (1 << WGM20) | (1 << WGM21); // Fast PWM.
     TCCR2B |= (1 << CS21);                 // PWM freq.
 
-    // Rode led.
-    TCCR1A |= (1 << COM1A1);
-
-    // Groene led.
-    TCCR1A |= (1 << COM1B1);
+    // Rode en groene led.
+    TCCR1A |= (1 << COM1A1) | (1 << COM1B1);
 
     // Blauwe led.
     TCCR2A |= (1 << COM2A1);
@@ -102,7 +90,7 @@ int main(void)
 {
 
     // Initialiseer de RGB LED pinnen.
-    DDRB = ((1 << LED_RED) | (1 << LED_GREEN) | (1 << LED_BLUE));
+    DDRB = (1 << LED_RED) | (1 << LED_GREEN) | (1 << LED_BLUE);
 
     // Initialiseer de overflow timer.
     initTimerOverflow();
@@ -111,9 +99,7 @@ int main(void)
     intPWMTimerLED();
 
     // Loop voor altijd.
-    while (1)
-    {
-    }
+    while (1) {}
 
     // Geef 0 terug.
     return 0;
