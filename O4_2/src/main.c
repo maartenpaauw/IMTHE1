@@ -11,64 +11,46 @@
 #include <util/setbaud.h>
 #include <util/delay.h>
 
-uint8_t serData = 0;
-
-ISR (USART_RX_vect)
-{
-  serData = UDR0;
-}
-
-void initUSART(void)
-{
-    UBRR0H = UBRRH_VALUE;
-    UBRR0L = UBRRL_VALUE;
-    
-    UCSR0A &= ~(1 << U2X0);
-    UCSR0B = (1 << TXEN0) | (1 << RXEN0);
-    UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);
-}
-
-
-void transmitByte(uint8_t data)
-{
-  loop_until_bit_is_set(UCSR0A, UDRE0);
-  UDR0 = data;
-}
-
-uint8_t receiveByte(void)
-{
-    loop_until_bit_is_set(UCSR0A, RXC0);
-    return UDR0;
-}
-
-//  Example of a useful printing command
-void printString(const char myString[])
-{
-    uint8_t i = 0;
-    
-    while (myString[i])
-    {
-        transmitByte(myString[i]);
-        i++;
-    }
-}
-
+// Main functie.
 int main (void)
 {
+  // Initialiseer de USART.
   initUSART();
 
+  // Defineer de LED pin.
+  DDRB = (1 << PB5);
+
+  // Loop voor altijd.
   while (1)
   {
+    // Lees de ontvangen byte via de seriele communicatie.
     uint8_t received = receiveByte();
 
+    // Controleer of het een a is.
     if (received == 'a')
     {
-        printString("ja");
+        // Geef terug dat het gelukt is.
+        printString("De LED is aan.\n");
+
+        // Zet de LED aan.
+        PORTB = (1 << PB5);
     }
 
+    // Controller of het een u is.
     else if (received == 'u')
     {
-        printString("ja");
+        // Geef terug dat het gelukt is.
+        printString("De LED is uit.\n");
+
+        // Zet de LED aan.
+        PORTB = (0 << PB5);
+    }
+
+    // Anders,
+    else
+    {
+        // Geef aan dat het niet gelukt is.
+        printString("Het is niet gelukt.\n");
     }
   }
 }

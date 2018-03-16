@@ -40,9 +40,12 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
 ### Hardware
 
-| Onderdelen                 |
-| -------------------------- |
-| Arduino Nano (v3.0) - 1×   |
+| Onderdelen               |
+| ------------------------ |
+| Arduino Nano (v3.0) - 1× |
+| LED - 1×                 |
+| 220Ω Resistor - 1×       |
+| Dupont Kabel - 3×        |
 
 ## Code
 
