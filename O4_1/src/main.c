@@ -85,7 +85,7 @@ void intPWMTimerLED()
     TCCR2A |= (1 << COM2A1);
 }
 
-// Main fucntie.
+// Main functie.
 int main(void)
 {
 

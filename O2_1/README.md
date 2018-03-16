@@ -11,9 +11,9 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 
 ### Vinden van een datasheet
 
-Op het internet had ik een [brochure][2] gevonden van het bedrijf Greegoo. In deze brochure stonden meerdere componenten met daar bij behorende datasheet. Één pagina ging over het 7 segment display (D5621A/B). Deze is te vinden in het hoofdstuk **Datasheet**. Elke 7 segment heeft 9 pinnen. 7 daarvan voor elke *streepje*, 1 voor de *punt* en 1 voor de ground of de voltage. Deze aantal pinnen zijn dus 2 keer aanwezig omdat het een dubbel 7 segment display is. Als het scherm gevoed wordt via de 5v5 pin op de Arduino heet dat **common anode** en als het scherm gevoed wordt via een data pin op de Arduino heet dat **common cathode**. Wat voor mijn 7 segment display geldt is niet aangegeven op het component zelf. Dit moet achterhaald worden. Meer hierover in het volgende hoofdstuk.
+Op het internet had ik een [brochure][2] gevonden van het bedrijf Greegoo. In deze brochure stonden meerdere componenten met het daarbij behorende datasheet. Één pagina ging over het 7 segment display (D5621A/B). Deze is te vinden in het hoofdstuk **Datasheet**. Elke 7 segment heeft 9 pinnen. 7 daarvan voor elke *streepje*, 1 voor de *punt* en 1 voor de ground of de voltage. Deze aantal pinnen zijn dus 2 keer aanwezig omdat het een dubbel 7 segment display is. Als het scherm gevoed wordt via de 5v5 pin op de Arduino heet dat **common anode** en als het scherm gevoed wordt via een data pin op de Arduino heet dat **common cathode**. Wat voor mijn 7 segment display geldt is niet aangegeven op het component zelf. Dit moet achterhaald worden. Meer hierover in het volgende hoofdstuk.
 
-### Common anode en cathode
+### Common anode of cathode
 
 In het datasheet stond aangegeven dat pin 13 en 14 op de ground of op de 5v5 pin moeten. Om uit te zoeken of het een common anode of een cathode is heb ik eerst pin 13 en 14 op een ground pin aangesloten. Daarna had ik met de 5v5 pin, met een resistor ertussen, aan gesloten op een van de segmenten pinnen. Geen een van de segmenten ging aan. Hierdoor wist ik dat het geen common cathode is maar een common anode 7 segment display. Dus heb ik pin 13 en 14 aangesloten, met een resistor ertussen, op de 5v5 pin op de Arduino. De pinnen van elke segment heb ik aangesloten op de B en D bank. 
 
@@ -185,5 +185,5 @@ De 7 Segment Display pinout heb ik gevonden op het internet via de volgende link
 * [https://en.wikipedia.org/wiki/Seven-segment_display][3] (7 Segment Display)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]:  http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&amp;amp;type=P&amp;amp;query=A%2Fd5621A%2FB "7 Segment Display (D5621A/B) Datasheet"
+[2]:  http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&amp;amp;amp;type=P&amp;amp;amp;query=A%2Fd5621A%2FB "7 Segment Display (D5621A/B) Datasheet"
 [3]: https://en.wikipedia.org/wiki/Seven-segment_display "7 Segment Display"

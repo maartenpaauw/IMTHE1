@@ -10,15 +10,19 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 
 ## Aanpak en Uitvoering
 
-Code uit de les verder uitgewerkt.
+Tijdens de les heb ik geleerd hoe je timers maakt een een PWM waarde kan sturen naar een bepaalde pin. Met deze code werd er een LED steeds gedimd. Deze code kon ik mooi gebruiken voor deze opdracht. 
 
-#### LED soort uitzoeken
+### Common Cathode of Common Anode
 
-Uitleg.
+Eerst moest er uitgezocht worden wat voor soort RGB LED het is. Het kan namelijk een Common Cathode of een Common Anode LED zijn. Ik sloot pin 2 aan op 5v op de Arduino en pin 1 via een weerstand op de ground van de Arduino. De LED ging meteen rood branden. Hierdoor wist ik dat het een Common Anode LED is. De pinout is te vinden in het hoofdstuk over de datasheets.
 
-#### Code uit boek
+### Code uit boek
 
-Uitleg.
+In de les hadden we de PWM OC2A gebruikt om de LED te laten dimmen. Om een RGB LED van kleur te laten veranderen zijn er 3 PWM pinnen nodig om de rode, groene en blauwe waardes aan te passen. Ik wist niet precies de instellingen die nodig waren om dit te regelen voor PWM OC1A en OC1B. Gelukkig was er een hoofdstuk in het boek hieraan besteed. De code uit het boek heb ik gebruikt om rood en groen van de RGB LED aan te passen.
+
+### Kleuren
+
+Het patroon dat ik gemaakt heb is het volgende. De LED begint vol rood (255, 0, 0). Daarna gaat rood aftellen van 255 naar 0. Tegelijkertijd telt groen op naar 255. Dit zorgt ervoor dat de LED overvloeid van rood naar groen. Als uiteindelijk groen op 255 is gaat groen weer aftellen naar 0. Als groen begint met aftellen begint de waarde van blauw op te tellen van 0 naar 255. Dit zorgt ervoor dat de LED overvloeid van groen naar blauw. Als blauw eenmaal op 255 staat gaat deze waarde weer aftellen naar 0. Tergelijkertijd begint rood op te tellen van 0 naar 255. Dit zorgt ervoor dat de LED overvloeid van blauw naar rood. Als dit gebeurd is zijn we weer aangekomen bij het begin. Deze code staat in de Interrupt Service Routine.
 
 ## Afbeelding
 
@@ -143,7 +147,7 @@ void intPWMTimerLED()
     TCCR2A |= (1 << COM2A1);
 }
 
-// Main fucntie.
+// Main functie.
 int main(void)
 {
 
@@ -178,18 +182,18 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
-### RGB LED (Common Cathode) Pinout
+### RGB LED Pinout
 
-![RGB LED (Common Cathode) Pinout](assets/data_sheets/rgb_led.jpg)
+![RGB LED Pinout](assets/data_sheets/rgb_led.jpg)
 
-De [RGB LED (Common Cathode) Pinout][2] heb ik gevonden op het internet door te Googelen op afbeeldingen en kan terug gevonden worden via de volgende link:
+De [RGB LED Pinout][2] heb ik gevonden op het internet door te Googelen op afbeeldingen en kan terug gevonden worden via de volgende link:
 
 [https://i1.wp.com/wiki.jmoon.co/wp-content/uploads/2015/07/rgb-2.jpg][2]
 
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
-* [https://i1.wp.com/wiki.jmoon.co/wp-content/uploads/2015/07/rgb-2.jpg][1] (RGB LED (Common Cathode) Pinout)
+* [http://eeenthusiast.com/wp-content/uploads/2015/03/rgb.jpg][2] (RGB LED Pinout)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]: https://i1.wp.com/wiki.jmoon.co/wp-content/uploads/2015/07/rgb-2.jpg "RGB LED (Common Cathode) Pinout"
+[2]: http://eeenthusiast.com/wp-content/uploads/2015/03/rgb.jpg "RGB LED (Common Cathode) Pinout"

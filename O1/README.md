@@ -34,12 +34,12 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
 ### Hardware
 
-| Onderdelen                 |
-| -------------------------- |
-| 220Ω Resistor - 2×         |
-| Arduino Nano (v3.0) - 1×   |
-| Dupont kabel - 5×          |
-| Rode (633nm) LED - 2×      |
+| Onderdelen               |
+| ------------------------ |
+| Arduino Nano (v3.0) - 1× |
+| 220Ω Resistor - 2×       |
+| Dupont kabel - 5×        |
+| LED - 2×                 |
 
 ## Code
 
@@ -59,18 +59,18 @@ int main(void)
 {
 
     // Defineer dat D5 + D7 een output pin is.
-    DDRD = 0b10100000;
+    DDRD = (1 << PD5) | (1 << PD7);
 
     while (1)
     {
         // Toggle de led op D5.
-        PORTD ^= 1 << 5;
+        PORTD ^= (1 << PD5);
 
         // Wacht voor 1 seconden.
         _delay_ms(1000);
 
         // Toggle de led op D7.
-        PORTD ^= 1 << 7;
+        PORTD ^= (1 << PD7);
     }
 
     return 0;

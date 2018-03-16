@@ -13,18 +13,18 @@ int main(void)
 {
 
     // Defineer dat D5 + D7 een output pin is.
-    DDRD = 0b10100000;
+    DDRD = (1 << PD5) | (1 << PD7);
 
     while (1)
     {
         // Toggle de led op D5.
-        PORTD ^= 1 << 5;
+        PORTD ^= (1 << PD5);
 
         // Wacht voor 1 seconden.
         _delay_ms(1000);
 
         // Toggle de led op D7.
-        PORTD ^= 1 << 7;
+        PORTD ^= (1 << PD7);
     }
 
     return 0;
