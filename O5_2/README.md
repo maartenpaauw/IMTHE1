@@ -21,11 +21,11 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 ## Video
 
-[![Opdracht 5.2 - ET Phone Home - Video](https://img.youtube.com/vi/XXX/maxresdefault.jpg)](https://www.youtube.com/)
+[![Opdracht 5.2 - ET Phone Home - Video](https://img.youtube.com/vi/F5fXDvtFF8w/maxresdefault.jpg)](https://www.youtube.com/watch?v=F5fXDvtFF8w)
 
 Deze video is ook te vinden op **Youtube**:
 
-[https://www.youtube.com/](https://www.youtube.com/)
+[https://www.youtube.com/watch?v=F5fXDvtFF8w](https://www.youtube.com/watch?v=F5fXDvtFF8w)
 
 ## Breadboard Schema
 
@@ -37,32 +37,53 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
 ### Hardware
 
-| Onderdelen                 |
-| -------------------------- |
-| Arduino Nano (v3.0) - 1×   |
+| Onderdelen               |
+| ------------------------ |
+| Arduino Nano (v3.0) - 1× |
+| LCD Scherm - 1×          |
+| Potentiometer - 1×       |
+| Dupont Kabel - 14×       |
 
 ## Code
 
 ```c
 /*
- * Opdracht 5.2 - ET Phone Home
+ * Opdracht Opdracht 5.2 - ET Phone Home
  * 
  * Maarten Paauw <s1094220@student.hsleiden.nl>
  * s1094220
  * INF3C
  */
-
-#include <avr/io.h>
+#include "hd44780.h"
 #include <util/delay.h>
+
+// Mijn naam.
+#define NAAM "Maarten Paauw"
+
+// Mijn studentnummer.
+#define STUDENTNUMMER "s1094220"
 
 int main(void)
 {
+    // Initialiseer het LCD display.
+    lcd_init();
 
-    while (1)
-    {
-        
-    }
+    // Maak het LCD display leeg.
+    lcd_clrscr();
+    
+    // Schrijf mijn naam op de eerste regel.
+    lcd_puts(NAAM);
 
+    // Ga naar de tweede regel.
+    lcd_goto(0x40);
+
+    // Schrijf mijn studentnummer op de tweede regel.
+    lcd_puts(STUDENTNUMMER);
+
+    // Loop voor altijd.
+    while (1) { }
+
+    // Geef 0 terug.
     return 0;
 }
 ```
