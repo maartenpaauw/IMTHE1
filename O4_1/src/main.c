@@ -40,20 +40,20 @@ ISR(TIMER0_OVF_vect)
 
     else
     {
-        OCR1A = ~RGB[0];    // Rode led waarde.
-        OCR1B = ~RGB[1];    // Groene led waarde.
-        OCR2A = ~RGB[2];    // Blauwe led waarde.
+        OCR1A = ~RGB[0]; // Rode led waarde.
+        OCR1B = ~RGB[1]; // Groene led waarde.
+        OCR2A = ~RGB[2]; // Blauwe led waarde.
     }
 }
 
 // Bereken degene die opgeteld moet worden.
-int increment (int count)
+int increment(int count)
 {
     return (count + 1) % 3;
 }
 
 // Bereken degene die afgetrokken moet worden.
-int decrement (int count)
+int decrement(int count)
 {
     return count % 3;
 }
@@ -99,7 +99,9 @@ int main(void)
     intPWMTimerLED();
 
     // Loop voor altijd.
-    while (1) {}
+    while (1)
+    {
+    }
 
     // Geef 0 terug.
     return 0;
