@@ -2,17 +2,15 @@
 
 > Led There Be Light
 
-Uitleg uit de module handleiding.
-
-## Aanpak en Uitvoering
-
 Deze opdracht bestaat uit drie kleinere opdrachten:
 
 1. Creëer een ‘Color changing light’ met het RGB-led op basis van PWM. De PWM moet in een Interrupt Service Routine (ISR) worden afgehandeld.
-
 2. Maak een programma waarin je via Serial communicatie een led aan of uit kan zetten. Dit mag door bijvoorbeeld het karakter ‘a’ of ‘u’ te sturen. Het programma geeft feedback over de seriële poort of het gelukt is ja of nee. Gebruik niet de gegeven usart.c en .h in je uitwerking, maar maak een oplossing in 1 source bestand.
-
 3. **Verander deelopdracht 2 zodat binnenkomende data afgehandeld wordt in een interrupt (USART_RX_vect) zodat je programma (zoals in het voorbeeld van hoofdstuk 5) niet ‘eeuwig’ op input wacht. Toon aan dat het werkt door via seriële communicatie een ‘r’, ‘g’ of ‘b’ door te geven aan de AVR en dat dan de corresponderende kleur gaat pulseren (PWM op 1 kleur).**
+
+## Aanpak en Uitvoering
+
+TODO
 
 ## Afbeelding
 
@@ -287,7 +285,6 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 [https://github.com/maartenpaauw/IMTHE1/blob/master/O4_3/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/O4_3/src/main.c)
 
-## Datasheet
 
 ### Arduino Nano Pinout
 
@@ -297,8 +294,18 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
+### RGB LED Pinout
+
+![RGB LED Pinout](assets/data_sheets/rgb_led.jpg)
+
+De [RGB LED Pinout][2] heb ik gevonden op het internet door te Googelen op afbeeldingen en kan terug gevonden worden via de volgende link:
+
+[https://i1.wp.com/wiki.jmoon.co/wp-content/uploads/2015/07/rgb-2.jpg][2]
+
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
+* [http://eeenthusiast.com/wp-content/uploads/2015/03/rgb.jpg][2] (RGB LED Pinout)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
+[2]: http://eeenthusiast.com/wp-content/uploads/2015/03/rgb.jpg "RGB LED (Common Cathode) Pinout"
