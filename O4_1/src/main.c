@@ -73,7 +73,7 @@ void initTimerOverflow()
 }
 
 // LED timers.
-void intPWMTimerLED()
+void initPWMTimerLED()
 {
     // Timer 1 (Voor rood en groen).
     TCCR1A |= (1 << WGM10) | (1 << WGM12); // Fast PWM.
@@ -101,7 +101,7 @@ int main(void)
     initTimerOverflow();
 
     // Initialiseer de led timer.
-    intPWMTimerLED();
+    initPWMTimerLED();
 
     // Loop voor altijd.
     while (1)

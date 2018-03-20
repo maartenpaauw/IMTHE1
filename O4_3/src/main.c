@@ -67,6 +67,7 @@ void printString(const char myString[])
     }
 }
 
+// Overflow timer.
 void initTimerOverflow()
 {
     // Timer mask.
@@ -76,6 +77,7 @@ void initTimerOverflow()
     TCCR0B |= (1 << CS02) | (1 << CS00);
 }
 
+// LED timers.
 void initPWMTimerLED()
 {
     // Timer 1 (Voor rood en groen).
