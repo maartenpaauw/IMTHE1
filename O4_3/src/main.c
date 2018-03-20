@@ -128,6 +128,7 @@ ISR (TIMER0_OVF_vect)
     // Switch om te kijken om welke kleur het gaat.
     switch(color)
     {
+
         // De kleur rood.
         case 'r':
 
@@ -163,6 +164,7 @@ ISR (USART_RX_vect)
     // Kijk welke kleur het is.
     switch (UDR0)
     {
+
     // Als het rood is.
     case 'r':
 
