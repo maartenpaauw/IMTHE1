@@ -82,6 +82,19 @@ int RGB[3] = {255, 0, 0};
 // Count.
 int count = 0;
 
+// Bereken degene die opgeteld moet worden.
+int increment(int count)
+{
+    return (count + 1) % 3;
+}
+
+// Bereken degene die afgetrokken moet worden.
+int decrement(int count)
+{
+    return count % 3;
+}
+
+// Timer interrupt.
 ISR(TIMER0_OVF_vect)
 {
     // Deze variabele hebben we twee keer nodig.
@@ -102,24 +115,13 @@ ISR(TIMER0_OVF_vect)
 
     else
     {
-        OCR1A = ~RGB[0];    // Rode led waarde.
-        OCR1B = ~RGB[1];    // Groene led waarde.
-        OCR2A = ~RGB[2];    // Blauwe led waarde.
+        OCR1A = ~RGB[0]; // Rode led waarde.
+        OCR1B = ~RGB[1]; // Groene led waarde.
+        OCR2A = ~RGB[2]; // Blauwe led waarde.
     }
 }
 
-// Bereken degene die opgeteld moet worden.
-int increment (int count)
-{
-    return (count + 1) % 3;
-}
-
-// Bereken degene die afgetrokken moet worden.
-int decrement (int count)
-{
-    return count % 3;
-}
-
+// Overflow timers.
 void initTimerOverflow()
 {
     // Timer mask.
@@ -127,9 +129,12 @@ void initTimerOverflow()
 
     // Timer instellingen.
     TCCR0B |= (1 << CS02) | (1 << CS00);
+
+    // Start de interrupt.
     sei();
 }
 
+// LED timers.
 void intPWMTimerLED()
 {
     // Timer 1 (Voor rood en groen).
@@ -161,7 +166,9 @@ int main(void)
     intPWMTimerLED();
 
     // Loop voor altijd.
-    while (1) {}
+    while (1)
+    {
+    }
 
     // Geef 0 terug.
     return 0;
