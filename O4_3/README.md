@@ -10,7 +10,9 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 
 ## Aanpak en Uitvoering
 
-TODO
+Deze opdracht is een combinatie van opdracht [4.1][../O4_1] en [4.2][../O4_2]. De componenten zijn precies hetzelfde aangesloten als in opdracht [4.1][../O4_1]. Een van de voorwaarde van de opdracht was dat de seriele communicatie code via interrupt moest werken. Om er voor te zorgen dat deze interrupt ook werkt op input van een enkele character moest de initUSART functie iets aangepast worden. `(1 << RXCIE0)` zorgt er voor dat dit werkt.
+
+Er zijn nu 2 ISR functies. De eerste wordt uitgevoerd als er seriele communicatie ontvangen wordt. Als dit zo is wordt de kleur aangepast (via een variabele). Ook wordt er feedback gegeven aan de gebruiker of de kleur is aangepast. De tweede functie zorgt ervoor dat de juiste kleur van de RGB LED gaat pulseren.
 
 ## Afbeelding
 
