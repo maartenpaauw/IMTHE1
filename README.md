@@ -12,7 +12,6 @@
 * [Opdracht 4.3 - Led There Be Light][O4_3]
 * [Opdracht 5.1 - ET Phone Home][O5_1]
 * [Opdracht 5.2 - ET Phone Home][O5_2]
-* [*Extra opdracht*][EX]
 * [Eindopdracht - Show Your Moves][EI]
 
 ## Video's
@@ -35,5 +34,4 @@ In plaats van Eclipse maak ik gebruik van Platform IO. Dit omdat ik dan kan blij
 [O4_3]: O4_3 "Opdracht 4.3 - Led There Be Light"
 [O5_1]: O5_1 "Opdracht 5.1 - ET Phone Home"
 [O5_2]: O5_2 "Opdracht 5.2 - ET Phone Home"
-[EX]: EX "Extra opdracht"
 [EI]: EI "Eindopdracht - Show Your Moves"
