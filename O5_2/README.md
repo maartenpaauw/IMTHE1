@@ -9,7 +9,17 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 
 ## Aanpak en Uitvoering
 
-TODO
+Om het display werkend te krijgen mocht ik gebruik maken van een library. Na een tijdje Googelen kwam ik terrecht bij een post op het forum van Atmel. De post ging over een library die gemaakt was voor dit display. De library had ook een settings bestand. Hier moesten aan aantal variabelen aangepast worden. Dit waren pin nummers, CPU snelheid en het aantal bits. Dit instellingen zijn opgenomen in het hoofdstuk code. Via een andere blogpost kwam ik erachter hoe ik de pinnen moest aansluiten en dat er een potentiometer nodig was. 
+
+De code zelf is vrij kort. Er zijn maar een aantal functies die aangeroepen hoeven worden:
+
+* Een functie die het display initialiseert.
+* Een functie die het display leeg maakt.
+* Een functie die mijn naam op de eerste regel zet.
+* Een functie die er voor zorgt dat er geschreven kan worden op de tweede regel.
+* Een functie die mijn studentnummer op de tweede regel zet.
+
+Al deze code staat buiten de loop omdat het maar één keer op het scherm gezet hoeft te worden. Deze code kan terug gevonden worden in het hoofdstuk code.
 
 ## Afbeelding
 
@@ -94,7 +104,7 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 ### Library
 
-De library die ik gebruikt heb heeft ook een aantal instellingen nodig. De instellingen heb ik hieronder opgenomen
+De library die ik gebruikt heb heeft ook een aantal instellingen nodig. De instellingen heb ik hieronder opgenomen.
 
 ```c
 #ifndef HD44780_SETTINGS_H
@@ -180,8 +190,20 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
+### HD44780 Pinout
+
+![d4478](assets/data_sheets/hd44780.png)
+
+De [HD44780 Pinout][3] heb ik gevonden via een blogpost die terug te vinden is via de volgende link:
+
+http://www.learningaboutelectronics.com/Articles/Arduino-HD44780-circuit.php
+
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
+* [https://community.atmel.com/projects/hd44780-library][2] (HD44780 Library)
+* [http://www.learningaboutelectronics.com/Articles/Arduino-HD44780-circuit.php][3] (Arduino HD44780 Circuit)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
+[2]: https://community.atmel.com/projects/hd44780-library "HD44780 Library"
+[3]: http://www.learningaboutelectronics.com/Articles/Arduino-HD44780-circuit.php "Arduino HD44780 Circuit"
