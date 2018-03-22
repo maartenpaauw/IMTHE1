@@ -1,8 +1,14 @@
-# Opdracht 0
+# Eindopdracht
 
-> Titel
+> Show Your Moves
 
-Uitleg uit de module handleiding.
+In opdracht 5 heb je jouw unieke IMTHE-Box componenten uitgezocht. Het doel van de eindopdracht is dat je iets unieks gaat maken met die componenten. Wat je gaat maken is aan jou, zolang het maar voldoet aan de volgend isen:
+
+* Je maakt correct gebruik van minimaal 1 uniek input en 1 uniek output component. Het staat je vrij om daarnaast elk ander onderdeel uit je IMTHE-Box te gebruiken in je oplossing.
+* De afhandeling van je in- en output gebeurt asynchroon door bijvoorbeeld ISR toe te passen.
+* Je maakt gebruik van de nauwkeurigheid van de gegeven componenten. Je probeert dus zoveel mogelijk uit je component te halen.
+
+De eindopdracht wordt ook in het verslag opgenomen met alle eisen eraan die al genoemd zijn. Daarnaast geef je ook een beschrijving van het concept inclusief waar het toegepast zou kunnen worden en film je je uitwerking uitgebreid, waarin duidelijk wordt dat je de uitwerking getest hebt in verschillende situaties.
 
 ## Aanpak en Uitvoering
 
@@ -10,15 +16,15 @@ TODO
 
 ## Afbeelding
 
-![Opdracht 0 - X - Afbeelding](assets/setup.jpg)
+![Eindopdracht - Show Your Moves - Afbeelding](assets/setup.jpg)
 
 De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
-[https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O0/assets/setup.jpg](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O0/assets/setup.jpg)
+[https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/setup.jpg](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/setup.jpg)
 
 ## Video
 
-[![Opdracht 0 - X - Video](https://img.youtube.com/vi/XXX/maxresdefault.jpg)](https://www.youtube.com/)
+[![Eindopdracht - Show Your Moves - Video](https://img.youtube.com/vi/XXX/maxresdefault.jpg)](https://www.youtube.com/)
 
 Deze video is ook te vinden op **Youtube**:
 
@@ -26,11 +32,11 @@ Deze video is ook te vinden op **Youtube**:
 
 ## Breadboard Schema
 
-[![Opdracht 0 - X - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O0/assets/fritzing/schema.png)
+[![Eindopdracht - Show Your Moves - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/fritzing/schema.png)
 
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
-[https://github.com/maartenpaauw/IMTHE1/raw/master/O0/assets/fritzing/schema.fzz](https://github.com/maartenpaauw/IMTHE1/raw/master/O0/assets/fritzing/schema.fzz)
+[https://github.com/maartenpaauw/IMTHE1/raw/master/EI/assets/fritzing/schema.fzz](https://github.com/maartenpaauw/IMTHE1/raw/master/EI/assets/fritzing/schema.fzz)
 
 ### Hardware
 
@@ -42,7 +48,7 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
 ```c
 /*
- * Opdracht 0 - X
+ * Eindopdracht - Show Your Moves
  * 
  * Maarten Paauw <s1094220@student.hsleiden.nl>
  * s1094220
@@ -66,7 +72,7 @@ int main(void)
 
 De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende link:
 
-[https://github.com/maartenpaauw/IMTHE1/blob/master/O0/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/O0/src/main.c)
+[https://github.com/maartenpaauw/IMTHE1/blob/master/EI/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/EI/src/main.c)
 
 ## Datasheet
 
