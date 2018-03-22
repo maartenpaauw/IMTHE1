@@ -154,8 +154,17 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
+### LED Pinout
+
+![LED Pinout](assets/data_sheets/led.png)
+
+De [LED Pinout][2] heb ik gevonden via Google en is terug te vinden via de volgende link:
+
+[https://components101.com/sites/default/files/component_pin/IR-LED-pinout-and-symbol_0.png][2]
+
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
+[2]: https://components101.com/sites/default/files/component_pin/IR-LED-pinout-and-symbol_0.png "LED Pinout"

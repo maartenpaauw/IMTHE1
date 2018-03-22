@@ -177,16 +177,26 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 
 ![RS 7243119 Pinout](assets/data_sheets/rs-7243119.png)
 
-De [RS 7243119 Pinout][2] heb ik gevonden in de specificaties bij een webshop en is terug te vinden via de volgende url:
+De [RS 7243119 Pinout][2] heb ik gevonden in de specificaties bij een webshop en is terug te vinden via de volgende link:
 
 [https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf][2]
+
+### Potentiometer Pinout
+
+![RS Potentiometer Pinout](assets/data_sheets/potentiometer.png)
+
+De [Potentiometer Pinout][4] heb ik gevonden op Google en is terug te vinden via de volgende link:
+
+[https://cdn-learn.adafruit.com/assets/assets/000/027/586/original/light_control-pot.png][4]
 
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
 * [https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf][2] (RS 7243119 Pinout)
 * [https://stackoverflow.com/questions/5731863/mapping-a-numeric-range-onto-another][3] (Mapping a Numeric Range Onto Another)
+* [https://cdn-learn.adafruit.com/assets/assets/000/027/586/original/light_control-pot.png][4] (Potentiometer Pinout)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
 [2]: https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf "RS 7243119"
 [3]: https://stackoverflow.com/questions/5731863/mapping-a-numeric-range-onto-another "Mapping a Numeric Range Onto Another"
+[4]: https://cdn-learn.adafruit.com/assets/assets/000/027/586/original/light_control-pot.png "Potentiometer Pinout"
