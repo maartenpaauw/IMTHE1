@@ -36,11 +36,19 @@ uint8_t Receive_data()
     for (int q = 0; q < 8; q++)
     {
         while ((PIND & (1 << DHT11_PIN)) == 0);
+        
         _delay_us(30);
+        
         if (PIND & (1 << DHT11_PIN))
+        {
             c = (c << 1) | (0x01);
+        }
+        
         else
+        {
             c = (c << 1);
+        }
+        
         while (PIND & (1 << DHT11_PIN));
     }
     return c;
