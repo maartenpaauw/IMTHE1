@@ -9,11 +9,49 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 
 ## De unieke componenten
 
-In de IMTHE-Box zitten 2 unieke componenten. Één uniek input component en één uniek output component. 
+In de IMTHE-Box zitten 2 unieke componenten. Één uniek input component en één uniek output component. De componenten die in mijn IMTHE-Box zitten zijn twee LED 8×8 Matrix en één DHT11, dit is een temperatuur en luchtvochtigheid sensor.
 
-De compontent die ik heb zijn hieronder opgenomen in de tabel.
+### DHT11
+
+De DHT11 is een temperatuur en luchtvochtigheid sensor. De DHT11 meet de  temperatuur en luchtvochtigheid van de nabijne lucht en vertaald het naar een digitaal signaal. De sensor is nauwkeurig gekalibreerd in een labratorium en deze kalibratie wordt opgeslagen op het component zelf. Er zijn geen analoge pinnen nodig om het signaal uit te lezen. Alle data van de sensor wordt verzonden over één digitale pin. Het beste is om de bedrading tussen de DHT11 en de AVR korter te houden dan 20 meter. Ook wordt er aangeraden om de DHT11 op 5 volt aan te sluiten.
+
+Het enigste nadeel van de DHT11 is dat de resultaten maar 1 keer per 2 seconden uitgelezen kan worden.
+
+#### Protocol (Single-Wire Two-Way)
+
+De protocol waarvan gebruik wordt gemaakt is interessant. Alle sensor data wordt verstuurd over 1 digitale pin. Om data te kunnen versturen (vanaf de sensor) moet er worden aangegeven om welke data het gaat zodat de ontvanger en de verzender weten waar er over gecommuniceerd wordt. Dit wordt gedaan door een zogenaamde *pull-up*. Als de data pin verbonden is met de VCC pin (door middel van een resistor) wordt er geen data verstuurd (uitgelezen).
+
+*Bij het programmeren van de Arduino moet er rekening gehouden worden dat er eerst 1 seconden gewacht moet worden voordat er contact gemaakt kan worden met de DHT11. De DHT11 heeft 1 seconden nodig voor het opstarten.*
+
+Er zijn 3 stappen die gemaakt moeten worden om de data uit te lezen van de DHT11. De stappen zijn hieronder opgenomen.
+
+##### Request
+
+Om er voor te zorgen dat de DHT11 data gaat versturen moet er eerst een ***request*** gemaakt worden. Dit wordt gedaan door eerst een ***pull-down***, langer dan 1**8 milliseconden**, te versturen en daarna een ***pull-up*** van **40 microseconden** te versturen. Vervolgens wordt er een response verstuurd.
+
+##### Response
+
+De DHT11 stuurt een ***response*** terug nadat er een ***request*** gemaakt is. De ***reponse*** bestaat uit een ***low pin*** van **54 microseconden** en een ***high pin*** van **80 microseconden**.
+
+##### Data Reading
+
+Nadat er een ***response*** is gegeven volgt direct de data. De data wordt verstuurd in **5 pakketen**. Ieder van **8-bit**. In totaal zijn die **40-bits**. Hieronder is per **8-bit** uitgelegd wat de data betekent:
+
+- Integraal van de luchtvochtigheid.
+- Decimaal van de luchtvochtigheid .
+- Integraal van de temperatuur (in celsius).
+- Decimaal van de temperatuur (in celsius) .
+- Checksum over de 4 vorige waardes.
+
+Elke bit wordt via de volgende manier gecommuniceerd; eerst wordt de **pin** op **low** gezet voor **54 microseconden**. Vervolgens wordt de **pin** op high **gezet** voor **24 microseconden** als het **0** is en **70 microseconden** als het **1** is. Aan het einde van 8 bit wordt er vervolgens de **pin** op **low** gezet voor **54 microseconden**.
+
+### 8×8 Matrix
+
+TODO
 
 ### Hardware
+
+De compontenten die ik heb zijn hieronder opgenomen in de tabel.
 
 | Onderdelen               |
 | ------------------------ |
