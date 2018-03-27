@@ -55,22 +55,27 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 #include <avr/io.h>
 #include <util/delay.h>
 
+// Defineer de pinnen voor de leds.
+#define LED_1 PD5
+#define LED_2 PD7
+
+// De main functie.
 int main(void)
 {
 
     // Defineer dat D5 + D7 een output pin is.
-    DDRD = (1 << PD5) | (1 << PD7);
+    DDRD = (1 << LED_1) | (1 << LED_2);
 
     while (1)
     {
         // Toggle de led op D5.
-        PORTD ^= (1 << PD5);
+        PORTD ^= (1 << LED_1);
 
         // Wacht voor 1 seconden.
         _delay_ms(1000);
 
         // Toggle de led op D7.
-        PORTD ^= (1 << PD7);
+        PORTD ^= (1 << LED_2);
     }
 
     return 0;
