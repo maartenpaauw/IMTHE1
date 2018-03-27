@@ -9,7 +9,7 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 
 ## De unieke componenten
 
-In de IMTHE-Box zitten 2 unieke componenten. Één uniek input component en één uniek output component. De componenten die in mijn IMTHE-Box zitten zijn twee LED 8×8 Matrix en één DHT11, dit is een temperatuur en luchtvochtigheid sensor.
+In de IMTHE-Box zitten 2 unieke componenten. Één uniek input component en één uniek output component. De componenten die in mijn IMTHE-Box zitten zijn één DHT11, dit is een temperatuur en luchtvochtigheid sensor, en twee LED 8×8 Matrix.
 
 ### DHT11
 
@@ -45,9 +45,19 @@ Nadat er een ***response*** is gegeven volgt direct de data. De data wordt verst
 
 Elke bit wordt via de volgende manier gecommuniceerd; eerst wordt de **pin** op **low** gezet voor **54 microseconden**. Vervolgens wordt de **pin** op high **gezet** voor **24 microseconden** als het **0** is en **70 microseconden** als het **1** is. Aan het einde van 8 bit wordt er vervolgens de **pin** op **low** gezet voor **54 microseconden**.
 
+*Alle informatie heb ik gewonnen uit de datasheet van het component:*
+
+*[https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][2]*
+
 ### 8×8 Matrix
 
-TODO
+De 8×8 Matrix is een component waar 64 leds in zitten. Deze 64 leds zijn gerankschikt in 8 rijen van 8. Dit vormt samen een vierkant. Alle pinnen van de leds zijn verbonden met 8 rij pinnen en 8 kolom pinnen. Een combinatie van één rij en één kolom pin zorgt voor het aan gaan van één led. Over de 8×8 matrix valt minder te vertellen vergeleken met de DHT11 component met betrekking tot het programmeren. De volgorde van de pinnen kan alleen een beetje verwarrend zijn. De pinnen lopen in de vorm van de letter U 90 graden gedraaid tegen de klok in. De pin linksonder is pin 1 en de pin linksboven is pin 16. De pinnen zelf staan niet op vorgorde van de rijen en kolommen. Welke pin voor welke rij of kolom is kan terug gevonden worden in de afbeelding van de pinout.
+
+*Bij het aansluiten moet er wel rekening gehouden worden dat er bij elke pin van de rijen of bij elke pin van de kolommen er een resistor aangesloten moet worden. Het component zelf heeft deze niet ingebouwd.*
+
+*Alle informatie heb ik gewonnen uit de datasheet van het component:*
+
+*[https://cdn-shop.adafruit.com/datasheets/BL-M12A881.PDF][1]*
 
 ### Hardware
 
@@ -55,31 +65,31 @@ De compontenten die ik heb zijn hieronder opgenomen in de tabel.
 
 | Onderdelen               |
 | ------------------------ |
-| 8×8 Matrix (output) - 2× |
 | DHT11(input) - 1×        |
+| 8×8 Matrix (output) - 2× |
 
 ## Datasheet
+
+### DHT11 Pinout
+
+![DHT11 Pinout](assets/data_sheets/dht11.png)
+
+De [DHT11 Pinout][2] is te vinden in de datasheet. Deze datasheet heb ik via Google gevonden en is terug te vinden via de volgende link:
+
+[https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][2]
 
 ### 8×8 Matrix Pinout
 
 ![8×8 Matrix Pinout](assets/data_sheets/8x8_matrix.png)
 
-De [8×8 Matrix Pinout][1] heb ik via Google gevonden en is terug te vinden via de volgende link:
+De [8×8 Matrix Pinout][1] is te vinden in de datasheet. Deze heb ik via Google gevonden en is terug te vinden via de volgende link:
 
-[https://www.arduino.cc/en/Tutorial/RowColumnScanning][1]
-
-### DHT11 Pinout
-
-![DHT11 Pinout](assets/data_sheets/dht11.jpg)
-
-De [DHT11 Pinout][2] heb ik via Google gevonden en is terug te vinden via de volgende link:
-
-[https://components101.com/dht11-temperature-sensor][2]
+[https://cdn-shop.adafruit.com/datasheets/BL-M12A881.PDF][1]
 
 ## Bronvermelding
 
-* [https://www.arduino.cc/en/Tutorial/RowColumnScanning][1] (8×8 Matrix Pinout)
-* [https://components101.com/dht11-temperature-sensor][2] (DHT11 Pinout)
+* [https://cdn-shop.adafruit.com/datasheets/BL-M12A881.PDF][1] (8×8 Matrix Datasheet)
+* [https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][2] (DHT11 Datasheet)
 
-[1]: https://www.arduino.cc/en/Tutorial/RowColumnScanning "8×8 Matrix Pinout"
-[2]: https://components101.com/dht11-temperature-sensor "DHT11 Pinout"
+[1]: https://cdn-shop.adafruit.com/datasheets/BL-M12A881.PDF "8×8 Matrix Datasheet"
+[2]: https://akizukidenshi.com/download/ds/aosong/DHT11.pdf "DHT11 Datasheet"
