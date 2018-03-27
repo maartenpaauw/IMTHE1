@@ -13,12 +13,14 @@
 // Genereer een random nummer tussen 1 en 6.
 int dobbel()
 {
+    // Genereer een random nummer tussen 1 en 6.
     return (rand() % 6) + 1;
 }
 
 // Regel de pinnen op de C bank.
 void handleC(int number)
 {
+    // Regel de pinnen op de C bank.
     PORTC = ~number;
 }
 
@@ -34,14 +36,20 @@ void handleD(int number)
 // Zet alle poorten uit.
 void clear()
 {
+    // Zet alle pinnen op de C bank op 0.
     PORTC = 0b0000000;
+
+    // Zet alle pinnen op de D bank op 0.
     PORTD = 0b0000000;
 }
 
+// Functie voor een enkel oog.
 void dot(int number)
 {
+    // Het getal min 1 voor de index uit de array.
     number = number - 1;
 
+    // Alle 9 ogen met de daarbij behorende pinnen.
     int dots[9][2] = {
         {0b00000011, 0b00000011}, // LINKS    BOVEN
         {0b00001100, 0b00000011}, // MIDDEN   BOVEN
@@ -61,6 +69,7 @@ void dot(int number)
     handleD(dots[number][1]);
 }
 
+// Functie voor een enkele zijde.
 void side(int number)
 {
 
@@ -88,6 +97,7 @@ void side(int number)
     }
 }
 
+// De main functie.
 int main(void)
 {
     // Zet de B pinnen op input.
@@ -102,6 +112,7 @@ int main(void)
     // Toon standaard 1.
     int res = 1;
 
+    // Loop voor altijd.
     while (1)
     {
         // Controleer of de knop is ingedrukt.
@@ -122,5 +133,6 @@ int main(void)
         side(res);
     }
 
+    // Geef een 0 terug.
     return 0;
 }

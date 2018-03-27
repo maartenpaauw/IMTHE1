@@ -224,9 +224,7 @@ int main(void)
     sei();
 
     // Loop voor altijd.
-    while (1)
-    {
-    }
+    while (1) { }
 
     // Geef niets terug.
     return 0;

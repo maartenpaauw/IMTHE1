@@ -14,6 +14,7 @@
 // Mijn studentnummer.
 #define STUDENTNUMMER "s1094220"
 
+// De main functie.
 int main(void)
 {
     // Initialiseer het LCD display.

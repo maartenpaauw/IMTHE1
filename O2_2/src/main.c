@@ -73,6 +73,7 @@ void handleD(int left)
     PORTD = ~((left << 4) >> 2);
 }
 
+// De main functie.
 int main(void)
 {
     // Segmenten als binair getal voor de cijfers 0 t/m 9.
@@ -102,9 +103,13 @@ int main(void)
     // Zet de D pinnen op output.
     DDRD = 0b00111100;
 
+    // Loop voor altijd.
     while (1)
     {
+        // Links.
         int left = numbers[a / 10];
+
+        // Rechts.
         int right = numbers[a % 10];
 
         // Regel de B pinnen.
@@ -122,12 +127,14 @@ int main(void)
         // Tel de A op.
         a++;
 
-        // Reset de count.
+        // Als de count groter is dan 99.
         if (a > 99)
         {
+            // Reset de count.
             a = 0;
         }
     }
 
+    // Geef 0 terug.
     return 0;
 }

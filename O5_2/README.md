@@ -73,6 +73,7 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 // Mijn studentnummer.
 #define STUDENTNUMMER "s1094220"
 
+// De main functie.
 int main(void)
 {
     // Initialiseer het LCD display.

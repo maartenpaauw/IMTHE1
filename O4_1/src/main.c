@@ -23,12 +23,14 @@ int count = 0;
 // Bereken degene die opgeteld moet worden.
 int increment(int count)
 {
+    // Bereken degene die opgeteld moet worden.
     return (count + 1) % 3;
 }
 
 // Bereken degene die afgetrokken moet worden.
 int decrement(int count)
 {
+    // Bereken degene die afgetrokken moet worden.
     return count % 3;
 }
 
@@ -51,6 +53,7 @@ ISR(TIMER0_OVF_vect)
         count++;
     }
 
+    // Is de waarde niet gelijk of kleiner dan 0.
     else
     {
         OCR1A = ~RGB[0]; // Rode led waarde.
@@ -104,9 +107,7 @@ int main(void)
     initPWMTimerLED();
 
     // Loop voor altijd.
-    while (1)
-    {
-    }
+    while (1) { }
 
     // Geef 0 terug.
     return 0;

@@ -62,41 +62,48 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 #include <util/delay.h>
 
 // Uit het bestand USART.
-void initUSART(void) {
+void initUSART(void)
+{
   UBRR0H = UBRRH_VALUE;
   UBRR0L = UBRRL_VALUE;
-#if USE_2X
-  UCSR0A |= (1 << U2X0);
-#else
-  UCSR0A &= ~(1 << U2X0);
-#endif
+
+  #if USE_2X
+    UCSR0A |= (1 << U2X0);
+  #else
+    UCSR0A &= ~(1 << U2X0);
+  #endif
+
   UCSR0B = (1 << TXEN0) | (1 << RXEN0);
   UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);
 }
 
 // Uit het bestand USART.
-uint8_t receiveByte(void) {
+uint8_t receiveByte(void)
+{
   loop_until_bit_is_set(UCSR0A, RXC0);
   return UDR0;
 }
 
 // Uit het bestand USART.
-void transmitByte(uint8_t data) {
+void transmitByte(uint8_t data)
+{
   loop_until_bit_is_set(UCSR0A, UDRE0);
   UDR0 = data;
 }
 
 // Uit het bestand USART.
-void printString(const char myString[]) {
+void printString(const char myString[])
+{
   uint8_t i = 0;
-  while (myString[i]) {
+  while (myString[i])
+  {
     transmitByte(myString[i]);
     i++;
   }
 }
 
 // Main functie.
-int main (void)
+int main(void)
 {
   // Initialiseer de USART.
   initUSART();
@@ -113,28 +120,28 @@ int main (void)
     // Controleer of het een a is.
     if (received == 'a')
     {
-        // Geef terug dat het gelukt is.
-        printString("De LED is aan.\n");
+      // Geef terug dat het gelukt is.
+      printString("De LED is aan.\n");
 
-        // Zet de LED aan.
-        PORTB = (1 << PB5);
+      // Zet de LED aan.
+      PORTB = (1 << PB5);
     }
 
     // Controller of het een u is.
     else if (received == 'u')
     {
-        // Geef terug dat het gelukt is.
-        printString("De LED is uit.\n");
+      // Geef terug dat het gelukt is.
+      printString("De LED is uit.\n");
 
-        // Zet de LED aan.
-        PORTB = (0 << PB5);
+      // Zet de LED aan.
+      PORTB = (0 << PB5);
     }
 
-    // Anders,
+    // Anders;
     else
     {
-        // Geef aan dat het niet gelukt is.
-        printString("Het is niet gelukt.\n");
+      // Geef aan dat het niet gelukt is.
+      printString("Het is niet gelukt.\n");
     }
   }
 }

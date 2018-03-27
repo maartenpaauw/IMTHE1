@@ -85,12 +85,14 @@ int count = 0;
 // Bereken degene die opgeteld moet worden.
 int increment(int count)
 {
+    // Bereken degene die opgeteld moet worden.
     return (count + 1) % 3;
 }
 
 // Bereken degene die afgetrokken moet worden.
 int decrement(int count)
 {
+    // Bereken degene die afgetrokken moet worden.
     return count % 3;
 }
 
@@ -113,6 +115,7 @@ ISR(TIMER0_OVF_vect)
         count++;
     }
 
+    // Is de waarde niet gelijk of kleiner dan 0.
     else
     {
         OCR1A = ~RGB[0]; // Rode led waarde.
@@ -135,7 +138,7 @@ void initTimerOverflow()
 }
 
 // LED timers.
-void intPWMTimerLED()
+void initPWMTimerLED()
 {
     // Timer 1 (Voor rood en groen).
     TCCR1A |= (1 << WGM10) | (1 << WGM12); // Fast PWM.
@@ -163,12 +166,10 @@ int main(void)
     initTimerOverflow();
 
     // Initialiseer de led timer.
-    intPWMTimerLED();
+    initPWMTimerLED();
 
     // Loop voor altijd.
-    while (1)
-    {
-    }
+    while (1) { }
 
     // Geef 0 terug.
     return 0;

@@ -87,7 +87,7 @@ int main(void)
       PORTB = (0 << PB5);
     }
 
-    // Anders,
+    // Anders;
     else
     {
       // Geef aan dat het niet gelukt is.

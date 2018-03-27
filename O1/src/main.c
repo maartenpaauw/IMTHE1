@@ -20,6 +20,7 @@ int main(void)
     // Defineer dat D5 + D7 een output pin is.
     DDRD = (1 << LED_1) | (1 << LED_2);
 
+    // Loop voor altijd.
     while (1)
     {
         // Toggle de led op D5.
@@ -32,5 +33,6 @@ int main(void)
         PORTD ^= (1 << LED_2);
     }
 
+    // Geef 0 terug.
     return 0;
 }

@@ -102,6 +102,7 @@ void handleD(int number)
     PORTD = ~((number << 4) >> 2);
 }
 
+// De main functie.
 int main(void)
 {
     // Segmenten als binair getal voor de cijfers 0 t/m 9.
@@ -128,6 +129,7 @@ int main(void)
     // Zet de D pinnen op output.
     DDRD = 0b00111100;
 
+    // Loop voor altijd.
     while (1)
     {
         // Rechter digit.
@@ -145,13 +147,15 @@ int main(void)
         // Tel de A op.
         a++;
 
-        // Reset de count.
+        // Als het getal groter is dan 9.
         if (a > 9)
         {
+            // Reset de count.
             a = 0;
         }
     }
 
+    // Geef 0 terug.
     return 0;
 }
 ```

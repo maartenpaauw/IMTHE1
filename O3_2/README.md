@@ -106,7 +106,7 @@ void delay(uint16_t time)
     }
 }
 
-// Preciezere afronden.
+// Preciezere afronding.
 // https://stackoverflow.com/questions/5731863/mapping-a-numeric-range-onto-another
 double round(double d)
 {
@@ -114,17 +114,23 @@ double round(double d)
     return floor(d + 0.5);
 }
 
-// Map het getal van een range in een nieuwe range.
+// Genereer de slope.
 // https://stackoverflow.com/questions/5731863/mapping-a-numeric-range-onto-another
-double map(int input, int input_start, int input_end, int output_start, int output_end)
+double slope (int output_start, int output_end, int input_start, int input_end)
 {
-    // Defineer de slope.
-    double slope = 1.0 * (output_end - output_start) / (input_end - input_start);
-
-    // Geef het nieuwe getal terug.
-    return output_start + round(slope * (input - input_start));
+    // Geef de slope terug.
+    return 1.0 * (output_end - output_start) / (input_end - input_start);
 }
 
+// Map het getal van een range in een nieuwe range.
+// https://stackoverflow.com/questions/5731863/mapping-a-numeric-range-onto-another
+double map(int input, int input_start, int output_start, double static_slope)
+{
+    // Geef het nieuwe getal terug.
+    return output_start + round(static_slope * (input - input_start));
+}
+
+// De main functie.
 int main(void)
 {
     // B Bank initialiseren.
@@ -132,6 +138,9 @@ int main(void)
 
     // Initialiseer de potential meter.
     initADC();
+
+    // Defineer de slope.
+    double static_slope = slope(10000, 100, 1, 1024);
 
     // Loop voor altijd.
     while (1)
@@ -143,7 +152,7 @@ int main(void)
         PORTB = (1 << PB5);
 
         // Bereken de delay.
-        double mapped = map(pwm, 1, 1024, 10000, 100) / 2;
+        double mapped = map(pwm, 1, 10000, static_slope) / 2;
 
         // Wacht voor een X aantal µs.
         delay(mapped);
@@ -155,6 +164,7 @@ int main(void)
         delay(mapped);
     }
 
+    // Geef een 0 terug.
     return 0;
 }
 ```
