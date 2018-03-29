@@ -183,7 +183,10 @@ void save_data()
 uint8_t validate_sensor_data()
 {
     // Tel de luchtvochtigheid en de temeratuur bij elkaar op.
-    uint8_t combined = integral_humidity + decimal_humidity + integral_temperature + decimal_temperature;
+    uint8_t combined = integral_humidity + 
+                       decimal_humidity + 
+                       integral_temperature + 
+                       decimal_temperature;
 
     // Geef terug dat de data klopt.
     return combined == checksum;
