@@ -15,7 +15,7 @@ In de IMTHE-Box zitten 2 unieke componenten. Één uniek input component en éé
 
 De DHT11 is een temperatuur en luchtvochtigheid sensor. De DHT11 meet de  temperatuur en luchtvochtigheid van de nabijne lucht en vertaald het naar een digitaal signaal. De sensor is nauwkeurig gekalibreerd in een labratorium en deze kalibratie wordt opgeslagen op het component zelf. Er zijn geen analoge pinnen nodig om het signaal uit te lezen. Alle data van de sensor wordt verzonden over één digitale pin. Het beste is om de bedrading tussen de DHT11 en de AVR korter te houden dan 20 meter. Ook wordt er aangeraden om de DHT11 op 5 volt aan te sluiten.
 
-Het enigste nadeel van de DHT11 is dat de resultaten maar 1 keer per 2 seconden uitgelezen kan worden.
+Het enigste nadeel van de DHT11 is dat de sensor maar 1 keer per 2 seconden de omliggende lucht meet.
 
 #### Protocol (Single-Wire Two-Way)
 
