@@ -65,7 +65,6 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
  * INF3C
  */
 #include "hd44780.h"
-#include <util/delay.h>
 
 // Mijn naam.
 #define NAAM "Maarten Paauw"
