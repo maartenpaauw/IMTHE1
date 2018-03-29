@@ -107,7 +107,7 @@ De [Arduino Nano Pinout](assets/data_sheets/nano.png) is uitgedeeld tijdens de e
 
 ![LED Pinout](assets/data_sheets/led.png)
 
-De [Led Pinout](assets/data_sheets/led.png) heb ik gevonden in de datasheet van de LED. Deze datasheet is terug te vinden via de volgende link:
+De [Led Pinout](assets/data_sheets/led.png) heb ik gevonden in de datasheet van de led. Deze datasheet is terug te vinden via de volgende link:
 
 [http://www1.futureelectronics.com/doc/EVERLIGHT%C2%A0/334-15__T1C1-4WYA.pdf][3]
 
@@ -115,8 +115,8 @@ De [Led Pinout](assets/data_sheets/led.png) heb ik gevonden in de datasheet van 
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
 * [https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink][2] (Native Blink)
-* [http://www1.futureelectronics.com/doc/EVERLIGHT%C2%A0/334-15__T1C1-4WYA.pdf][3] (Led)
+* [http://www1.futureelectronics.com/doc/EVERLIGHT%C2%A0/334-15__T1C1-4WYA.pdf][3] (Led Datasheet)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
 [2]: https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink "Native Blink"
-[3]: http://www1.futureelectronics.com/doc/EVERLIGHT%C2%A0/334-15__T1C1-4WYA.pdf "Led"
+[3]: http://www1.futureelectronics.com/doc/EVERLIGHT%C2%A0/334-15__T1C1-4WYA.pdf "Led Datasheet"

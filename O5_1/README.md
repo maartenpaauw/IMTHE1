@@ -9,7 +9,7 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 
 ## De unieke componenten
 
-In de IMTHE-Box zitten 2 unieke componenten. Één uniek input component en één uniek output component. De componenten die in mijn IMTHE-Box zitten zijn één DHT11, dit is een temperatuur en luchtvochtigheid sensor, en twee LED 8×8 Matrix.
+In de IMTHE-Box zitten 2 unieke componenten. Één uniek input component en één uniek output component. De componenten die in mijn IMTHE-Box zitten zijn één **DHT11**, dit is een temperatuur en luchtvochtigheid sensor, en twee **LED 8×8 Matrix**.
 
 ### DHT11
 
@@ -19,7 +19,7 @@ Het enigste nadeel van de DHT11 is dat de sensor maar 1 keer per 2 seconden de o
 
 #### Protocol (Single-Wire Two-Way)
 
-De protocol waarvan gebruik wordt gemaakt is interessant. Alle sensor data wordt verstuurd over 1 digitale pin. Om data te kunnen versturen (vanaf de sensor) moet er worden aangegeven om welke data het gaat zodat de ontvanger en de verzender weten waar er over gecommuniceerd wordt. Dit wordt gedaan door een zogenaamde *pull-up*. Als de data pin verbonden is met de VCC pin (door middel van een resistor) wordt er geen data verstuurd (uitgelezen).
+De protocol waarvan gebruik wordt gemaakt is interessant. Alle sensor data wordt verstuurd over 1 digitale pin. Om data te kunnen versturen (vanaf de sensor) moet er worden aangegeven om welke data het gaat zodat de ontvanger en de verzender weten waar er over gecommuniceerd wordt. Dit wordt gedaan door een zogenaamde *pull-up*. Als de data pin verbonden is met de *VCC* pin (door middel van een resistor) wordt er geen data verstuurd (uitgelezen).
 
 *Bij het programmeren van de Arduino moet er rekening gehouden worden dat er eerst 1 seconden gewacht moet worden voordat er contact gemaakt kan worden met de DHT11. De DHT11 heeft 1 seconden nodig voor het opstarten.*
 
@@ -47,7 +47,7 @@ Elke bit wordt via de volgende manier gecommuniceerd; eerst wordt de **pin** op 
 
 *Alle informatie heb ik gewonnen uit de datasheet van het component:*
 
-*[https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][2]*
+*[https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][1]*
 
 ### 8×8 Matrix
 
@@ -57,7 +57,7 @@ De 8×8 Matrix is een component waar 64 leds in zitten. Deze 64 leds zijn gerank
 
 *Alle informatie heb ik gewonnen uit de datasheet van het component:*
 
-*[https://cdn-shop.adafruit.com/datasheets/BL-M12A881.PDF][1]*
+*[https://cdn-shop.adafruit.com/datasheets/BL-M12A881.PDF][2]*
 
 ### Hardware
 
@@ -68,28 +68,28 @@ De compontenten die ik heb zijn hieronder opgenomen in de tabel.
 | DHT11(input) - 1×        |
 | 8×8 Matrix (output) - 2× |
 
-## Datasheet
+## Datasheets
 
-### DHT11 Pinout
+### DHT11
 
 ![DHT11 Pinout](assets/data_sheets/dht11.png)
 
-De [DHT11 Pinout][2] is te vinden in de datasheet. Deze datasheet heb ik via Google gevonden en is terug te vinden via de volgende link:
+De [DHT11 Pinout][1] is te vinden in de datasheet. Deze datasheet heb ik via Google gevonden en is terug te vinden via de volgende link:
 
-[https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][2]
+[https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][1]
 
-### 8×8 Matrix Pinout
+### 8×8 Matrix
 
 ![8×8 Matrix Pinout](assets/data_sheets/8x8_matrix.png)
 
-De [8×8 Matrix Pinout][1] is te vinden in de datasheet. Deze heb ik via Google gevonden en is terug te vinden via de volgende link:
+De [8×8 Matrix Pinout](assets/data_sheets/8x8_matrix.png) heb ik uit de datasheet van de 8×8 Matrix. De datasheet is terug te vinden via de volgende link:
 
-[https://cdn-shop.adafruit.com/datasheets/BL-M12A881.PDF][1]
+[https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF][2]
 
 ## Bronvermelding
 
-* [https://cdn-shop.adafruit.com/datasheets/BL-M12A881.PDF][1] (8×8 Matrix Datasheet)
-* [https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][2] (DHT11 Datasheet)
+* [https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][1] (DHT11 Datasheet)
+* [https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF][2] (8×8 Matrix Datasheet)
 
-[1]: https://cdn-shop.adafruit.com/datasheets/BL-M12A881.PDF "8×8 Matrix Datasheet"
-[2]: https://akizukidenshi.com/download/ds/aosong/DHT11.pdf "DHT11 Datasheet"
+[1]: https://akizukidenshi.com/download/ds/aosong/DHT11.pdf "DHT11 Datasheet"
+[2]: https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF "8×8 Matrix Datasheet"

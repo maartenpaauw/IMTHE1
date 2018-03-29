@@ -316,9 +316,9 @@ De [RGB Led Pinout](assets/data_sheets/rgb_led.png) heb ik gevonden in de datash
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
-* [http://eeenthusiast.com/wp-content/uploads/2015/03/rgb.jpg][2] (RGB led Pinout)
+* [https://www.wiltronics.com.au/wp-content/uploads/datasheets/Datasheet.pdf][2] (RGB Led Datasheet)
 * [https://gist.github.com/3XX0/5524477][3] (simple AVR USART)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]: http://eeenthusiast.com/wp-content/uploads/2015/03/rgb.jpg "RGB led (Common Cathode) Pinout"
-[3]: https://gist.github.com/3XX0/5524477 "simple AVR USART"
+[2]: https://www.wiltronics.com.au/wp-content/uploads/datasheets/Datasheet.pdf "RGB Led Datasheet"
+[3]: https://gist.github.com/3XX0/5524477 "Simple AVR USART"

@@ -21,7 +21,7 @@ In het datasheet stond aangegeven dat pin 13 en 14 op de *ground* of op de 5v5 p
 
 ### Het vormen van getallen
 
-Op de wikipedia van het [7 Segment Display][3] was een lijst opgenomen hoe je met welke segmenten welk getal kan vormen. Voor het gemak heb ik deze waardes (**on** of **off**) omgezet naar binair. Dit heb ik gedaan voor elk getal en dit in een array gestopt.
+Op de wikipedia van het [7 Segment Display][3] was een lijst opgenomen hoe je met welke segmenten welk getal kan vormen. Voor het gemak heb ik deze waardes (**on** of **off**) omgezet naar binair (**1** of **0**). Dit heb ik gedaan voor elk getal en dit in een array gestopt.
 
 ## Afbeelding
 
@@ -196,5 +196,5 @@ De [7 Segment Display Pinout](assets/data_sheets/D5621A_B.png) heb ik gevonden i
 * [https://en.wikipedia.org/wiki/Seven-segment_display][3] (7 Segment Display)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]:  http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&amp;amp;amp;amp;amp;type=P&amp;amp;amp;amp;amp;query=A%2Fd5621A%2FB "7 Segment Display (D5621A/B) Datasheet"
+[2]:  http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&amp;amp;amp;amp;amp;amp;type=P&amp;amp;amp;amp;amp;amp;query=A%2Fd5621A%2FB "7 Segment Display (D5621A/B) Datasheet"
 [3]: https://en.wikipedia.org/wiki/Seven-segment_display "7 Segment Display"

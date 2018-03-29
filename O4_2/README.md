@@ -156,9 +156,9 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 [https://github.com/maartenpaauw/IMTHE1/blob/master/O4_2/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/O4_2/src/main.c)
 
-## Datasheet
+## Datasheets
 
-### Arduino Nano Pinout
+### Arduino Nano
 
 ![Arduino Nano Pinout](assets/data_sheets/nano.png)
 
@@ -177,6 +177,7 @@ De [Led Pinout](assets/data_sheets/led.png) heb ik gevonden in de datasheet van 
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
+* [http://www1.futureelectronics.com/doc/EVERLIGHT%C2%A0/334-15__T1C1-4WYA.pdf][2] (Led Datasheet)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]: http://www1.futureelectronics.com/doc/EVERLIGHT%C2%A0/334-15__T1C1-4WYA.pdf "LED Datasheet"
+[2]: http://www1.futureelectronics.com/doc/EVERLIGHT%C2%A0/334-15__T1C1-4WYA.pdf "Led Datasheet"

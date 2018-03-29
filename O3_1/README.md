@@ -243,7 +243,7 @@ De [8×8 Matrix Pinout](assets/data_sheets/8x8_matrix.png) heb ik uit de datashe
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
-* [https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF][2] (8×8 Matrix Pinout)
+* [https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF][2] (8×8 Matrix Datasheet)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]: https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF "8×8 Matrix Pinout"
+[2]: https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF "8×8 Matrix Datasheet"

@@ -186,7 +186,7 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 ![Arduino Nano Pinout](assets/data_sheets/nano.png)
 
-De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
+De [Arduino Nano Pinout](assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
@@ -194,7 +194,7 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 
 ![RS 7243119 Pinout](assets/data_sheets/rs-7243119.png)
 
-De [RS 7243119 Pinout][2] heb ik gevonden in de datasheet van de RS 7243119. Deze datasheet heb ik gevonden in de specificaties bij een webshop en is terug te vinden via de volgende link:
+De [RS 7243119 Pinout](assets/data_sheets/rs-7243119.png) heb ik gevonden in de datasheet van de RS 7243119. Deze datasheet heb ik gevonden in de specificaties bij een webshop en is terug te vinden via de volgende link:
 
 [https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf][2]
 
@@ -202,7 +202,7 @@ De [RS 7243119 Pinout][2] heb ik gevonden in de datasheet van de RS 7243119. Dez
 
 ![RS Potentiometer Pinout](assets/data_sheets/potentiometer.png)
 
-De [Potentiometer Pinout][4] heb ik gevonden in de datasheet van de Potentiometer. Deze datasheet is terug te vinden via de volgende link:
+De [Potentiometer Pinout](assets/data_sheets/potentiometer.png) heb ik gevonden in de datasheet van de Potentiometer. Deze datasheet is terug te vinden via de volgende link:
 
 [https://components101.com/sites/default/files/component_datasheet/potentiometer%20datasheet.pdf][4]
 
