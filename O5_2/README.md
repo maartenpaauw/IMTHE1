@@ -197,6 +197,8 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 
 De [HD44780 Pinout][3] heb ik gevonden via een blogpost die terug te vinden is via de volgende link:
 
+[http://www.learningaboutelectronics.com/Articles/Arduino-HD44780-circuit.php][3]
+
 ### Potentiometer Pinout
 
 ![RS Potentiometer Pinout](assets/data_sheets/potentiometer.png)
@@ -204,8 +206,6 @@ De [HD44780 Pinout][3] heb ik gevonden via een blogpost die terug te vinden is v
 De [Potentiometer Pinout][4] heb ik gevonden op Google en is terug te vinden via de volgende link:
 
 [https://cdn-learn.adafruit.com/assets/assets/000/027/586/original/light_control-pot.png][4]
-
-http://www.learningaboutelectronics.com/Articles/Arduino-HD44780-circuit.php
 
 ## Bronvermelding
 
