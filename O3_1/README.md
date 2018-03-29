@@ -70,9 +70,14 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 /*
  * Opdracht 3.1 - ADC Baby!
  * 
+ * Eigenaar:
  * Maarten Paauw <s1094220@student.hsleiden.nl>
  * s1094220
  * INF3C
+ * 
+ * Versie: 1
+ * Aangemaakt: 15 februari 2018
+ * Gewijzigd: 27 maart 2018
  */
 
 #include <avr/io.h>

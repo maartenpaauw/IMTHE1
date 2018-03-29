@@ -53,9 +53,14 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 /*
  * Opdracht 4.3 - Led There Be Light
  * 
+ * Eigenaar:
  * Maarten Paauw <s1094220@student.hsleiden.nl>
  * s1094220
  * INF3C
+ * 
+ * Versie: 1
+ * Aangemaakt: 12 maart 2018
+ * Gewijzigd: 27 maart 2018
  */
 
 // Baud rate.

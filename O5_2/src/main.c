@@ -1,10 +1,16 @@
 /*
  * Opdracht Opdracht 5.2 - ET Phone Home
  * 
+ * Eigenaar:
  * Maarten Paauw <s1094220@student.hsleiden.nl>
  * s1094220
  * INF3C
+ * 
+ * Versie: 1
+ * Aangemaakt: 12 maart 2018
+ * Gewijzigd: 29 maart 2018
  */
+
 #include "hd44780.h"
 
 // Mijn naam.

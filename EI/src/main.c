@@ -1,7 +1,14 @@
 /*
- * ATmega16_DHT11_Project_File.c
- *
- * http://www.electronicwings.com
+ * Eindopdracht - Show Your Moves
+ * 
+ * Eigenaar:
+ * Maarten Paauw <s1094220@student.hsleiden.nl>
+ * s1094220
+ * INF3C
+ * 
+ * Versie: 1
+ * Aangemaakt: 22 maart 2018
+ * Gewijzigd: 29 maart 2018
  */
 
 #include <avr/io.h>
@@ -11,13 +18,15 @@
 
 #include <USART.h>
 
+// De pin waar de DHT11 data over verstuurd wordt.
 #define DHT11_PIN PD6
+#define DHT11_BANK DDRD
 
 uint8_t c = 0, I_RH, D_RH, I_Temp, D_Temp, CheckSum;
 
 void Request()
 {
-    DDRD |= (1 << DHT11_PIN);
+    DHT11_BANK |= (1 << DHT11_PIN);
     PORTD &= ~(1 << DHT11_PIN);
     _delay_ms(20);
     PORTD |= (1 << DHT11_PIN);
