@@ -12,7 +12,11 @@ De eindopdracht wordt ook in het verslag opgenomen met alle eisen eraan die al g
 
 ## Aanpak en Uitvoering
 
-TODO
+In opdracht 5.1 heb ik al eerder beschreven hoe de 8×8 Matrix werkt en in opdracht 3.1 heb ik de 8×8 Matrix al eerder toegepast. Ook heb ik al eerder in opdracht 5.1 beschreven hoe de DHT11 sensor werkt. Het aansluiten en programmeren van de DHT11 sensor ligt na het uitzoeken en uitleggen voor de hand. Dit ga ik niet behandelen in dit hoofdstuk. Dit kan de hoofdstukken teruggevonden worden van de eerder genoemde opdrachten.
+
+### Het concept
+
+TODO.
 
 ## Afbeelding
 
