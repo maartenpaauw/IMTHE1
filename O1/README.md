@@ -6,7 +6,7 @@ Maak een "Blink led" programma, waar twee leds om en om aan en uit gaan. Het kni
 
 ## Aanpak en Uitvoering
 
-Omdat ik altijd de editor Visual Studio Code gebruik wilde ik daar ook mijn opdrachten in gaan maken. Om er voor te zorgen dat dit mogelijk is moet er gebruik worden gemaakt van Platform IO. Platform IO heeft, net zoals in Arduino IDE, voorbeeld *sketches*. Een van de *sketches* is ["Native Blink"][2] (geschreven in C). Deze heb ik geopend, gebuild en geüpload naar mijn Arduino om Platform IO te testen. Deze code zorgt ervoor dat de *onboard* led aan en uit gaat. Deze code heb ik uitgebreid voor het voltooien van deze opdracht.
+Omdat ik altijd de editor Visual Studio Code gebruik wilde ik daar ook mijn opdrachten in gaan maken. Om er voor te zorgen dat dit mogelijk is moet er gebruik worden gemaakt van Platform IO. Dit wordt gedaan door middel van Platform IO zelf te installeren en de plugin binnen Visual Studio Code te downloaden en te activeren. Platform IO heeft, net zoals in Arduino IDE, voorbeeld *sketches*. Een van de *sketches* is ["Native Blink"][2] (geschreven in C). Deze heb ik geopend, *gebuild* en geüpload naar mijn Arduino om Platform IO te testen. Deze code zorgt ervoor dat de *onboard* led aan en uit gaat. Dit is lukte. Om deze opdracht te voltooien heb ik de code omgeschreven om er voor te zorgen dat 2 leds om de beurt aan en uit gaan. Hoe de led aangesloten moest worden heb ik gevonden in de datasheet. Een afbeelding en een link naar de datasheet is opgenomen in het hoofdstuk **Datasheets**.
 
 ## Afbeelding
 
@@ -93,30 +93,30 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 [https://github.com/maartenpaauw/IMTHE1/blob/master/O1/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/O1/src/main.c)
 
-## Datasheet
+## Datasheets
 
-### Arduino Nano Pinout
+### Arduino Nano
 
 ![Arduino Nano Pinout](assets/data_sheets/nano.png)
 
-De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
+De [Arduino Nano Pinout](assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
-### LED Pinout
+### Led
 
 ![LED Pinout](assets/data_sheets/led.png)
 
-De [LED Pinout][3] heb ik gevonden via Google en is terug te vinden via de volgende link:
+De [Led Pinout](assets/data_sheets/led.png) heb ik gevonden in de datasheet van de LED. Deze datasheet is terug te vinden via de volgende link:
 
-[https://components101.com/sites/default/files/component_pin/IR-LED-pinout-and-symbol_0.png][3]
+[http://www1.futureelectronics.com/doc/EVERLIGHT%C2%A0/334-15__T1C1-4WYA.pdf][3]
 
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
 * [https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink][2] (Native Blink)
-* [https://components101.com/sites/default/files/component_pin/IR-LED-pinout-and-symbol_0.png][3] (LED Pinout)
+* [http://www1.futureelectronics.com/doc/EVERLIGHT%C2%A0/334-15__T1C1-4WYA.pdf][3] (Led)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
 [2]: https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink "Native Blink"
-[3]: https://components101.com/sites/default/files/component_pin/IR-LED-pinout-and-symbol_0.png "LED Pinout"
+[3]: http://www1.futureelectronics.com/doc/EVERLIGHT%C2%A0/334-15__T1C1-4WYA.pdf "Led"

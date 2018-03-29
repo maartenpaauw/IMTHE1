@@ -11,13 +11,17 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 
 ## Aanpak en Uitvoering
 
-Tijdens de les van week 3 zijn wij bezig geweest met de push button en 1 led. Als de knop ingedrukt werd ging de led aan en als de knop weer werd losgelaten ging de led uit. Deze code heb ik verder uitgebreid om deze opdracht te halen. 
+Tijdens de les van week 3 zijn wij bezig geweest met de *push button* en één led. Als de knop ingedrukt werd ging de led aan en als de knop weer werd losgelaten ging de led uit. Deze code heb ik verder uitgebreid om deze opdracht te halen. 
 
-In plaats van dat ik gebruik maak van 9 led's heb ik ervoor gekozen om het 8×8 matrix te gebruiken. Een oog van de dobbelsteen is 2×2 op het matrix. Zo hou je tussen de ogen één enkele led over. Om ervoor te zorgen dat er maar één oog aangaat staat elke oog, ook al zijn er meerdere nodig, 1 miliseconden aan. Dit is niet te zien met het blote oog.
-
-In het hoofdstuk datasheet is er een datasheet opgenomen waarbij ik aangegeven heb welke LED's ik nodig heb en welke niet. Hieronder een tabel met welke pinnen ik nodig heb.
+In plaats van dat ik gebruik maak van 9 losse led's heb ik ervoor gekozen om het 8×8 matrix te gebruiken. Een oog van de dobbelsteen is 2×2 op het matrix. Zo hou je tussen de ogen één enkele led over. Om ervoor te zorgen dat er maar één oog aangaat staat elke oog, ook al zijn er meerdere nodig, 1 miliseconden aan. Dit is niet te zien met het blote oog.
 
 ### 8×8 Matrix Pinnen
+
+Voor het gemak heb ik voor mijzelf de pinnen gefilterd en met kleur aangegeven welke ik nodig heb (groen) en welke niet (rood). De afbeelding komt uit de datasheet. Deze datasheet is opgenomen in het hoofdstuk **datasheets**.
+
+![8×8 Matrix Pinout - Gefilterd](assets/data_sheets/8x8_matrix_filtered.png)
+
+Ook voor het gemak heb ik alle nodige pinnen, voor de rijen en kolommen, in een tabel gezet.
 
 | Rijen | Kolommen |
 | ----- | -------- |
@@ -28,7 +32,7 @@ In het hoofdstuk datasheet is er een datasheet opgenomen waarbij ik aangegeven h
 | 2     | 15       |
 | 5     | 16       |
 
-*De pinnen zijn gesorteerd van links naar rechts op het component.*
+***LET OP:*** *De pinnen zijn gesorteerd van links naar rechts op het component.*
 
 ## Afbeelding
 
@@ -49,6 +53,8 @@ Deze video is ook te vinden op **Youtube**:
 ## Breadboard Schema
 
 [![Opdracht 3.1 - ADC Baby! - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_1/assets/fritzing/schema.png)
+
+***LET OP:*** *In het programma **Fritzing** was er geen kleine 8×8 Matrix te vinden. Ik heb daarom heb ik een grote gepakt en deze aangesloten op een appart breadboard zodat de pinnen van het component te verbinden zijn met de Arduino.*
 
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
@@ -216,32 +222,28 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 [https://github.com/maartenpaauw/IMTHE1/blob/master/O3_1/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/O3_1/src/main.c)
 
-## Datasheet
+## Datasheets
 
-### Arduino Nano Pinout
+### Arduino Nano
 
 ![Arduino Nano Pinout](assets/data_sheets/nano.png)
 
-De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
+De [Arduino Nano Pinout](assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
-### 8×8 Matrix Pinout
+### 8×8 Matrix
 
 ![8×8 Matrix Pinout](assets/data_sheets/8x8_matrix.png)
 
-De [8×8 Matrix Pinout][2] is terug te vinden via de volgende link:
+De [8×8 Matrix Pinout](assets/data_sheets/8x8_matrix.png) heb ik uit de datasheet van de 8×8 Matrix. De datasheet is terug te vinden via de volgende link:
 
-[https://www.arduino.cc/en/Tutorial/RowColumnScanning][2]
-
-![8×8 Matrix Pinout - Gefilterd](assets/data_sheets/8x8_matrix_filtered.png)
-
-Voor het gemak heb ik voor mijzelf de pinnen gefilterd en met kleur aangegeven welke ik nodig heb (groen) en welke niet (rood).
+[https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF][2]
 
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
-* [https://www.arduino.cc/en/Tutorial/RowColumnScanning][2] (8×8 Matrix Pinout)
+* [https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF][2] (8×8 Matrix Pinout)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]: https://www.arduino.cc/en/Tutorial/RowColumnScanning "8×8 Matrix Pinout"
+[2]: https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF "8×8 Matrix Pinout"

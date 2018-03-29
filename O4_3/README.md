@@ -10,9 +10,11 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 
 ## Aanpak en Uitvoering
 
-Deze opdracht is een combinatie van opdracht [4.1](../O4_1) en [4.2](../O4_2). De componenten zijn precies hetzelfde aangesloten als in opdracht [4.1](../O4_1). Een van de voorwaarde van de opdracht was dat de seriele communicatie code via interrupt moest werken. Om er voor te zorgen dat deze interrupt ook werkt op input van een enkele character moest de initUSART functie iets aangepast worden. `(1 << RXCIE0)` zorgt er voor dat dit werkt.
+Deze opdracht is een combinatie van opdracht [4.1](../O4_1) en [4.2](../O4_2). De componenten zijn precies hetzelfde aangesloten als in opdracht [4.1](../O4_1). Een van de voorwaarde van de opdracht was dat de seriele communicatie code via interrupt moest werken. Om er voor te zorgen dat deze interrupt ook werkt op input van een enkele karakter moest de initUSART functie iets aangepast worden. `(1 << RXCIE0)` zorgt er voor dat dit werkt. Dit stukje code had ik gevonden in een snippet op GitHub Gist:
 
-Er zijn nu 2 ISR functies. De eerste wordt uitgevoerd als er seriele communicatie ontvangen wordt. Als dit zo is wordt de kleur aangepast (via een variabele). Ook wordt er feedback gegeven aan de gebruiker of de kleur is aangepast. De tweede functie zorgt ervoor dat de juiste kleur van de RGB LED gaat pulseren.
+[https://gist.github.com/3XX0/5524477][3]
+
+Er zijn nu 2 ISR functies. De eerste wordt uitgevoerd als er seriele communicatie ontvangen wordt. Als dit zo is wordt de kleur aangepast (via een variabele). Ook wordt er feedback gegeven aan de gebruiker of de kleur is aangepast. De tweede functie zorgt ervoor dat de juiste kleur van de RGB led gaat pulseren.
 
 ## Afbeelding
 
@@ -293,26 +295,30 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 [https://github.com/maartenpaauw/IMTHE1/blob/master/O4_3/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/O4_3/src/main.c)
 
 
-### Arduino Nano Pinout
+## Datasheets
+
+### Arduino Nano
 
 ![Arduino Nano Pinout](assets/data_sheets/nano.png)
 
-De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
+De [Arduino Nano Pinout](assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
-### RGB LED Pinout
+### RGB Led
 
-![RGB LED Pinout](assets/data_sheets/rgb_led.jpg)
+![RGB led Pinout](assets/data_sheets/rgb_led.png)
 
-De [RGB LED Pinout][2] heb ik gevonden op het internet door te Googelen op afbeeldingen en kan terug gevonden worden via de volgende link:
+De [RGB Led Pinout](assets/data_sheets/rgb_led.png) heb ik gevonden in de datasheet van een common cathode led. De datasheet is terug te vinden via de volgende link:
 
-[https://i1.wp.com/wiki.jmoon.co/wp-content/uploads/2015/07/rgb-2.jpg][2]
+[https://www.wiltronics.com.au/wp-content/uploads/datasheets/Datasheet.pdf][2]
 
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
-* [http://eeenthusiast.com/wp-content/uploads/2015/03/rgb.jpg][2] (RGB LED Pinout)
+* [http://eeenthusiast.com/wp-content/uploads/2015/03/rgb.jpg][2] (RGB led Pinout)
+* [https://gist.github.com/3XX0/5524477][3] (simple AVR USART)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]: http://eeenthusiast.com/wp-content/uploads/2015/03/rgb.jpg "RGB LED (Common Cathode) Pinout"
+[2]: http://eeenthusiast.com/wp-content/uploads/2015/03/rgb.jpg "RGB led (Common Cathode) Pinout"
+[3]: https://gist.github.com/3XX0/5524477 "simple AVR USART"

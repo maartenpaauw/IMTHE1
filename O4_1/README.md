@@ -10,19 +10,19 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 
 ## Aanpak en Uitvoering
 
-Tijdens de les heb ik geleerd hoe je timers maakt een een PWM waarde kan sturen naar een bepaalde pin. Met deze code werd er een LED steeds gedimd. Deze code kon ik mooi gebruiken voor deze opdracht. 
+Tijdens de les heb ik geleerd hoe je timers maakt een PWM waarde kan sturen naar een bepaalde pin. Met deze code werd er een led steeds gedimd. Deze code kon ik mooi gebruiken voor deze opdracht. 
 
 ### Common Cathode of Common Anode
 
-Eerst moest er uitgezocht worden wat voor soort RGB LED het is. Het kan namelijk een Common Cathode of een Common Anode LED zijn. Ik sloot pin 2 aan op 5v op de Arduino en pin 1 via een weerstand op de ground van de Arduino. De LED ging meteen rood branden. Hierdoor wist ik dat het een Common Anode LED is. De pinout is te vinden in het hoofdstuk over de datasheets.
+Eerst moest er uitgezocht worden wat voor soort RGB led het is. Het kan namelijk een **Common Cathode** of een **Common Anode** led zijn. Ik sloot pin 2 aan op 5v5 op de Arduino en pin 1 via een weerstand op de *ground* van de Arduino. De led ging meteen rood branden. Hierdoor wist ik dat het een **Common Anode** led is. De pinout is te vinden in het hoofdstuk over de datasheets.
 
 ### Code uit boek
 
-In de les hadden we de PWM OC2A gebruikt om de LED te laten dimmen. Om een RGB LED van kleur te laten veranderen zijn er 3 PWM pinnen nodig om de rode, groene en blauwe waardes aan te passen. Ik wist niet precies de instellingen die nodig waren om dit te regelen voor PWM OC1A en OC1B. Gelukkig was er een hoofdstuk in het boek hieraan besteed. De code uit het boek heb ik gebruikt om rood en groen van de RGB LED aan te passen.
+In de les hadden we de PWM OC2A gebruikt om de led te laten dimmen. Om een RGB led van kleur te laten veranderen zijn er 3 PWM pinnen nodig om de rode, groene en blauwe waardes aan te passen. Ik wist niet precies de instellingen die nodig waren om dit te regelen voor PWM OC1A en OC1B. Gelukkig was er een hoofdstuk in het boek hieraan besteed. De code uit het boek heb ik gebruikt om groen en blauw van de RGB led aan te passen.
 
-### Kleuren
+### Kleuren patroon
 
-Het patroon dat ik gemaakt heb is het volgende. De LED begint vol rood (255, 0, 0). Daarna gaat rood aftellen van 255 naar 0. Tegelijkertijd telt groen op naar 255. Dit zorgt ervoor dat de LED overvloeid van rood naar groen. Als uiteindelijk groen op 255 is gaat groen weer aftellen naar 0. Als groen begint met aftellen begint de waarde van blauw op te tellen van 0 naar 255. Dit zorgt ervoor dat de LED overvloeid van groen naar blauw. Als blauw eenmaal op 255 staat gaat deze waarde weer aftellen naar 0. Tergelijkertijd begint rood op te tellen van 0 naar 255. Dit zorgt ervoor dat de LED overvloeid van blauw naar rood. Als dit gebeurd is zijn we weer aangekomen bij het begin. Deze code staat in de Interrupt Service Routine.
+Het patroon dat ik gemaakt heb is het volgende. De led begint vol rood (255). Daarna gaat rood aftellen van 255 naar 0. Tegelijkertijd telt groen op naar 255. Dit zorgt ervoor dat de led overvloeid van rood naar groen. Als uiteindelijk groen op 255 is gaat groen weer aftellen naar 0. Als groen begint met aftellen begint de waarde van blauw op te tellen van 0 naar 255. Dit zorgt ervoor dat de led overvloeid van groen naar blauw. Als blauw eenmaal op 255 staat gaat deze waarde weer aftellen naar 0. Tergelijkertijd begint rood op te tellen van 0 naar 255. Dit zorgt ervoor dat de led overvloeid van blauw naar rood. Als dit gebeurd is zijn we weer aangekomen bij het begin. Deze code staat in de Interrupt Service Routine.
 
 ## Afbeelding
 
@@ -185,28 +185,28 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 [https://github.com/maartenpaauw/IMTHE1/blob/master/O4_1/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/O4_1/src/main.c)
 
-## Datasheet
+## Datasheets
 
-### Arduino Nano Pinout
+### Arduino Nano
 
 ![Arduino Nano Pinout](assets/data_sheets/nano.png)
 
-De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
+De [Arduino Nano Pinout](assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
-### RGB LED Pinout
+### RGB Led
 
-![RGB LED Pinout](assets/data_sheets/rgb_led.jpg)
+![RGB led Pinout](assets/data_sheets/rgb_led.png)
 
-De [RGB LED Pinout][2] heb ik gevonden op het internet door te Googelen op afbeeldingen en kan terug gevonden worden via de volgende link:
+De [RGB Led Pinout](assets/data_sheets/rgb_led.png) heb ik gevonden in de datasheet van een common cathode led. De datasheet is terug te vinden via de volgende link:
 
-[https://i1.wp.com/wiki.jmoon.co/wp-content/uploads/2015/07/rgb-2.jpg][2]
+[https://www.wiltronics.com.au/wp-content/uploads/datasheets/Datasheet.pdf][2]
 
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
-* [http://eeenthusiast.com/wp-content/uploads/2015/03/rgb.jpg][2] (RGB LED Pinout)
+* [https://www.wiltronics.com.au/wp-content/uploads/datasheets/Datasheet.pdf][2] (RGB led Datasheet)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]: http://eeenthusiast.com/wp-content/uploads/2015/03/rgb.jpg "RGB LED (Common Cathode) Pinout"
+[2]: https://www.wiltronics.com.au/wp-content/uploads/datasheets/Datasheet.pdf "RGB led (Common Cathode) Datasheet"

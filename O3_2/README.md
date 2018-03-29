@@ -11,7 +11,7 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 
 ## Aanpak en Uitvoering
 
-Tijdens de les van week 3 zijn we aan de slag geweest met de potentiometer. We hebben een led van langzaam naar snel laten knipperen. Ik heb de led vervangen door de speaker en de code iets aangepast:
+Tijdens de les van week 3 zijn we aan de slag geweest met de potentiometer. We hebben een led van langzaam naar snel laten knipperen. Ik heb de led vervangen door de speaker en de code iets aangepast en extra functies toegevoegd:
 
 - Ik heb een functie gemaakt die een waarde van 1 tot en met 1024 in de juiste verhouding teruggeeft tussen de 100 en 10.000. Dit zijn het aantal microseconden dat de speaker moet wachten voordat het weer stroom krijgt. Deze functie wordt ook wel map genoemd. Een groot deel van de code heb ik gevonden op [Stack Overflow][3].
 - Ook moest ik bereken hoe lang de speaker moest wachten om weer stroom te krijgen. Dit is te zien in onderstaande tabel.
@@ -20,6 +20,8 @@ Tijdens de les van week 3 zijn we aan de slag geweest met de potentiometer. We h
 | ---------- | ------------------ | ------------------ |
 | 100        | 10                 | 10.000             |
 | 10.000     | 0.1                | 100                |
+
+*Door het aanmaken van deze tabel kwam ik erachter dat de waardes geflipt werden bij het omrekenen. Door deze ontdekking heb ik de map functie laten mappen van de waarde 10.000 tot 100 in plaats van 100 tot 10.000. Hierdoor was er geen verdere berekening nodig.*
 
 ## Afbeelding
 
@@ -178,9 +180,9 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 [https://github.com/maartenpaauw/IMTHE1/blob/master/O3_2/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/O3_2/src/main.c)
 
-## Datasheet
+## Datasheets
 
-### Arduino Nano Pinout
+### Arduino Nano
 
 ![Arduino Nano Pinout](assets/data_sheets/nano.png)
 
@@ -188,30 +190,30 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
-### RS 7243119 Pinout
+### RS 7243119
 
 ![RS 7243119 Pinout](assets/data_sheets/rs-7243119.png)
 
-De [RS 7243119 Pinout][2] heb ik gevonden in de specificaties bij een webshop en is terug te vinden via de volgende link:
+De [RS 7243119 Pinout][2] heb ik gevonden in de datasheet van de RS 7243119. Deze datasheet heb ik gevonden in de specificaties bij een webshop en is terug te vinden via de volgende link:
 
 [https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf][2]
 
-### Potentiometer Pinout
+### Potentiometer
 
 ![RS Potentiometer Pinout](assets/data_sheets/potentiometer.png)
 
-De [Potentiometer Pinout][4] heb ik gevonden op Google en is terug te vinden via de volgende link:
+De [Potentiometer Pinout][4] heb ik gevonden in de datasheet van de Potentiometer. Deze datasheet is terug te vinden via de volgende link:
 
-[https://cdn-learn.adafruit.com/assets/assets/000/027/586/original/light_control-pot.png][4]
+[https://components101.com/sites/default/files/component_datasheet/potentiometer%20datasheet.pdf][4]
 
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
-* [https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf][2] (RS 7243119 Pinout)
+* [https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf][2] (RS 7243119 Datasheet)
 * [https://stackoverflow.com/questions/5731863/mapping-a-numeric-range-onto-another][3] (Mapping a Numeric Range Onto Another)
-* [https://cdn-learn.adafruit.com/assets/assets/000/027/586/original/light_control-pot.png][4] (Potentiometer Pinout)
+* [https://cdn-learn.adafruit.com/assets/assets/000/027/586/original/light_control-pot.png][4] (Potentiometer Datasheet)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]: https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf "RS 7243119"
+[2]: https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf "RS 7243119 Datasheet"
 [3]: https://stackoverflow.com/questions/5731863/mapping-a-numeric-range-onto-another "Mapping a Numeric Range Onto Another"
-[4]: https://cdn-learn.adafruit.com/assets/assets/000/027/586/original/light_control-pot.png "Potentiometer Pinout"
+[4]: https://components101.com/sites/default/files/component_datasheet/potentiometer%20datasheet.pdf "Potentiometer Datasheet"

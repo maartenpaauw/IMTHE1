@@ -11,15 +11,17 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 
 ### Vinden van een datasheet
 
-Op het internet had ik een [brochure][2] gevonden van het bedrijf Greegoo. In deze brochure stonden meerdere componenten met het daarbij behorende datasheet. Één pagina ging over het 7 segment display (D5621A/B). Deze is te vinden in het hoofdstuk **Datasheet**. Elke 7 segment heeft 9 pinnen. 7 daarvan voor elke *streepje*, 1 voor de *punt* en 1 voor de ground of de voltage. Deze aantal pinnen zijn dus 2 keer aanwezig omdat het een dubbel 7 segment display is. Als het scherm gevoed wordt via de 5v5 pin op de Arduino heet dat **common anode** en als het scherm gevoed wordt via een data pin op de Arduino heet dat **common cathode**. Wat voor mijn 7 segment display geldt is niet aangegeven op het component zelf. Dit moet achterhaald worden. Meer hierover in het volgende hoofdstuk.
+Op het internet had ik een [brochure][2] gevonden van het bedrijf Greegoo. In deze brochure stonden meerdere componenten met het daarbij behorende datasheet. Één pagina ging over het 7 segment display (D5621A/B). Deze is te vinden in het hoofdstuk **Datasheets**. Elke 7 segment heeft 9 pinnen. 7 daarvan voor elke *streepje*, 1 voor de punt en 1 voor de *ground* of de voltage. Deze aantal pinnen zijn 2 keer aanwezig omdat het een dubbel 7 segment display is.
+
+Als het scherm gevoed wordt via de 5v5 pin op de Arduino heet dat **common anode** en als het scherm gevoed wordt via een data pin op de Arduino heet dat **common cathode**. Hoe mijn 7 Segment Display aangesloten moet worden is niet aangegeven op het component zelf. Dit moet achterhaald worden. Meer hierover in het volgende hoofdstuk.
 
 ### Common anode of cathode
 
-In het datasheet stond aangegeven dat pin 13 en 14 op de ground of op de 5v5 pin moeten. Om uit te zoeken of het een common anode of een cathode is heb ik eerst pin 13 en 14 op een ground pin aangesloten. Daarna had ik met de 5v5 pin, met een resistor ertussen, aan gesloten op een van de segmenten pinnen. Geen een van de segmenten ging aan. Hierdoor wist ik dat het geen common cathode is maar een common anode 7 segment display. Dus heb ik pin 13 en 14 aangesloten, met een resistor ertussen, op de 5v5 pin op de Arduino. De pinnen van elke segment heb ik aangesloten op de B en D bank. 
+In het datasheet stond aangegeven dat pin 13 en 14 op de *ground* of op de 5v5 pin moeten. Om uit te zoeken of het een common anode of een cathode is heb ik eerst pin 13 en 14 op een *ground* pin aangesloten. Daarna had ik met de 5v5 pin, met een resistor ertussen, aan gesloten op een van de segment pinnen. Geen een van de segmenten ging aan. Hierdoor wist ik dat het geen common cathode is maar een common anode 7 segment display. Dus heb ik pin 13 en 14 aangesloten, met een resistor ertussen, op de 5v5 pin op de Arduino. De pinnen van elke segment heb ik aangesloten op de pinnen van de B en D bank. 
 
 ### Het vormen van getallen
 
-Op de wikipedia van het [7 Segment Display][3] was er een lijst opgenomen hoe je met welke segmenten welk getal kan maken. Voor het gemak heb ik deze waardes (**on** of **off**) omgezet naar binair. Dit heb ik gedaan voor elk getal en dit in een array gestopt.
+Op de wikipedia van het [7 Segment Display][3] was een lijst opgenomen hoe je met welke segmenten welk getal kan vormen. Voor het gemak heb ik deze waardes (**on** of **off**) omgezet naar binair. Dit heb ik gedaan voor elk getal en dit in een array gestopt.
 
 ## Afbeelding
 
@@ -41,7 +43,7 @@ Deze video is ook te vinden op **Youtube**:
 
 [![Opdracht 2.1 - Count Me In - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_1/assets/fritzing/schema.png)
 
-*Fritzing heeft geen dubbel 7 segment display. Daarom gebruik ik in het schema 2 enkele. Omdat ik 2 enkele gebruik zijn er wel meer pinnen in het schema. Van het rechter 7 segment display tel ik de rechter- boven en onder pin niet mee.*
+***LET OP:*** *Fritzing heeft geen dubbel 7 segment display. Daarom gebruik ik in het schema 2 enkele. Omdat ik 2 enkele gebruik zijn er wel meer pinnen in het schema. Van het rechter 7 segment display tel ik de rechter- boven en onder pin niet mee.*
 
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
@@ -169,21 +171,21 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 [https://github.com/maartenpaauw/IMTHE1/blob/master/O2_1/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/O2_1/src/main.c)
 
-## Datasheet
+## Datasheets
 
-### Arduino Nano Pinout
+### Arduino Nano
 
 ![Arduino Nano Pinout](assets/data_sheets/nano.png)
 
-De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
+De [Arduino Nano Pinout](assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
-### 7 Segment Display Pinout
+### 7 Segment Display
 
 ![D5621A_B](assets/data_sheets/D5621A_B.png)
 
-De 7 Segment Display pinout heb ik gevonden op het internet via de volgende link:
+De [7 Segment Display Pinout](assets/data_sheets/D5621A_B.png) heb ik gevonden in de datasheet van het 7 Segment Display. De datasheet is terug te vinden via de volgende link:
 
 [http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&type=P&query=A%2Fd5621A%2FB][2]
 
@@ -194,5 +196,5 @@ De 7 Segment Display pinout heb ik gevonden op het internet via de volgende link
 * [https://en.wikipedia.org/wiki/Seven-segment_display][3] (7 Segment Display)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]:  http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&amp;amp;amp;type=P&amp;amp;amp;query=A%2Fd5621A%2FB "7 Segment Display (D5621A/B) Datasheet"
+[2]:  http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&amp;amp;amp;amp;amp;type=P&amp;amp;amp;amp;amp;query=A%2Fd5621A%2FB "7 Segment Display (D5621A/B) Datasheet"
 [3]: https://en.wikipedia.org/wiki/Seven-segment_display "7 Segment Display"

@@ -10,7 +10,7 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 
 ## Aanpak en Uitvoering
 
-Tijdens de les ben ik op weg geholpen met seriële communicatie. De code die tijdens de les gemaakt is heb ik verder uitgewerkt voor deze opdracht. De code die gemaakt is controleert of er een 'a' of 'u' ontvangen wordt via de seriële communicatie. Als er een 'a' ontvangen wordt gaat de LED aan en als er een 'u' ontvangen wordt gaat de LED uit. Ook wordt er feedback gegeven via de seriële communicatie of het gelukt is of niet.
+Tijdens de les ben ik op weg geholpen met seriële communicatie. Dit was code die de seriele verbinding uit leest en het karakter terug geeft wat verstuurd werd. Deze code die tijdens de les gemaakt is heb ik verder uitgewerkt voor deze opdracht. De code die gemaakt is controleert of er een 'a' of 'u' ontvangen wordt via de seriële communicatie. Als er een 'a' ontvangen wordt gaat de led aan en als er een 'u' ontvangen wordt gaat de led uit. Ook wordt er feedback gegeven via de seriële communicatie of het gelukt is of niet.
 
 ## Afbeelding
 
@@ -166,17 +166,17 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
-### LED Pinout
+### Led
 
 ![LED Pinout](assets/data_sheets/led.png)
 
-De [LED Pinout][2] heb ik gevonden via Google en is terug te vinden via de volgende link:
+De [Led Pinout](assets/data_sheets/led.png) heb ik gevonden in de datasheet van de led. Deze datasheet is terug te vinden via de volgende link:
 
-[https://components101.com/sites/default/files/component_pin/IR-LED-pinout-and-symbol_0.png][2]
+[http://www1.futureelectronics.com/doc/EVERLIGHT%C2%A0/334-15__T1C1-4WYA.pdf][2]
 
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]: https://components101.com/sites/default/files/component_pin/IR-LED-pinout-and-symbol_0.png "LED Pinout"
+[2]: http://www1.futureelectronics.com/doc/EVERLIGHT%C2%A0/334-15__T1C1-4WYA.pdf "LED Datasheet"
