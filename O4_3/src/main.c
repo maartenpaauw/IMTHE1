@@ -27,7 +27,7 @@
 // Count.
 int count = 0;
 
-// Valiabele voor de kleur code (standaard rood).
+// Variabele voor de kleur code (standaard rood).
 char color = 'r';
 
 // Uit het bestand USART.
@@ -184,7 +184,7 @@ ISR (USART_RX_vect)
     // Als het groen is.
     case 'g':
 
-        // Zet de kleur en laat de gebruiker weten dat de kleur rood wordt.
+        // Zet de kleur en laat de gebruiker weten dat de kleur groen wordt.
         setColorAndMessage('g', "De kleur wordt groen.\n");
 
         // Break de case.
@@ -193,7 +193,7 @@ ISR (USART_RX_vect)
     // Als het blauw is.
     case 'b':
 
-        // Zet de kleur en laat de gebruiker weten dat de kleur rood wordt.
+        // Zet de kleur en laat de gebruiker weten dat de kleur blauw wordt.
         setColorAndMessage('b', "De kleur wordt blauw.\n");
 
         // Break de case.

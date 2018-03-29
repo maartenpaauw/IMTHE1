@@ -79,7 +79,7 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 // Count.
 int count = 0;
 
-// Valiabele voor de kleur code (standaard rood).
+// Variabele voor de kleur code (standaard rood).
 char color = 'r';
 
 // Uit het bestand USART.
@@ -124,6 +124,7 @@ void printString(const char myString[])
     }
 }
 
+// Overflow timer.
 void initTimerOverflow()
 {
     // Timer mask.
@@ -133,7 +134,8 @@ void initTimerOverflow()
     TCCR0B |= (1 << CS02) | (1 << CS00);
 }
 
-void intPWMTimerLED()
+// LED timers.
+void initPWMTimerLED()
 {
     // Timer 1 (Voor rood en groen).
     TCCR1A |= (1 << WGM10) | (1 << WGM12); // Fast PWM.
@@ -234,7 +236,7 @@ ISR (USART_RX_vect)
     // Als het groen is.
     case 'g':
 
-        // Zet de kleur en laat de gebruiker weten dat de kleur rood wordt.
+        // Zet de kleur en laat de gebruiker weten dat de kleur groen wordt.
         setColorAndMessage('g', "De kleur wordt groen.\n");
 
         // Break de case.
@@ -243,7 +245,7 @@ ISR (USART_RX_vect)
     // Als het blauw is.
     case 'b':
 
-        // Zet de kleur en laat de gebruiker weten dat de kleur rood wordt.
+        // Zet de kleur en laat de gebruiker weten dat de kleur blauw wordt.
         setColorAndMessage('b', "De kleur wordt blauw.\n");
 
         // Break de case.
