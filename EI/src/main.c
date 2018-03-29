@@ -15,6 +15,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <util/delay.h>
+#include <avr/interrupt.h>
 
 // USART wordt gebruikt voor het debuggen van de sensor data.
 #include <USART.h>
@@ -29,7 +30,7 @@
 #define DHT11_PORT PORTD
 
 // Variabele om tijdelijk de data (enkele bit) van de sensor op te slaan.
-uint8_t temp = 0;
+uint8_t temporarily = 0;
 
 // Variabele om de integraal van de luchtvochtigheid op te slaan.
 uint8_t integral_humidity;
@@ -49,7 +50,7 @@ uint8_t checksum;
 // Initialiseer de DHT11 sensor.
 void init_DHT11()
 {
-    // In de datasheet is er uitgelegd dat de DHT11 sensor 1 seconde nodig 
+    // In de datasheet is er uitgelegd dat de DHT11 sensor 1 seconde nodig
     // heeft met opstarten. Daarom even een delay van 1 seconde.
     _delay_ms(1000);
 }
@@ -140,24 +141,24 @@ uint8_t receive_data()
         {
             // Schuif de vorige waarde 1 plek naar links en sla een nieuwe 1 op
             // in het binaire getal.
-            temp = (temp << 1) | (0x01);
+            temporarily = (temporarily << 1) | (0x01);
         }
 
         // Als de pin op low staat wordt er een 0 bedoelt als bit.
         else
         {
-            // Schuif de vorige waarde 1 plek naar links. Automatisch wordt er 
+            // Schuif de vorige waarde 1 plek naar links. Automatisch wordt er
             // aan de rechter kant een nul toegevoegd.
-            temp = (temp << 1);
+            temporarily = (temporarily << 1);
         }
-        
+
         // Loop net zolang dat de DHT11 op hoog staat.
         // Dit is de 54 microseconden de ik in de uitleg aangeef.
         loop_until_dht_is_clear();
     }
 
     // Geef het binaire getal terug.
-    return temp;
+    return temporarily;
 }
 
 // Sla alle data uit de sensor uit.
@@ -168,10 +169,10 @@ void save_data()
 
     // Sla de decimaal van de luchtvochtigheid op.
     decimal_humidity = receive_data();
-    
+
     // Sla de integraal van de temperatuur op.
     integral_temperature = receive_data();
-    
+
     // Sla de decimaal van de temperatuur op.
     decimal_temperature = receive_data();
 
@@ -183,9 +184,9 @@ void save_data()
 uint8_t validate_sensor_data()
 {
     // Tel de luchtvochtigheid en de temeratuur bij elkaar op.
-    uint8_t combined = integral_humidity + 
-                       decimal_humidity + 
-                       integral_temperature + 
+    uint8_t combined = integral_humidity +
+                       decimal_humidity +
+                       integral_temperature +
                        decimal_temperature;
 
     // Geef terug dat de data klopt.
@@ -200,12 +201,65 @@ void debug(int sensor_data, char extra_string[])
 
     // Formateer de integer naar een string.
     itoa(sensor_data, data, 10);
-    
+
     // Toon de sensor data.
     printString(data);
-    
+
     // Voeg de extra string toe.
     printString(extra_string);
+}
+
+// Timer overflow interrupt.
+ISR (TIMER0_OVF_vect)
+{
+    // Geef aan de DHT11 sensor door dat je een request wilt gaan doen.
+    request();
+
+    // Handel de (automatische) response van de DHT11 sensor af.
+    response();
+
+    // Sla de data van de sensor op in variabelen.
+    save_data();
+
+    // Controleer of de DHT sensor data valide is.
+    if (validate_sensor_data())
+    {
+        // Print een titel.
+        printString("Luchtvochtigheid: ");
+
+        // Print de luchtvochtigheid.
+        debug(integral_humidity, ".");
+        debug(decimal_humidity, "%");
+
+        // Print een enter.
+        printString("\n");
+
+        // Print een titel.
+        printString("Temperatuur: ");
+
+        // Print de temperatuur.
+        debug(integral_temperature, ".");
+        debug(decimal_temperature, "°C");
+
+        // Print twee enters.
+        printString("\n\n");
+    }
+
+    // Wacht net zolang totdat de DHT11 weer nieuwe data gaat meten.
+    DHT11_measure_time();
+}
+
+// Overflow timer.
+void initTimerOverflow()
+{
+    // Timer mask.
+    TIMSK0 |= (1 << TOIE0);
+
+    // Timer instellingen.
+    TCCR0B |= (1 << CS02) | (1 << CS00);
+
+    // Zet de interrupts aan.
+    sei();
 }
 
 // De main functie.
@@ -217,46 +271,9 @@ int main(void)
     // Initialiseer de DHT11 sensor.
     init_DHT11();
 
+    // Initialiseer de overflow timer.
+    initTimerOverflow();
+
     // Loop voor altijd.
-    while (1)
-    {
-        // Geef aan de DHT11 sensor door dat je een request wilt gaan doen.
-        request();
-
-        // Handel de (automatische) response van de DHT11 sensor af.
-        response();
-
-        // Sla de data van de sensor op in variabelen.
-        save_data();
-
-        // Controleer of de DHT sensor data valide is.
-        if (validate_sensor_data())
-        {
-            // Print een titel.
-            printString("Luchtvochtigheid: ");
-
-            // Print de luchtvochtigheid.
-            debug(integral_humidity, ".");
-            debug(decimal_humidity, "%");
-
-            // Print een enter.
-            printString("\n");
-
-            // Print een titel.
-            printString("Temperatuur: ");
-
-            // Print de temperatuur.
-            debug(integral_temperature, ".");
-            debug(decimal_temperature, "°C");
-
-            // Print twee enters.
-            printString("\n\n");
-        }
-
-        // Als de checksum niet correct is. Bij het versturen van foutieve gegevens.
-        else { }
-
-        // Wacht net zolang totdat de DHT11 weer nieuwe data gaat meten.
-        DHT11_measure_time();
-    }
+    while (1) { }
 }
