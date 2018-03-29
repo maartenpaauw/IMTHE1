@@ -29,7 +29,7 @@
 #define DHT11_PORT PORTD
 
 // Variabele om tijdelijk de data (enkele bit) van de sensor op te slaan.
-uint8_t c = 0;
+uint8_t temp = 0;
 
 // Variabele om de integraal van de luchtvochtigheid op te slaan.
 uint8_t integral_humidity;
@@ -83,17 +83,18 @@ void request()
     DHT11_BANK |= (1 << DHT11_PIN);
 
     // Zet de DHT11 pin op 0. Dit heb ik in mijn vorige verslag beschreven als
-    // een "pull-down".
+    // een "pull down".
     DHT11_PORT &= ~(1 << DHT11_PIN);
 
-    // De Pull Down moet minimaal 18 miliseconden plaats vinden.
+    // De "pull down" moet minimaal 18 miliseconden plaats vinden.
+    // Ik hou het bij de minimale "pull down" tijd.
     _delay_ms(18);
 
     // Zet de DHT11 pin op 1. Dit heb ik in mijn vorige verslag beschreven als
-    // een "pull-up".
+    // een "pull up".
     DHT11_PORT |= (1 << DHT11_PIN);
 
-    // De Pull Up moet exact 40 microseconden plaats vinden.
+    // De "pull up" moet exact 40 microseconden plaats vinden.
     _delay_us(40);
 }
 
@@ -139,7 +140,7 @@ uint8_t receive_data()
         {
             // Schuif de vorige waarde 1 plek naar links en sla een nieuwe 1 op
             // in het binaire getal.
-            c = (c << 1) | (0x01);
+            temp = (temp << 1) | (0x01);
         }
 
         // Als de pin op low staat wordt er een 0 bedoelt als bit.
@@ -147,7 +148,7 @@ uint8_t receive_data()
         {
             // Schuif de vorige waarde 1 plek naar links. Automatisch wordt er 
             // aan de rechter kant een nul toegevoegd.
-            c = (c << 1);
+            temp = (temp << 1);
         }
         
         // Loop net zolang dat de DHT11 op hoog staat.
@@ -156,7 +157,7 @@ uint8_t receive_data()
     }
 
     // Geef het binaire getal terug.
-    return c;
+    return temp;
 }
 
 // Sla alle data uit de sensor uit.
@@ -188,12 +189,25 @@ uint8_t validate_sensor_data()
     return combined == checksum;
 }
 
-// De main functie.
-int main(void)
+// Print de sensor data uit.
+void debug(int sensor_data, char extra_string[])
 {
     // placeholder voor de data voor het printen.
     char data[5];
 
+    // Formateer de integer naar een string.
+    itoa(sensor_data, data, 10);
+    
+    // Toon de sensor data.
+    printString(data);
+    
+    // Voeg de extra string toe.
+    printString(extra_string);
+}
+
+// De main functie.
+int main(void)
+{
     // Initialiseer de seriele verbinding voor het schrijven.
     initUSART();
 
@@ -215,26 +229,25 @@ int main(void)
         // Controleer of de DHT sensor data valide is.
         if (validate_sensor_data())
         {
-            itoa(integral_humidity, data, 10);
-            printString(data);
-            printString(".");
+            // Print een titel.
+            printString("Luchtvochtigheid: ");
 
-            itoa(decimal_humidity, data, 10);
-            printString(data);
-            printString("%");
+            // Print de luchtvochtigheid.
+            debug(integral_humidity, ".");
+            debug(decimal_humidity, "%");
 
-            printString(" ");
-
-            itoa(integral_temperature, data, 10);
-            printString(data);
-            printString(".");
-
-            itoa(decimal_temperature, data, 10);
-            printString(data);
-            printString("°");
-            printString("C");
-
+            // Print een enter.
             printString("\n");
+
+            // Print een titel.
+            printString("Temperatuur: ");
+
+            // Print de temperatuur.
+            debug(integral_temperature, ".");
+            debug(decimal_temperature, "°C");
+
+            // Print twee enters.
+            printString("\n\n");
         }
 
         // Als de checksum niet correct is. Bij het versturen van foutieve gegevens.
