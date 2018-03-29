@@ -22,7 +22,11 @@ Van elke opdracht is er een video gemaakt. Alle video's zijn terug te vinden in 
 
 ## Platform IO
 
-In plaats van Eclipse maak ik gebruik van Platform IO. Dit omdat ik dan kan blijven programmeren in mijn favoriete editor Visual Studio Code. De map indeling (voor alle opdrachten) ziet er daarom iets anders uit vergeleken met een Eclipse project.
+In plaats van Eclipse maak ik gebruik van Platform IO. Dit omdat ik dan kan blijven programmeren in mijn favoriete editor Visual Studio Code. De mapindeling (voor alle opdrachten) ziet er daarom iets anders uit vergeleken met de mapindeling van een Eclipse project.
+
+## Voorbeelden
+
+Tijdens de les zijn er korte stukken code geschreven om de start aan de opdrachten gemakkelijk te maken. Deze *code snippets* zijn opgeslagen in de map [voorbeelden](voorbeelden/).
 
 [O1]: O1 "Opdracht 1 - Blink Once To Accept"
 [O2_1]: O2_1 "Opdracht 2.1 - Count Me In"
