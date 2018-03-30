@@ -8,7 +8,7 @@
  * 
  * Versie: 1
  * Aangemaakt: 22 maart 2018
- * Gewijzigd: 29 maart 2018
+ * Gewijzigd: 30 maart 2018
  */
 
 #include <avr/io.h>
@@ -28,6 +28,21 @@
 
 // De port waar de DHT11 data over verstuurd wordt.
 #define DHT11_PORT PORTD
+
+// De bank waar de 8x8 matrix pinnen op aangesloten zitten.
+#define MATRIX_BANK DDRC
+
+// De port waar de 8x8 matrix pinnen op aangesloten zitten.
+#define MATRIX_PORT PORTC
+
+// De port en pin voor de SER pin op de shift register.
+#define SER_PIN PC0
+
+// De port en pin voor de RCLK pin op de shift register.
+#define RCLK_PIN PC1
+
+// De port en pin voor de SRCLK pin op de shift register.
+#define SRCLK_PIN PC2
 
 // Variabele om tijdelijk de data (enkele bit) van de sensor op te slaan.
 uint8_t temporarily = 0;
@@ -209,6 +224,16 @@ void debug(int sensor_data, char extra_string[])
     printString(extra_string);
 }
 
+// Initialiseer de 8x8 matrix.
+void init_8x8_matrix ()
+{
+    // Defineer de pinnen die nodig zijn.
+    MATRIX_BANK = (1 << SER_PIN) | (1 << RCLK_PIN) | (1 << SRCLK_PIN);
+
+    // Zet alle C pinnen op low.
+    MATRIX_PORT = 0x00000000;
+}
+
 // Timer overflow interrupt.
 ISR (TIMER0_OVF_vect)
 {
@@ -250,7 +275,7 @@ ISR (TIMER0_OVF_vect)
 }
 
 // Overflow timer.
-void initTimerOverflow()
+void init_timer_overflow()
 {
     // Timer mask.
     TIMSK0 |= (1 << TOIE0);
@@ -271,8 +296,11 @@ int main(void)
     // Initialiseer de DHT11 sensor.
     init_DHT11();
 
+    // Initialiseer de 8x8 matrix.
+    init_8x8_matrix();
+
     // Initialiseer de overflow timer.
-    initTimerOverflow();
+    init_timer_overflow();
 
     // Loop voor altijd.
     while (1) { }
