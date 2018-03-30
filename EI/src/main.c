@@ -225,13 +225,92 @@ void debug(int sensor_data, char extra_string[])
 }
 
 // Initialiseer de 8x8 matrix.
-void init_8x8_matrix ()
+void init_8x8_matrix()
 {
     // Defineer de pinnen die nodig zijn.
     MATRIX_BANK = (1 << SER_PIN) | (1 << RCLK_PIN) | (1 << SRCLK_PIN);
 
     // Zet alle C pinnen op low.
-    MATRIX_PORT = 0x00000000;
+    MATRIX_PORT = 0b00000000;
+}
+
+// Zet te serial pin laag.
+void ser_pin_low()
+{
+    // Zet te serial pin laag.
+    MATRIX_PORT &= ~(1 << SER_PIN);
+}
+
+// Zet te serial pin hoog.
+void ser_pin_high()
+{
+    // Zet te serial pin hoog.
+    MATRIX_PORT |= (1 << SER_PIN);
+}
+
+// Zet te rclk pin laag.
+void rclk_pin_low()
+{
+    // Zet te rclk pin laag.
+    MATRIX_PORT &= ~(1 << RCLK_PIN);
+}
+
+// Zet te rclk pin hoog.
+void rclk_pin_high()
+{
+    // Zet te rclk pin hoog.
+    MATRIX_PORT |= (1 << RCLK_PIN);
+}
+
+// Zet te srclk pin laag.
+void srclk_pin_low()
+{
+    // Zet te srclk pin laag.
+    MATRIX_PORT &= ~(1 << SRCLK_PIN);
+}
+
+// Zet te srclk pin hoog.
+void srclk_pin_high()
+{
+    // Zet te srclk pin hoog.
+    MATRIX_PORT |= (1 << SRCLK_PIN);
+}
+
+// Zet iets op het display.
+void handle_matrix ()
+{
+    // Zet de srclk pin op laag.
+    srclk_pin_low();
+
+    // Zet de rclk pin op laag.
+    rclk_pin_low();
+
+    // Loop door 16 bits heen
+    for (int i = 0; i < 16; i++) 
+    {
+        // Controleer of de bit hoog moet zijn
+        if (i == 7)
+        {
+            // Zet de SER pin op hoog.
+            ser_pin_high();
+        }
+
+        // Zo niet;
+        else
+        {
+            // Zet de SER pin op laag.
+            ser_pin_low();
+        }
+
+        // Zet de RCLK pin op hoog.
+        srclk_pin_high();
+
+        // Zet de RCLK pin op laag.
+        srclk_pin_low();
+    }
+
+    // Zet de srclk pin op hoog.
+    rclk_pin_high();
 }
 
 // Timer overflow interrupt.
@@ -270,6 +349,9 @@ ISR (TIMER0_OVF_vect)
         printString("\n\n");
     }
 
+    // Test een pot op het matrix.
+    handle_matrix();
+
     // Wacht net zolang totdat de DHT11 weer nieuwe data gaat meten.
     DHT11_measure_time();
 }
@@ -303,5 +385,7 @@ int main(void)
     init_timer_overflow();
 
     // Loop voor altijd.
-    while (1) { }
+    while (1)
+    {
+    }
 }
