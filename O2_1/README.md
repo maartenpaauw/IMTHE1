@@ -25,7 +25,7 @@ Op de wikipedia van het [7 Segment Display][3] was een lijst opgenomen hoe je me
 
 ## Afbeelding
 
-![Opdracht 2.1 - Count Me In - Afbeelding](assets/setup.jpg)
+![Opdracht 2.1 - Count Me In - Afbeelding](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_1/assets/setup.jpg)
 
 De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
@@ -41,7 +41,7 @@ Deze video is ook te vinden op **Youtube**:
 
 ## Breadboard Schema
 
-[![Opdracht 2.1 - Count Me In - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_1/assets/fritzing/schema.png)
+[![Opdracht 2.1 - Count Me In - Schema](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_1/assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_1/assets/fritzing/schema.png)
 
 ***LET OP:*** *Fritzing heeft geen dubbel 7 segment display. Daarom gebruik ik in het schema 2 enkele. Omdat ik 2 enkele gebruik zijn er wel meer pinnen in het schema. Van het rechter 7 segment display tel ik de rechter- boven en onder pin niet mee.*
 
@@ -175,17 +175,17 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 ### Arduino Nano
 
-![Arduino Nano Pinout](assets/data_sheets/nano.png)
+![Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_1/assets/data_sheets/nano.png)
 
-De [Arduino Nano Pinout](assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
+De [Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_1/assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
 ### 7 Segment Display
 
-![D5621A_B](assets/data_sheets/D5621A_B.png)
+![D5621A_B](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_1/assets/data_sheets/D5621A_B.png)
 
-De [7 Segment Display Pinout](assets/data_sheets/D5621A_B.png) heb ik gevonden in de datasheet van het 7 Segment Display. De datasheet is terug te vinden via de volgende link:
+De [7 Segment Display Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_1/assets/data_sheets/D5621A_B.png) heb ik gevonden in de datasheet van het 7 Segment Display. De datasheet is terug te vinden via de volgende link:
 
 [http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&type=P&query=A%2Fd5621A%2FB][2]
 

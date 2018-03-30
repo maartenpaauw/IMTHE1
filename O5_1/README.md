@@ -72,7 +72,7 @@ De compontenten die ik heb zijn hieronder opgenomen in de tabel.
 
 ### DHT11
 
-![DHT11 Pinout](assets/data_sheets/dht11.png)
+![DHT11 Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O5_1/assets/data_sheets/dht11.png)
 
 De [DHT11 Pinout][1] is te vinden in de datasheet. Deze datasheet heb ik via Google gevonden en is terug te vinden via de volgende link:
 
@@ -80,9 +80,9 @@ De [DHT11 Pinout][1] is te vinden in de datasheet. Deze datasheet heb ik via Goo
 
 ### 8×8 Matrix
 
-![8×8 Matrix Pinout](assets/data_sheets/8x8_matrix.png)
+![8×8 Matrix Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O5_1/assets/data_sheets/8x8_matrix.png)
 
-De [8×8 Matrix Pinout](assets/data_sheets/8x8_matrix.png) heb ik uit de datasheet van de 8×8 Matrix. De datasheet is terug te vinden via de volgende link:
+De [8×8 Matrix Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O5_1/assets/data_sheets/8x8_matrix.png) heb ik uit de datasheet van de 8×8 Matrix. De datasheet is terug te vinden via de volgende link:
 
 [https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF][2]
 

@@ -26,7 +26,7 @@ Het patroon dat ik gemaakt heb is het volgende. De led begint vol rood (255). Da
 
 ## Afbeelding
 
-![Opdracht 4.1 - Led There Be Light - Afbeelding](assets/setup.jpg)
+![Opdracht 4.1 - Led There Be Light - Afbeelding](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O4_1/assets/setup.jpg)
 
 De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
@@ -42,7 +42,7 @@ Deze video is ook te vinden op **Youtube**:
 
 ## Breadboard Schema
 
-[![Opdracht 4.1 - Led There Be Light - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O4_1/assets/fritzing/schema.png)
+[![Opdracht 4.1 - Led There Be Light - Schema](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O4_1/assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O4_1/assets/fritzing/schema.png)
 
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
@@ -189,17 +189,17 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 ### Arduino Nano
 
-![Arduino Nano Pinout](assets/data_sheets/nano.png)
+![Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O4_1/assets/data_sheets/nano.png)
 
-De [Arduino Nano Pinout](assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
+De [Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O4_1/assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
 ### RGB Led
 
-![RGB led Pinout](assets/data_sheets/rgb_led.png)
+![RGB led Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O4_1/assets/data_sheets/rgb_led.png)
 
-De [RGB Led Pinout](assets/data_sheets/rgb_led.png) heb ik gevonden in de datasheet van een common cathode led. De datasheet is terug te vinden via de volgende link:
+De [RGB Led Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O4_1/assets/data_sheets/rgb_led.png) heb ik gevonden in de datasheet van een common cathode led. De datasheet is terug te vinden via de volgende link:
 
 [https://www.wiltronics.com.au/wp-content/uploads/datasheets/Datasheet.pdf][2]
 

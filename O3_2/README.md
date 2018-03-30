@@ -7,7 +7,7 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 1. Maak een digitale dobbelsteen met 9 leds (zie plaatje). Als je op een knop drukt geven de leds een random waarde tussen 1 en 6 weer op de leds zoals je dat kent op een echte dobbelsteen. Hou bij het programma rekening met dender-gedrag. 
 2. **Maak een programma dat de waarde van een potentiometer vertaalt in een geluidssignaal tussen 100 en 10.000Hz. Laat dit signaal horen op de speaker.**
 
-![Opdracht 3.1 - ADC Baby! - Voorbeeld](assets/voorbeeld.png)
+![Opdracht 3.1 - ADC Baby! - Voorbeeld](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/voorbeeld.png)
 
 ## Aanpak en Uitvoering
 
@@ -25,7 +25,7 @@ Tijdens de les van week 3 zijn we aan de slag geweest met de potentiometer. We h
 
 ## Afbeelding
 
-![Opdracht 3.2 - ADC Baby! - Afbeelding](assets/setup.jpg)
+![Opdracht 3.2 - ADC Baby! - Afbeelding](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/setup.jpg)
 
 De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
@@ -41,7 +41,7 @@ Deze video is ook te vinden op **Youtube**:
 
 ## Breadboard Schema
 
-[![Opdracht 3.2 - ADC Baby! - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/fritzing/schema.png)
+[![Opdracht 3.2 - ADC Baby! - Schema](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/fritzing/schema.png)
 
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
@@ -184,25 +184,25 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 ### Arduino Nano
 
-![Arduino Nano Pinout](assets/data_sheets/nano.png)
+![Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/data_sheets/nano.png)
 
-De [Arduino Nano Pinout](assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
+De [Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
 ### RS 7243119
 
-![RS 7243119 Pinout](assets/data_sheets/rs-7243119.png)
+![RS 7243119 Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/data_sheets/rs-7243119.png)
 
-De [RS 7243119 Pinout](assets/data_sheets/rs-7243119.png) heb ik gevonden in de datasheet van de RS 7243119. Deze datasheet heb ik gevonden in de specificaties bij een webshop en is terug te vinden via de volgende link:
+De [RS 7243119 Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/data_sheets/rs-7243119.png) heb ik gevonden in de datasheet van de RS 7243119. Deze datasheet heb ik gevonden in de specificaties bij een webshop en is terug te vinden via de volgende link:
 
 [https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf][2]
 
 ### Potentiometer
 
-![RS Potentiometer Pinout](assets/data_sheets/potentiometer.png)
+![RS Potentiometer Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/data_sheets/potentiometer.png)
 
-De [Potentiometer Pinout](assets/data_sheets/potentiometer.png) heb ik gevonden in de datasheet van de Potentiometer. Deze datasheet is terug te vinden via de volgende link:
+De [Potentiometer Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/data_sheets/potentiometer.png) heb ik gevonden in de datasheet van de Potentiometer. Deze datasheet is terug te vinden via de volgende link:
 
 [https://components101.com/sites/default/files/component_datasheet/potentiometer%20datasheet.pdf][4]
 

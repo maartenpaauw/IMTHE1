@@ -10,7 +10,7 @@ Omdat ik altijd de editor Visual Studio Code gebruik wilde ik daar ook mijn opdr
 
 ## Afbeelding
 
-![Opdracht 1 - Blink Once To Accept - Afbeelding](assets/setup.jpg)
+![Opdracht 1 - Blink Once To Accept - Afbeelding](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/setup.jpg)
 
 De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
@@ -26,7 +26,7 @@ Deze video is ook te vinden op **Youtube**:
 
 ## Breadboard Schema
 
-[![Opdracht 1 - Blink Once To Accept - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/fritzing/schema.png)
+[![Opdracht 1 - Blink Once To Accept - Schema](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/fritzing/schema.png)
 
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
@@ -97,17 +97,17 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 ### Arduino Nano
 
-![Arduino Nano Pinout](assets/data_sheets/nano.png)
+![Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/data_sheets/nano.png)
 
-De [Arduino Nano Pinout](assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
+De [Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
 ### Led
 
-![LED Pinout](assets/data_sheets/led.png)
+![LED Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/data_sheets/led.png)
 
-De [Led Pinout](assets/data_sheets/led.png) heb ik gevonden in de datasheet van de led. Deze datasheet is terug te vinden via de volgende link:
+De [Led Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O1/assets/data_sheets/led.png) heb ik gevonden in de datasheet van de led. Deze datasheet is terug te vinden via de volgende link:
 
 [http://www1.futureelectronics.com/doc/EVERLIGHT%C2%A0/334-15__T1C1-4WYA.pdf][3]
 

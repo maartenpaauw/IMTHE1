@@ -13,7 +13,7 @@ Om van 0 t/m 99 te tellen in plaats van 0 t/m 9 waren er maar kleine aanpassinge
 
 ## Afbeelding
 
-![Opdracht 2.2 - Count Me In - Afbeelding](assets/setup.jpg)
+![Opdracht 2.2 - Count Me In - Afbeelding](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_2/assets/setup.jpg)
 
 De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
@@ -205,17 +205,17 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 ### Arduino Nano
 
-![Arduino Nano Pinout](assets/data_sheets/nano.png)
+![Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_2/assets/data_sheets/nano.png)
 
-De [Arduino Nano Pinout](assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
+De [Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_2/assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
 ### 7 Segment Display
 
-![D5621A_B](assets/data_sheets/D5621A_B.png)
+![D5621A_B](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_2/assets/data_sheets/D5621A_B.png)
 
-De [7 Segment Display Pinout](assets/data_sheets/D5621A_B.png) heb ik gevonden in de datasheet van het 7 Segment Display. De datasheet is terug te vinden via de volgende link:
+De [7 Segment Display Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_2/assets/data_sheets/D5621A_B.png) heb ik gevonden in de datasheet van het 7 Segment Display. De datasheet is terug te vinden via de volgende link:
 
 [http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&type=P&query=A%2Fd5621A%2FB][2]
 

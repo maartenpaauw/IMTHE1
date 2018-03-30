@@ -14,7 +14,7 @@ Tijdens de les ben ik op weg geholpen met seriële communicatie. Dit was code di
 
 ## Afbeelding
 
-![Opdracht 4.2 - Led There Be Light - Afbeelding](assets/setup.jpg)
+![Opdracht 4.2 - Led There Be Light - Afbeelding](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O4_2/assets/setup.jpg)
 
 De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
@@ -30,7 +30,7 @@ Deze video is ook te vinden op **Youtube**:
 
 ## Breadboard Schema
 
-[![Opdracht 4.2 - Led There Be Light - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O4_2/assets/fritzing/schema.png)
+[![Opdracht 4.2 - Led There Be Light - Schema](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O4_2/assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O4_2/assets/fritzing/schema.png)
 
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
@@ -160,7 +160,7 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 ### Arduino Nano
 
-![Arduino Nano Pinout](assets/data_sheets/nano.png)
+![Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O4_2/assets/data_sheets/nano.png)
 
 De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 
@@ -168,9 +168,9 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 
 ### Led
 
-![LED Pinout](assets/data_sheets/led.png)
+![LED Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O4_2/assets/data_sheets/led.png)
 
-De [Led Pinout](assets/data_sheets/led.png) heb ik gevonden in de datasheet van de led. Deze datasheet is terug te vinden via de volgende link:
+De [Led Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O4_2/assets/data_sheets/led.png) heb ik gevonden in de datasheet van de led. Deze datasheet is terug te vinden via de volgende link:
 
 [http://www1.futureelectronics.com/doc/EVERLIGHT%C2%A0/334-15__T1C1-4WYA.pdf][2]
 

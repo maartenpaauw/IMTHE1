@@ -7,7 +7,7 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 1. **Maak een digitale dobbelsteen met 9 leds (zie plaatje). Als je op een knop drukt geven de leds een random waarde tussen 1 en 6 weer op de leds zoals je dat kent op een echte dobbelsteen. Hou bij het programma rekening met dender-gedrag.** 
 2. Maak een programma dat de waarde van een potentiometer vertaalt in een geluidssignaal tussen 100 en 10.000Hz. Laat dit signaal horen op de speaker.
 
-![Opdracht 3.1 - ADC Baby! - Voorbeeld](assets/voorbeeld.png)
+![Opdracht 3.1 - ADC Baby! - Voorbeeld](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_1/assets/voorbeeld.png)
 
 ## Aanpak en Uitvoering
 
@@ -19,7 +19,7 @@ In plaats van dat ik gebruik maak van 9 losse led's heb ik ervoor gekozen om het
 
 Voor het gemak heb ik voor mijzelf de pinnen gefilterd en met kleur aangegeven welke ik nodig heb (groen) en welke niet (rood). De afbeelding komt uit de datasheet. Deze datasheet is opgenomen in het hoofdstuk **datasheets**.
 
-![8×8 Matrix Pinout - Gefilterd](assets/data_sheets/8x8_matrix_filtered.png)
+![8×8 Matrix Pinout - Gefilterd](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_1/assets/data_sheets/8x8_matrix_filtered.png)
 
 Ook voor het gemak heb ik alle nodige pinnen, voor de rijen en kolommen, in een tabel gezet.
 
@@ -36,7 +36,7 @@ Ook voor het gemak heb ik alle nodige pinnen, voor de rijen en kolommen, in een 
 
 ## Afbeelding
 
-![Opdracht 3.1 - ADC Baby! - Afbeelding](assets/setup.jpg)
+![Opdracht 3.1 - ADC Baby! - Afbeelding](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_1/assets/setup.jpg)
 
 De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
@@ -52,7 +52,7 @@ Deze video is ook te vinden op **Youtube**:
 
 ## Breadboard Schema
 
-[![Opdracht 3.1 - ADC Baby! - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_1/assets/fritzing/schema.png)
+[![Opdracht 3.1 - ADC Baby! - Schema](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_1/assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_1/assets/fritzing/schema.png)
 
 ***LET OP:*** *In het programma **Fritzing** was er geen kleine 8×8 Matrix te vinden. Ik heb daarom heb ik een grote gepakt en deze aangesloten op een appart breadboard zodat de pinnen van het component te verbinden zijn met de Arduino.*
 
@@ -226,17 +226,17 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 ### Arduino Nano
 
-![Arduino Nano Pinout](assets/data_sheets/nano.png)
+![Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_1/assets/data_sheets/nano.png)
 
-De [Arduino Nano Pinout](assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
+De [Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_1/assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
 ### 8×8 Matrix
 
-![8×8 Matrix Pinout](assets/data_sheets/8x8_matrix.png)
+![8×8 Matrix Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_1/assets/data_sheets/8x8_matrix.png)
 
-De [8×8 Matrix Pinout](assets/data_sheets/8x8_matrix.png) heb ik uit de datasheet van de 8×8 Matrix. De datasheet is terug te vinden via de volgende link:
+De [8×8 Matrix Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_1/assets/data_sheets/8x8_matrix.png) heb ik uit de datasheet van de 8×8 Matrix. De datasheet is terug te vinden via de volgende link:
 
 [https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF][2]
 
