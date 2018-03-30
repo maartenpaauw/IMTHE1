@@ -38,6 +38,8 @@ Deze video is ook te vinden op **Youtube**:
 
 [![Eindopdracht - Show Your Moves - Schema](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/fritzing/schema.png)
 
+***LET OP:*** *Het programma **Fritzing** had geen DHT11 component. Daarom heb ik een component gepak dat het meest in de buurt komt. Op het component, dat in mijn IMTHE-Box zit, is een resistor van de data pin naar de 5v5 pin gesoldeerd. Deze resistor heb ik weggelaten in mijn Fritzing schema.*
+
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
 [https://github.com/maartenpaauw/IMTHE1/raw/master/EI/assets/fritzing/schema.fzz](https://github.com/maartenpaauw/IMTHE1/raw/master/EI/assets/fritzing/schema.fzz)
@@ -91,5 +93,7 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
+* [https://protostack.com.au/2010/05/introduction-to-74hc595-shift-register-controlling-16-leds/][2] (Shift Register Controlling 16 Leds)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
+[2]: https://protostack.com.au/2010/05/introduction-to-74hc595-shift-register-controlling-16-leds/ "Shift Register Controlling 16 Leds"
