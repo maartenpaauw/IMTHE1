@@ -7,7 +7,7 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 1. Maak een digitale dobbelsteen met 9 leds (zie plaatje). Als je op een knop drukt geven de leds een random waarde tussen 1 en 6 weer op de leds zoals je dat kent op een echte dobbelsteen. Hou bij het programma rekening met dender-gedrag. 
 2. **Maak een programma dat de waarde van een potentiometer vertaalt in een geluidssignaal tussen 100 en 10.000Hz. Laat dit signaal horen op de speaker.**
 
-![Opdracht 3.1 - ADC Baby! - Voorbeeld](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/voorbeeld.png)
+![Opdracht 3.2 - ADC Baby! - Voorbeeld](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/voorbeeld.png)
 
 ## Aanpak en Uitvoering
 

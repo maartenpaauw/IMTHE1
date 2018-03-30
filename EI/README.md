@@ -20,7 +20,7 @@ TODO.
 
 ## Afbeelding
 
-![Eindopdracht - Show Your Moves - Afbeelding](assets/setup.jpg)
+![Eindopdracht - Show Your Moves - Afbeelding](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/setup.jpg)
 
 De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
@@ -36,7 +36,7 @@ Deze video is ook te vinden op **Youtube**:
 
 ## Breadboard Schema
 
-[![Eindopdracht - Show Your Moves - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/fritzing/schema.png)
+[![Eindopdracht - Show Your Moves - Schema](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/fritzing/schema.png)
 
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
@@ -82,7 +82,7 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 ### Arduino Nano Pinout
 
-![Arduino Nano Pinout](assets/data_sheets/nano.png)
+![Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/data_sheets/nano.png)
 
 De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 

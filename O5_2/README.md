@@ -23,7 +23,7 @@ Al deze code staat buiten de loop omdat het maar één keer op het scherm gezet 
 
 ## Afbeelding
 
-![Opdracht 5.2 - ET Phone Home - Afbeelding](assets/setup.jpg)
+![Opdracht 5.2 - ET Phone Home - Afbeelding](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O5_2/assets/setup.jpg)
 
 De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
@@ -39,7 +39,7 @@ Deze video is ook te vinden op **Youtube**:
 
 ## Breadboard Schema
 
-[![Opdracht 5.2 - ET Phone Home - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O5_2/assets/fritzing/schema.png)
+[![Opdracht 5.2 - ET Phone Home - Schema](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O5_2/assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O5_2/assets/fritzing/schema.png)
 
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
@@ -190,25 +190,25 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 ### Arduino Nano
 
-![Arduino Nano Pinout](assets/data_sheets/nano.png)
+![Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O5_2/assets/data_sheets/nano.png)
 
-De [Arduino Nano Pinout](assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
+De [Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O5_2/assets/data_sheets/nano.png) is uitgedeeld tijdens de eerste les en terug te vinden via het volgende forum post:
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
 ### HD44780
 
-![HD44780](assets/data_sheets/hd44780.png)
+![HD44780](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O5_2/assets/data_sheets/hd44780.png)
 
-De [HD44780 Pinout](assets/data_sheets/hd44780.png) heb ik gevonden in de datasheet van het displat zelf. Deze datasheet kan terug gevonden worden via de volgende link:
+De [HD44780 Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O5_2/assets/data_sheets/hd44780.png) heb ik gevonden in de datasheet van het displat zelf. Deze datasheet kan terug gevonden worden via de volgende link:
 
 [https://www.electronicshub.org/wp-content/uploads/2013/09/HD44780_16x2_Character_LCD_Display.pdf][3]
 
 ### Potentiometer
 
-![Potentiometer Pinout](assets/data_sheets/potentiometer.png)
+![Potentiometer Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O5_2/assets/data_sheets/potentiometer.png)
 
-De [Potentiometer Pinout](assets/data_sheets/potentiometer.png) heb ik gevonden in de datasheet van de Potentiometer. Deze datasheet is terug te vinden via de volgende link:
+De [Potentiometer Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O5_2/assets/data_sheets/potentiometer.png) heb ik gevonden in de datasheet van de Potentiometer. Deze datasheet is terug te vinden via de volgende link:
 
 [https://components101.com/sites/default/files/component_datasheet/potentiometer%20datasheet.pdf][4]
 

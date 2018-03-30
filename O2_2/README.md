@@ -29,7 +29,7 @@ Deze video is ook te vinden op **Youtube**:
 
 ## Breadboard Schema
 
-[![Opdracht 2.2 - Count Me In - Schema](assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_2/assets/fritzing/schema.png)
+[![Opdracht 2.2 - Count Me In - Schema](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_2/assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_2/assets/fritzing/schema.png)
 
 ***LET OP:*** *Fritzing heeft geen dubbel 7 segment display. Daarom gebruik ik in het schema 2 enkele. Omdat ik 2 enkele gebruik zijn er wel meer pinnen in het schema. Van het rechter 7 segment display tel ik de rechter- boven en onder pin niet mee.*
 
