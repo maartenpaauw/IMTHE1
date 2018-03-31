@@ -318,19 +318,6 @@ void turn_on_dot (int row, int column)
         srclk_pin_low();
     }
 
-    // // Loop door 8 bits heen
-    // for (int i = 0; i < 8; i++) 
-    // {
-    //     // Zet de SER pin op laag.
-    //     ser_pin_low();
-
-    //     // Zet de RCLK pin op hoog.
-    //     srclk_pin_high();
-
-    //     // Zet de RCLK pin op laag.
-    //     srclk_pin_low();
-    // }
-
     // Loop door 8 bits heen
     for (int i = 0; i < 8; i++) 
     {
