@@ -645,7 +645,7 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
-###SN74HC595
+### SN74HC595
 
 ![SN74HC595 Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/data_sheets/sn74hc595.png)
 
