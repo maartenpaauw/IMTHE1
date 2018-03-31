@@ -44,6 +44,8 @@
 // De port en pin voor de SRCLK pin op de shift register.
 #define SRCLK_PIN PC2
 
+int count = 0;
+
 // Variabele om tijdelijk de data (enkele bit) van de sensor op te slaan.
 uint8_t temporarily = 0;
 
@@ -74,8 +76,8 @@ void init_DHT11()
 // nieuwe data. Deze tijd komt uit de datasheet.
 void DHT11_measure_time()
 {
-    // Wacht 2 seconden.
-    _delay_ms(2000);
+    // Wacht 1 seconden.
+    _delay_ms(1000);
 }
 
 // Wacht net zolang dat de DHT11 pin clear is.
@@ -277,7 +279,7 @@ void srclk_pin_high()
 }
 
 // Zet iets op het display.
-void handle_matrix ()
+void turn_on_dot (int row, int column)
 {
     // Zet de srclk pin op laag.
     srclk_pin_low();
@@ -285,11 +287,14 @@ void handle_matrix ()
     // Zet de rclk pin op laag.
     rclk_pin_low();
 
-    // Loop door 16 bits heen
-    for (int i = 0; i < 16; i++) 
+    int real_row = row - 1;
+    int real_column = column - 1;
+
+    // Loop door 8 bits heen
+    for (int i = 0; i < 8; i++) 
     {
         // Controleer of de bit hoog moet zijn
-        if (i == 7)
+        if (i == real_row)
         {
             // Zet de SER pin op hoog.
             ser_pin_high();
@@ -309,51 +314,195 @@ void handle_matrix ()
         srclk_pin_low();
     }
 
+    // Loop door 8 bits heen
+    for (int i = 0; i < 8; i++) 
+    {
+        // Controleer of de bit hoog moet zijn
+        if (i == real_column)
+        {
+            // Zet de SER pin op hoog.
+            ser_pin_low();
+        }
+
+        // Zo niet;
+        else
+        {
+            // Zet de SER pin op laag.
+            ser_pin_high();
+        }
+
+        // Zet de RCLK pin op hoog.
+        srclk_pin_high();
+
+        // Zet de RCLK pin op laag.
+        srclk_pin_low();
+    }
+
     // Zet de srclk pin op hoog.
     rclk_pin_high();
+}
+
+// Show sad smiley.
+void matrix_smiley_sad()
+{
+    // Rijen en kolommen die aan moeten voor het tonen van een zielig gezicht.
+    uint8_t dots [30][2] = {
+        {1, 2},
+        {1, 3},
+        {1, 4},
+        {1, 5},
+        {1, 6},
+        {1, 7},
+        {2, 1},
+        {2, 8},
+        {3, 1},
+        {3, 3},
+        {3, 6},
+        {3, 8},
+        {4, 1},
+        {4, 8},
+        {5, 1},
+        {5, 4},
+        {5, 5},
+        {5, 8},
+        {6, 1},
+        {6, 3},
+        {6, 6},
+        {6, 8},
+        {7, 1},
+        {7, 8},
+        {8, 2},
+        {8, 3},
+        {8, 4},
+        {8, 5},
+        {8, 6},
+        {8, 7},
+    };
+
+    // Loop 30 keer (zoveel leds zijn er nodig).
+    for (int i = 0; i < 30; i++)
+    {
+        // Zet de specifieke led aan.
+        turn_on_dot(dots[i][0], dots[i][1]);
+
+        // Laat de led heel even aan staan.
+        _delay_us(100);
+    }
+}
+
+// Show happy smiley.
+void matrix_smiley_happy()
+{
+    // Rijen en kolommen die aan moeten voor het tonen van een blij gezicht.
+    uint8_t dots [30][2] = {
+        {1, 2},
+        {1, 3},
+        {1, 4},
+        {1, 5},
+        {1, 6},
+        {1, 7},
+        {2, 1},
+        {2, 8},
+        {3, 1},
+        {3, 3},
+        {3, 6},
+        {3, 8},
+        {4, 1},
+        {4, 8},
+        {5, 1},
+        {5, 3},
+        {5, 6},
+        {5, 8},
+        {6, 1},
+        {6, 4},
+        {6, 5},
+        {6, 8},
+        {7, 1},
+        {7, 8},
+        {8, 2},
+        {8, 3},
+        {8, 4},
+        {8, 5},
+        {8, 6},
+        {8, 7},
+    };
+
+    // Loop 30 keer (zoveel leds zijn er nodig).
+    for (int i = 0; i < 30; i++)
+    {
+        // Zet de specifieke led aan.
+        turn_on_dot(dots[i][0], dots[i][1]);
+
+        // Laat de led heel even aan staan.
+        _delay_us(100);
+    }
 }
 
 // Timer overflow interrupt.
 ISR (TIMER0_OVF_vect)
 {
-    // Geef aan de DHT11 sensor door dat je een request wilt gaan doen.
-    request();
-
-    // Handel de (automatische) response van de DHT11 sensor af.
-    response();
-
-    // Sla de data van de sensor op in variabelen.
-    save_data();
-
-    // Controleer of de DHT sensor data valide is.
-    if (validate_sensor_data())
+    if (count > 65)
     {
-        // Print een titel.
-        printString("Luchtvochtigheid: ");
+        count = 0;
 
-        // Print de luchtvochtigheid.
-        debug(integral_humidity, ".");
-        debug(decimal_humidity, "%");
+        // Geef aan de DHT11 sensor door dat je een request wilt gaan doen.
+        request();
 
-        // Print een enter.
-        printString("\n");
+        // Handel de (automatische) response van de DHT11 sensor af.
+        response();
 
-        // Print een titel.
-        printString("Temperatuur: ");
+        // Sla de data van de sensor op in variabelen.
+        save_data();
 
-        // Print de temperatuur.
-        debug(integral_temperature, ".");
-        debug(decimal_temperature, "°C");
+        // Controleer of de DHT sensor data valide is.
+        if (validate_sensor_data())
+        {
+            // Print een titel.
+            printString("Luchtvochtigheid: ");
 
-        // Print twee enters.
-        printString("\n\n");
+            // Print de luchtvochtigheid.
+            debug(integral_humidity, ".");
+            debug(decimal_humidity, "%");
+
+            // Print een enter.
+            printString("\n");
+
+            // Print een titel.
+            printString("Temperatuur: ");
+
+            // Print de temperatuur.
+            debug(integral_temperature, ".");
+            debug(decimal_temperature, "°C");
+
+            // Print twee enters.
+            printString("\n\n");
+        }
+
+        // Wacht net zolang totdat de DHT11 weer nieuwe data gaat meten.
+        // DHT11_measure_time();
     }
 
-    // Test een pot op het matrix.
-    handle_matrix();
+    else
+    {
+        count++;
+    }
+}
 
-    // Wacht net zolang totdat de DHT11 weer nieuwe data gaat meten.
-    DHT11_measure_time();
+// Functie on de matrix te bedienen.
+ISR (TIMER1_OVF_vect)
+{
+    // Bereken de temperatuur.
+    if (integral_temperature > 21)
+    {
+        // Blije smiley.
+        matrix_smiley_happy();
+    }
+
+    else
+    {
+        // Verdrietige smiley.
+        matrix_smiley_sad();
+    }
 }
 
 // Overflow timer.
@@ -361,9 +510,13 @@ void init_timer_overflow()
 {
     // Timer mask.
     TIMSK0 |= (1 << TOIE0);
+    TIMSK1 |= (1 << TOIE1);
 
-    // Timer instellingen.
-    TCCR0B |= (1 << CS02) | (1 << CS00);
+    // Timer 0 instellingen.
+    TCCR0B |= (1 << CS00) | (1 << CS02);
+
+    // Timer 1 instellingen.
+    TCCR1B |= (1 << CS10);
 
     // Zet de interrupts aan.
     sei();
@@ -385,7 +538,5 @@ int main(void)
     init_timer_overflow();
 
     // Loop voor altijd.
-    while (1)
-    {
-    }
+    while (1) { }
 }
