@@ -8,7 +8,7 @@
  * 
  * Versie: 1
  * Aangemaakt: 22 maart 2018
- * Gewijzigd: 30 maart 2018
+ * Gewijzigd: 31 maart 2018
  */
 
 #include <avr/io.h>
@@ -44,6 +44,7 @@
 // De port en pin voor de SRCLK pin op de shift register.
 #define SRCLK_PIN PC2
 
+// Count variabele
 int count = 0;
 
 // Variabele om tijdelijk de data (enkele bit) van de sensor op te slaan.
@@ -72,12 +73,13 @@ void init_DHT11()
     _delay_ms(1000);
 }
 
-// Delay in miliseconden hoe lang de DHT11 sensor wacht voor het meten van
+// De DHT11 sensor moet 1 seconden wachten voor het meten van
 // nieuwe data. Deze tijd komt uit de datasheet.
-void DHT11_measure_time()
+int DHT11_measure_time()
 {
-    // Wacht 1 seconden.
-    _delay_ms(1000);
+    // A = Snelheid van de CPU gedeeld door de prescaler van de timer.
+    // (1000 / A * 1000) = 1 seconden.
+    return (1000 / (16000000 / 1024)) * 1000;
 }
 
 // Wacht net zolang dat de DHT11 pin clear is.
@@ -151,7 +153,7 @@ uint8_t receive_data()
         // Als de bit 1 moet zijn wordt er voor 70 microseconden gewacht.
         // Ik wil precies op de helft van de tijd tussen low en high wachten.
         // Op dat moment kan je uitlezen of de pin high of low staat.
-        _delay_us((24 + 70) / 2);
+        _delay_us(24 + (70 / 2));
 
         // Kijk of de DHT11 pin op high staat wordt er een 1 bedoelt als bit.
         if (PIND & (1 << DHT11_PIN))
@@ -441,8 +443,13 @@ void matrix_smiley_happy()
 // Timer overflow interrupt.
 ISR (TIMER0_OVF_vect)
 {
-    if (count > 65)
+    // Willen maar 1 keer meten per 10 seconden.
+    int count_check = DHT11_measure_time() * 10;
+
+    // Is het tijd voor een nieuwe meting?
+    if (count > count_check)
     {
+        // Zet de count terug op 0.
         count = 0;
 
         // Geef aan de DHT11 sensor door dat je een request wilt gaan doen.
@@ -477,13 +484,12 @@ ISR (TIMER0_OVF_vect)
             // Print twee enters.
             printString("\n\n");
         }
-
-        // Wacht net zolang totdat de DHT11 weer nieuwe data gaat meten.
-        // DHT11_measure_time();
     }
 
+    // Zo niet;
     else
     {
+        // Tel de count 1 op.
         count++;
     }
 }
@@ -508,7 +514,7 @@ ISR (TIMER1_OVF_vect)
 // Overflow timer.
 void init_timer_overflow()
 {
-    // Timer mask.
+    // Timer masks.
     TIMSK0 |= (1 << TOIE0);
     TIMSK1 |= (1 << TOIE1);
 
