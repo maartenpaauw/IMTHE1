@@ -74,7 +74,7 @@ De compontenten die ik heb zijn hieronder opgenomen in de tabel.
 
 ![DHT11 Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O5_1/assets/data_sheets/dht11.png)
 
-De [DHT11 Pinout][1] is te vinden in de datasheet. Deze datasheet heb ik via Google gevonden en is terug te vinden via de volgende link:
+De [DHT11 Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O5_1/assets/data_sheets/dht11.png) is te vinden in de datasheet. Deze datasheet heb ik via Google gevonden en is terug te vinden via de volgende link:
 
 [https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][1]
 

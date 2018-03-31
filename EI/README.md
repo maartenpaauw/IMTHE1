@@ -12,7 +12,7 @@ De eindopdracht wordt ook in het verslag opgenomen met alle eisen eraan die al g
 
 ## Aanpak en Uitvoering
 
-In opdracht 5.1heb ik al eerder beschreven hoe de 8×8 Matrix werkt en in opdracht 3.1 heb ik de 8×8 Matrix al eerder toegepast. Ook heb ik al eerder in opdracht 5.1 beschreven hoe de DHT11 sensor werkt. Het aansluiten en programmeren van de DHT11 sensor ligt na het uitzoeken en uitleggen voor de hand. Dit ga ik niet behandelen in dit hoofdstuk. Dit kan in de hoofdstukken teruggevonden worden van de eerder genoemde opdrachten.
+In opdracht [5.1](https://github.com/maartenpaauw/IMTHE1/blob/master/O5_1/README.md) heb ik al eerder beschreven hoe de 8×8 Matrix werkt en in opdracht [3.1](https://github.com/maartenpaauw/IMTHE1/blob/master/O3_1/README.md) heb ik de 8×8 Matrix al eerder toegepast. Ook heb ik al eerder in opdracht [5.1](https://github.com/maartenpaauw/IMTHE1/blob/master/O5_1/README.md) beschreven hoe de DHT11 sensor werkt. Het aansluiten en programmeren van de DHT11 sensor ligt na het uitzoeken en uitleggen voor de hand. Dit ga ik niet behandelen in dit hoofdstuk. Dit kan in de hoofdstukken teruggevonden worden van de eerder genoemde opdrachten.
 
 ### Extra Hardware
 
@@ -42,7 +42,7 @@ Deze video is ook te vinden op **Youtube**:
 
 [![Eindopdracht - Show Your Moves - Schema](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/fritzing/schema.png)
 
-***LET OP:*** *Het programma **Fritzing** had geen DHT11 component. Daarom heb ik een component gepak dat het meest in de buurt komt. Op het component, dat in mijn IMTHE-Box zit, is een resistor van de data pin naar de 5v5 pin gesoldeerd. Deze resistor heb ik weggelaten in mijn Fritzing schema. Net als bij opdracht 3.1 is er in het programma **Fritzing** geen kleine 8×8 Matrix te vinden. Ik heb daarom heb ik een grote gepakt en deze aangesloten op een appart breadboard zodat de pinnen van het component te verbinden zijn met de shift registers.*
+***LET OP:*** *Het programma **Fritzing** had geen DHT11 component. Daarom heb ik een component gepak dat het meest in de buurt komt. Op het component, dat in mijn IMTHE-Box zit, is een resistor van de data pin naar de 5v5 pin gesoldeerd. Deze resistor heb ik weggelaten in mijn Fritzing schema. Net als bij opdracht [3.1](https://github.com/maartenpaauw/IMTHE1/blob/master/O3_1/README.md) is er in het programma **Fritzing** geen kleine 8×8 Matrix te vinden. Ik heb daarom heb ik een grote gepakt en deze aangesloten op een appart breadboard zodat de pinnen van het component te verbinden zijn met de shift registers.*
 
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
@@ -50,9 +50,14 @@ Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 
 ### Hardware
 
-| Onderdelen                 |
-| -------------------------- |
-| Arduino Nano (v3.0) - 1×   |
+| Onderdelen               |
+| ------------------------ |
+| Arduino Nano (v3.0) - 1× |
+| DHT11 - 1×               |
+| SN74HC595 - 2×           |
+| 220Ω Resistor - 8×       |
+| 8×8 Matrix - 1×          |
+| Dupont Kabel - 45×       |
 
 ## Code
 
@@ -648,14 +653,34 @@ De [SN74HC595 Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/mast
 
 [http://www.ti.com/lit/ds/symlink/sn74hc595.pdf][4]
 
+### DHT11
+
+![DHT11 Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/data_sheets/dht11.png)
+
+De [DHT11 Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/data_sheets/dht11.png) is te vinden in de datasheet. Deze datasheet heb ik via Google gevonden en is terug te vinden via de volgende link:
+
+[https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][5]
+
+### 8×8 Matrix
+
+![8×8 Matrix Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/data_sheets/8x8_matrix.png)
+
+De [8×8 Matrix Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/data_sheets/8x8_matrix.png) heb ik uit de datasheet van de 8×8 Matrix. De datasheet is terug te vinden via de volgende link:
+
+[https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF][6]
+
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
 * [https://protostack.com.au/2010/05/introduction-to-74hc595-shift-register-controlling-16-leds/][2] (Shift Register Controlling 16 Leds)
 * [http://www.electronicwings.com/avr-atmega/dht11-sensor-interfacing-with-atmega16-32][3] (DHT11 Sensor Interfacing with AVR ATmega16/ATmega32)
 * [http://www.ti.com/lit/ds/symlink/sn74hc595.pdf][4] (SN74HC595 Datasheet)
+* [https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][5] (DHT11 Datasheet)
+* [https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF][6] (8×8 Matrix Datasheet)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
 [2]: https://protostack.com.au/2010/05/introduction-to-74hc595-shift-register-controlling-16-leds/ "Shift Register Controlling 16 Leds"
 [3]: http://www.electronicwings.com/avr-atmega/dht11-sensor-interfacing-with-atmega16-32 "DHT11 Sensor Interfacing with AVR ATmega16/ATmega32"
 [4]: http://www.ti.com/lit/ds/symlink/sn74hc595.pdf "SN74HC595"
+[5]: https://akizukidenshi.com/download/ds/aosong/DHT11.pdf "DHT11 Datasheet"
+[6]: https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF "8×8 Matrix Datasheet"
