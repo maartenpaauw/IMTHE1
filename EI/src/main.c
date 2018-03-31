@@ -77,9 +77,8 @@ void init_DHT11()
 // nieuwe data. Deze tijd komt uit de datasheet.
 int DHT11_measure_time()
 {
-    // A = Snelheid van de CPU gedeeld door de prescaler van de timer.
-    // (1000 / A * 1000) = 1 seconden.
-    return (1000 / (16000000 / 1024)) * 1000;
+    // (1000 / (16000000 / 1024)) * 1000 = 64;
+    return 64;
 }
 
 // Wacht net zolang dat de DHT11 pin clear is.
@@ -289,7 +288,10 @@ void turn_on_dot (int row, int column)
     // Zet de rclk pin op laag.
     rclk_pin_low();
 
+    // Trek 1 van de rij af.
     int real_row = row - 1;
+
+    // Trek 1 van de kolom af.
     int real_column = column - 1;
 
     // Loop door 8 bits heen
@@ -440,6 +442,39 @@ void matrix_smiley_happy()
     }
 }
 
+// Overflow timer.
+void init_timer_overflow()
+{
+    // Timer mask 0.
+    TIMSK0 |= (1 << TOIE0);
+
+    // Timer mask 1.
+    TIMSK1 |= (1 << TOIE1);
+
+    // Timer 0 instellingen.
+    TCCR0B |= (1 << CS00) | (1 << CS02);
+
+    // Timer 1 instellingen.
+    TCCR1B |= (1 << CS10);
+
+    // Zet de interrupts aan.
+    sei();
+}
+
+// Functie voor het controleren of er tussen 2 waardes in zit.
+uint8_t between(value, min, max)
+{
+    // Kijk of het tussen 2 waardes in ligt.
+    return (value <= max && value >= min)
+}
+
+// Functie om te controleren of de temeratuur en de luchtvochtigheid perfect zijn.
+uint8_t right_conditions ()
+{
+    // Geef het terug.
+    return (between(integral_temperature, 18, 22) && between(integral_humidity, 40, 60));
+}
+
 // Timer overflow interrupt.
 ISR (TIMER0_OVF_vect)
 {
@@ -498,34 +533,18 @@ ISR (TIMER0_OVF_vect)
 ISR (TIMER1_OVF_vect)
 {
     // Bereken de temperatuur.
-    if (integral_temperature > 21)
+    if (right_conditions())
     {
         // Blije smiley.
         matrix_smiley_happy();
     }
 
+    // Niet de juiste omstandigheden.
     else
     {
         // Verdrietige smiley.
         matrix_smiley_sad();
     }
-}
-
-// Overflow timer.
-void init_timer_overflow()
-{
-    // Timer masks.
-    TIMSK0 |= (1 << TOIE0);
-    TIMSK1 |= (1 << TOIE1);
-
-    // Timer 0 instellingen.
-    TCCR0B |= (1 << CS00) | (1 << CS02);
-
-    // Timer 1 instellingen.
-    TCCR1B |= (1 << CS10);
-
-    // Zet de interrupts aan.
-    sei();
 }
 
 // De main functie.
