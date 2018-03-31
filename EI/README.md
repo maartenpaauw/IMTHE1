@@ -2,7 +2,7 @@
 
 > Show Your Moves
 
-In opdracht 5 heb je jouw unieke IMTHE-Box componenten uitgezocht. Het doel van de eindopdracht is dat je iets unieks gaat maken met die componenten. Wat je gaat maken is aan jou, zolang het maar voldoet aan de volgend isen:
+In opdracht 5 heb je jouw unieke IMTHE-Box componenten uitgezocht. Het doel van de eindopdracht is dat je iets unieks gaat maken met die componenten. Wat je gaat maken is aan jou, zolang het maar voldoet aan de volgend is en:
 
 * Je maakt correct gebruik van minimaal 1 uniek input en 1 uniek output component. Het staat je vrij om daarnaast elk ander onderdeel uit je IMTHE-Box te gebruiken in je oplossing.
 * De afhandeling van je in- en output gebeurt asynchroon door bijvoorbeeld ISR toe te passen.
@@ -12,11 +12,15 @@ De eindopdracht wordt ook in het verslag opgenomen met alle eisen eraan die al g
 
 ## Aanpak en Uitvoering
 
-In opdracht 5.1 heb ik al eerder beschreven hoe de 8×8 Matrix werkt en in opdracht 3.1 heb ik de 8×8 Matrix al eerder toegepast. Ook heb ik al eerder in opdracht 5.1 beschreven hoe de DHT11 sensor werkt. Het aansluiten en programmeren van de DHT11 sensor ligt na het uitzoeken en uitleggen voor de hand. Dit ga ik niet behandelen in dit hoofdstuk. Dit kan de hoofdstukken teruggevonden worden van de eerder genoemde opdrachten.
+In opdracht 5.1heb ik al eerder beschreven hoe de 8×8 Matrix werkt en in opdracht 3.1 heb ik de 8×8 Matrix al eerder toegepast. Ook heb ik al eerder in opdracht 5.1 beschreven hoe de DHT11 sensor werkt. Het aansluiten en programmeren van de DHT11 sensor ligt na het uitzoeken en uitleggen voor de hand. Dit ga ik niet behandelen in dit hoofdstuk. Dit kan in de hoofdstukken teruggevonden worden van de eerder genoemde opdrachten.
 
 ### Het concept
 
 TODO.
+
+### Extra hardware
+
+Om er voor te zorgen dat de 8×8 Matrix aangestuurd kan worden met zo min mogelijk pinnen van de Arduino zelf heb ik gebruik gemaakt van 2 shift registers. De eerste shift register regelt de rij pinnen van de 8×8 Matrix em de tweede shift register regels de kolommen van de 8×8 Matrix. Beide shift registers zitten aan elkaar gekoppelt. Zo zijn er maar 3 data kabels nodig om de shift registers te bedienen.
 
 ## Afbeelding
 
@@ -28,11 +32,11 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 ## Video
 
-[![Eindopdracht - Show Your Moves - Video](https://img.youtube.com/vi/XXX/maxresdefault.jpg)](https://www.youtube.com/)
+[![Eindopdracht - Show Your Moves - Video](https://img.youtube.com/vi/Fws1fKBU__s/maxresdefault.jpg)](https://www.youtube.com/watch?v=Fws1fKBU__s)
 
 Deze video is ook te vinden op **Youtube**:
 
-[https://www.youtube.com/](https://www.youtube.com/)
+[https://www.youtube.com/watch?v=Fws1fKBU__s](https://www.youtube.com/watch?v=Fws1fKBU__s)
 
 ## Breadboard Schema
 
@@ -626,9 +630,9 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 [https://github.com/maartenpaauw/IMTHE1/blob/master/EI/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/EI/src/main.c)
 
-## Datasheet
+## Datasheets
 
-### Arduino Nano Pinout
+### Arduino Nano
 
 ![Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/data_sheets/nano.png)
 
@@ -636,10 +640,22 @@ De [Arduino Nano Pinout][1] is uitgedeeld tijdens de eerste les en terug te vind
 
 [https://forum.arduino.cc/index.php?topic=147582.0][1]
 
+###SN74HC595
+
+![SN74HC595 Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/data_sheets/sn74hc595.png)
+
+De [SN74HC595 Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/data_sheets/sn74hc595.png) heb ik uit de datasheet van de SN74HC595. De datasheet is terug te vinden via de volgende link:
+
+[http://www.ti.com/lit/ds/symlink/sn74hc595.pdf][4]
+
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
 * [https://protostack.com.au/2010/05/introduction-to-74hc595-shift-register-controlling-16-leds/][2] (Shift Register Controlling 16 Leds)
+* [http://www.electronicwings.com/avr-atmega/dht11-sensor-interfacing-with-atmega16-32][3] (DHT11 Sensor Interfacing with AVR ATmega16/ATmega32)
+* [http://www.ti.com/lit/ds/symlink/sn74hc595.pdf][4] (SN74HC595 Datasheet)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
 [2]: https://protostack.com.au/2010/05/introduction-to-74hc595-shift-register-controlling-16-leds/ "Shift Register Controlling 16 Leds"
+[3]: http://www.electronicwings.com/avr-atmega/dht11-sensor-interfacing-with-atmega16-32 "DHT11 Sensor Interfacing with AVR ATmega16/ATmega32"
+[4]: http://www.ti.com/lit/ds/symlink/sn74hc595.pdf "SN74HC595"
