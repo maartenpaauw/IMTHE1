@@ -318,6 +318,19 @@ void turn_on_dot (int row, int column)
         srclk_pin_low();
     }
 
+    // // Loop door 8 bits heen
+    // for (int i = 0; i < 8; i++) 
+    // {
+    //     // Zet de SER pin op laag.
+    //     ser_pin_low();
+
+    //     // Zet de RCLK pin op hoog.
+    //     srclk_pin_high();
+
+    //     // Zet de RCLK pin op laag.
+    //     srclk_pin_low();
+    // }
+
     // Loop door 8 bits heen
     for (int i = 0; i < 8; i++) 
     {
@@ -462,10 +475,10 @@ void init_timer_overflow()
 }
 
 // Functie voor het controleren of er tussen 2 waardes in zit.
-uint8_t between(value, min, max)
+uint8_t between(int value, int min, int max)
 {
     // Kijk of het tussen 2 waardes in ligt.
-    return (value <= max && value >= min)
+    return (value <= max && value >= min);
 }
 
 // Functie om te controleren of de temeratuur en de luchtvochtigheid perfect zijn.
