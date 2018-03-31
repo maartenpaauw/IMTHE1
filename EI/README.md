@@ -14,13 +14,13 @@ De eindopdracht wordt ook in het verslag opgenomen met alle eisen eraan die al g
 
 In opdracht 5.1heb ik al eerder beschreven hoe de 8×8 Matrix werkt en in opdracht 3.1 heb ik de 8×8 Matrix al eerder toegepast. Ook heb ik al eerder in opdracht 5.1 beschreven hoe de DHT11 sensor werkt. Het aansluiten en programmeren van de DHT11 sensor ligt na het uitzoeken en uitleggen voor de hand. Dit ga ik niet behandelen in dit hoofdstuk. Dit kan in de hoofdstukken teruggevonden worden van de eerder genoemde opdrachten.
 
-### Het concept
+### Extra Hardware
 
-TODO.
+Om er voor te zorgen dat de 8×8 Matrix aangestuurd kan worden met zo min mogelijk pinnen van de Arduino zelf heb ik gebruik gemaakt van 2 shift registers. De eerste shift register regelt de rij pinnen van de 8×8 Matrix em de tweede shift register regels de kolommen van de 8×8 Matrix. Beide shift registers zitten aan elkaar gekoppelt. Zo zijn er maar 3 data kabels nodig om de shift registers te bedienen. Hoe de shift register werkt is vrij gemakkelijk. Door te timen met klokken en de data verstuur pin laag en hoog te zetten kunnen er bits in de shift register gestopt worden. Omdat ik er twee achter elkaar heb kunnen ze bij elkaar 16 bits onthouden en dus 16 pinnen hoog of laag zetten. Dit is precies genoeg voor de 8×8 Matrix. Hoe de shift registers aangesloten moeten worden is terug te vinden in het hoofdstuk **datasheets**.
 
-### Extra hardware
+### Het Concept
 
-Om er voor te zorgen dat de 8×8 Matrix aangestuurd kan worden met zo min mogelijk pinnen van de Arduino zelf heb ik gebruik gemaakt van 2 shift registers. De eerste shift register regelt de rij pinnen van de 8×8 Matrix em de tweede shift register regels de kolommen van de 8×8 Matrix. Beide shift registers zitten aan elkaar gekoppelt. Zo zijn er maar 3 data kabels nodig om de shift registers te bedienen.
+Het concept zelf is niet origineel maar wel effectief. Met mijn concept wordt er door de DHT11 sensor de temperatuur en de luchtvochtigheid in mijn kamer gemeten. Deze waarde gaat door een formule heen. Deze formule kijkt of de luchtvochtigheid tussen de 40 en 60 procent is en de temperatuur tussen de 18 en de 22 graden is. Deze luchtvochtigheid en temperatuur zorgt voor een aangenaamde omgeving. Dit is vooral belangrijk als je, net zoals ik, astma hebt. Als deze omstandigheden goed zijn wordt er een blij gezichtje op de 8×8 Matrix getoond. Zo niet wordt er een verdrietig gezichtje op de 8×8 Matrix getoond.
 
 ## Afbeelding
 
