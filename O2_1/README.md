@@ -35,7 +35,7 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 [![Opdracht 2.1 - Count Me In - Video](https://img.youtube.com/vi/wHO4zX4rpPY/maxresdefault.jpg)](https://www.youtube.com/watch?v=wHO4zX4rpPY)
 
-Deze video is ook te vinden op **Youtube**:
+Deze video is ook te vinden op **YouTube**:
 
 [https://www.youtube.com/watch?v=wHO4zX4rpPY](https://www.youtube.com/watch?v=wHO4zX4rpPY)
 

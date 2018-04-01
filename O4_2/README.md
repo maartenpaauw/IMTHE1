@@ -24,7 +24,7 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 [![Opdracht 4.2 - Led There Be Light - Video](https://img.youtube.com/vi/a47dbYte-uk/maxresdefault.jpg)](https://www.youtube.com/watch?v=a47dbYte-uk)
 
-Deze video is ook te vinden op **Youtube**:
+Deze video is ook te vinden op **YouTube**:
 
 [https://www.youtube.com/watch?v=a47dbYte-uk](https://www.youtube.com/watch?v=a47dbYte-uk)
 

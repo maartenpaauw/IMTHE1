@@ -33,7 +33,7 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 [![Opdracht 5.2 - ET Phone Home - Video](https://img.youtube.com/vi/F5fXDvtFF8w/maxresdefault.jpg)](https://www.youtube.com/watch?v=F5fXDvtFF8w)
 
-Deze video is ook te vinden op **Youtube**:
+Deze video is ook te vinden op **YouTube**:
 
 [https://www.youtube.com/watch?v=F5fXDvtFF8w](https://www.youtube.com/watch?v=F5fXDvtFF8w)
 
