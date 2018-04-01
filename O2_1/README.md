@@ -7,7 +7,7 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 1. **Maak een programma dat op het 7-segment LED display herhalend telt van 0 t/m 9. Gebruik het rechter display van de twee en verwerk functies en bit-shifting in je oplossing.**
 2. Breidt de eerste deel-opdracht uit zodat de twee segmenten samen van 0 t/m 99 tellen.
 
-## Aanpak en Uitvoering
+## Aanpak & Uitvoering
 
 ### Vinden van een datasheet
 

@@ -8,7 +8,7 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 2. Maak een programma waarin je via Serial communicatie een led aan of uit kan zetten. Dit mag door bijvoorbeeld het karakter ‘a’ of ‘u’ te sturen. Het programma geeft feedback over de seriële poort of het gelukt is ja of nee. Gebruik niet de gegeven usart.c en .h in je uitwerking, maar maak een oplossing in 1 source bestand.
 3. **Verander deelopdracht 2 zodat binnenkomende data afgehandeld wordt in een interrupt (USART_RX_vect) zodat je programma (zoals in het voorbeeld van hoofdstuk 5) niet ‘eeuwig’ op input wacht. Toon aan dat het werkt door via seriële communicatie een ‘r’, ‘g’ of ‘b’ door te geven aan de AVR en dat dan de corresponderende kleur gaat pulseren (PWM op 1 kleur).**
 
-## Aanpak en Uitvoering
+## Aanpak & Uitvoering
 
 Deze opdracht is een combinatie van opdracht [4.1](https://github.com/maartenpaauw/IMTHE1/blob/master/O4_1/README.md) en [4.2](https://github.com/maartenpaauw/IMTHE1/blob/master/O4_2/README.md). De componenten zijn precies hetzelfde aangesloten als in opdracht [4.1](https://github.com/maartenpaauw/IMTHE1/blob/master/O4_1/README.md). Een van de voorwaarde van de opdracht was dat de seriele communicatie code via interrupt moest werken. Om er voor te zorgen dat deze interrupt ook werkt op input van een enkele karakter moest de initUSART functie iets aangepast worden. `(1 << RXCIE0)` zorgt er voor dat dit werkt. Dit stukje code had ik gevonden in een snippet op GitHub Gist:
 

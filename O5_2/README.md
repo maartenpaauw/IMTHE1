@@ -7,7 +7,7 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 1. Elke IMTHE-Box bevat unieke componenten. Zoek naar de datasheets van deze componenten en maak een kort verslag per component over de protocollen die gebruikt worden en hoe je dit moet gebruiken vanuit de AVR code.
 2. **Zoek naar een library op internet om het HD44780 display te kunnen besturen en maak een programma dat jouw naam en studentnummer op het display laat zien.**
 
-## Aanpak en Uitvoering
+## Aanpak & Uitvoering
 
 Om het display werkend te krijgen mocht ik gebruik maken van een library. Na een tijdje Googelen kwam ik terrecht bij een post op het forum van Atmel. De post ging over een library die gemaakt was voor dit display. De library had ook een settings bestand. Hier moesten aan aantal variabelen aangepast worden. Dit waren pin nummers, CPU snelheid en het aantal bits. Dit instellingen zijn opgenomen in het hoofdstuk code. Via een andere blogpost kwam ik erachter hoe ik de pinnen moest aansluiten en dat er een potentiometer nodig was. 
 

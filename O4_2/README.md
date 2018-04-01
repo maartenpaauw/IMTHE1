@@ -8,7 +8,7 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 2. **Maak een programma waarin je via Serial communicatie een led aan of uit kan zetten. Dit mag door bijvoorbeeld het karakter ‘a’ of ‘u’ te sturen. Het programma geeft feedback over de seriële poort of het gelukt is ja of nee. Gebruik niet de gegeven usart.c en .h in je uitwerking, maar maak een oplossing in 1 source bestand.**
 3. Verander deelopdracht 2 zodat binnenkomende data afgehandeld wordt in een interrupt (USART_RX_vect) zodat je programma (zoals in het voorbeeld van hoofdstuk 5) niet ‘eeuwig’ op input wacht. Toon aan dat het werkt door via seriële communicatie een ‘r’, ‘g’ of ‘b’ door te geven aan de AVR en dat dan de corresponderende kleur gaat pulseren (PWM op 1 kleur).
 
-## Aanpak en Uitvoering
+## Aanpak & Uitvoering
 
 Tijdens de les ben ik op weg geholpen met seriële communicatie. Dit was code die de seriele verbinding uit leest en het karakter terug geeft wat verstuurd werd. Deze code die tijdens de les gemaakt is heb ik verder uitgewerkt voor deze opdracht. De code die gemaakt is controleert of er een 'a' of 'u' ontvangen wordt via de seriële communicatie. Als er een 'a' ontvangen wordt gaat de led aan en als er een 'u' ontvangen wordt gaat de led uit. Ook wordt er feedback gegeven via de seriële communicatie of het gelukt is of niet.
 

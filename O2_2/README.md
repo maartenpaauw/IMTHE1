@@ -7,7 +7,7 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 1. Maak een programma dat op het 7-segment LED display herhalend telt van 0 t/m 9. Gebruik het rechter display van de twee en verwerk functies en bit-shifting in je oplossing.
 2. **Breidt de eerste deel-opdracht uit zodat de twee segmenten samen van 0 t/m 99 tellen.**
 
-## Aanpak en Uitvoering
+## Aanpak & Uitvoering
 
 Om van 0 t/m 99 te tellen in plaats van 0 t/m 9 waren er maar kleine aanpassingen nodig. Ten eerste moest het linker segment aangesloten worden. Om alle segementen aan te sluiten had ik 3 banken nodig. Dit zijn de B, C en D bank. Hierdoor moest er een extra functie gemaakt worden die de B bank regelt. Ook moest de functie die de C bank regelt worden aangepast. Deze bank is nu verantwoordelijk voor het linker en het rechter segment (3 segmenten links en 3 segmenten rechts).
 

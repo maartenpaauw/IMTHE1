@@ -9,7 +9,7 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 
 ![Opdracht 3.2 - ADC Baby! - Voorbeeld](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_2/assets/voorbeeld.png)
 
-## Aanpak en Uitvoering
+## Aanpak & Uitvoering
 
 Tijdens de les van week 3 zijn we aan de slag geweest met de potentiometer. We hebben een led van langzaam naar snel laten knipperen. Ik heb de led vervangen door de speaker en de code iets aangepast en extra functies toegevoegd:
 

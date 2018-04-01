@@ -10,7 +10,7 @@ In opdracht 5 heb je jouw unieke IMTHE-Box componenten uitgezocht. Het doel van 
 
 De eindopdracht wordt ook in het verslag opgenomen met alle eisen eraan die al genoemd zijn. Daarnaast geef je ook een beschrijving van het concept inclusief waar het toegepast zou kunnen worden en film je je uitwerking uitgebreid, waarin duidelijk wordt dat je de uitwerking getest hebt in verschillende situaties.
 
-## Aanpak en Uitvoering
+## Aanpak & Uitvoering
 
 In opdracht [5.1](https://github.com/maartenpaauw/IMTHE1/blob/master/O5_1/README.md) heb ik al eerder beschreven hoe de 8×8 Matrix werkt en in opdracht [3.1](https://github.com/maartenpaauw/IMTHE1/blob/master/O3_1/README.md) heb ik de 8×8 Matrix al eerder toegepast. Ook heb ik al eerder in opdracht [5.1](https://github.com/maartenpaauw/IMTHE1/blob/master/O5_1/README.md) beschreven hoe de DHT11 sensor werkt. Het aansluiten en programmeren van de DHT11 sensor ligt na het uitzoeken en uitleggen voor de hand. Dit ga ik niet behandelen in dit hoofdstuk. Dit kan in de hoofdstukken teruggevonden worden van de eerder genoemde opdrachten.
 

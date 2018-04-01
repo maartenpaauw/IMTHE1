@@ -8,7 +8,7 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 2. Maak een programma waarin je via Serial communicatie een led aan of uit kan zetten. Dit mag door bijvoorbeeld het karakter ‘a’ of ‘u’ te sturen. Het programma geeft feedback over de seriële poort of het gelukt is ja of nee. Gebruik niet de gegeven usart.c en .h in je uitwerking, maar maak een oplossing in 1 source bestand.
 3. Verander deelopdracht 2 zodat binnenkomende data afgehandeld wordt in een interrupt (USART_RX_vect) zodat je programma (zoals in het voorbeeld van hoofdstuk 5) niet ‘eeuwig’ op input wacht. Toon aan dat het werkt door via seriële communicatie een ‘r’, ‘g’ of ‘b’ door te geven aan de AVR en dat dan de corresponderende kleur gaat pulseren (PWM op 1 kleur).
 
-## Aanpak en Uitvoering
+## Aanpak & Uitvoering
 
 Tijdens de les heb ik geleerd hoe je timers maakt een PWM waarde kan sturen naar een bepaalde pin. Met deze code werd er een led steeds gedimd. Deze code kon ik mooi gebruiken voor deze opdracht. 
 

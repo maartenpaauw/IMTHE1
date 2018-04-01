@@ -9,7 +9,7 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 
 ![Opdracht 3.1 - ADC Baby! - Voorbeeld](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_1/assets/voorbeeld.png)
 
-## Aanpak en Uitvoering
+## Aanpak & Uitvoering
 
 Tijdens de les van week 3 zijn wij bezig geweest met de *push button* en één led. Als de knop ingedrukt werd ging de led aan en als de knop weer werd losgelaten ging de led uit. Deze code heb ik verder uitgebreid om deze opdracht te halen. 
 
