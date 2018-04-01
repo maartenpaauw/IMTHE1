@@ -15,11 +15,11 @@ Op het internet had ik een [brochure][2] gevonden van het bedrijf Greegoo. In de
 
 Als het scherm gevoed wordt via de 5v5 pin op de Arduino heet dat **common anode** en als het scherm gevoed wordt via een data pin op de Arduino heet dat **common cathode**. Hoe mijn 7 Segment Display aangesloten moet worden is niet aangegeven op het component zelf. Dit moet achterhaald worden. Meer hierover in het volgende hoofdstuk.
 
-### Common anode of cathode
+### Common- Anode of Cathode
 
 In het datasheet stond aangegeven dat pin 13 en 14 op de *ground* of op de 5v5 pin moeten. Om uit te zoeken of het een common anode of een cathode is heb ik eerst pin 13 en 14 op een *ground* pin aangesloten. Daarna had ik met de 5v5 pin, met een resistor ertussen, aan gesloten op een van de segment pinnen. Geen een van de segmenten ging aan. Hierdoor wist ik dat het geen common cathode is maar een common anode 7 segment display. Dus heb ik pin 13 en 14 aangesloten, met een resistor ertussen, op de 5v5 pin op de Arduino. De pinnen van elke segment heb ik aangesloten op de pinnen van de B en D bank. 
 
-### Het vormen van getallen
+### Het Vormen van Getallen
 
 Op de wikipedia van het [7 Segment Display][3] was een lijst opgenomen hoe je met welke segmenten welk getal kan vormen. Voor het gemak heb ik deze waardes (**on** of **off**) omgezet naar binair (**1** of **0**). Dit heb ik gedaan voor elk getal en dit in een array gestopt.
 
