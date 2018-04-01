@@ -9,7 +9,7 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 
 ## Aanpak & Uitvoering
 
-### Vinden van een datasheet
+### Vinden van de Datasheet
 
 Op het internet had ik een [brochure][2] gevonden van het bedrijf Greegoo. In deze brochure stonden meerdere componenten met het daarbij behorende datasheet. Één pagina ging over het 7 segment display (D5621A/B). Deze is te vinden in het hoofdstuk **Datasheets**. Elke 7 segment heeft 9 pinnen. 7 daarvan voor elke *streepje*, 1 voor de punt en 1 voor de *ground* of de voltage. Deze aantal pinnen zijn 2 keer aanwezig omdat het een dubbel 7 segment display is.
 
@@ -187,14 +187,14 @@ De [Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/m
 
 De [7 Segment Display Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_1/assets/data_sheets/D5621A_B.png) heb ik gevonden in de datasheet van het 7 Segment Display. De datasheet is terug te vinden via de volgende link:
 
-[http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&type=P&query=A%2Fd5621A%2FB][2]
+[http://datasheet.datasheetarchive.com/originals/library/Datasheets-SL3/DSASL0045733.pdf][2]
 
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
-* [http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&type=P&query=A%2Fd5621A%2FB][2] (7 Segment Display (D5621A/B) Datasheet)
+* [http://datasheet.datasheetarchive.com/originals/library/Datasheets-SL3/DSASL0045733.pdf][2] (7 Segment Display (D5621A/B) Datasheet)
 * [https://en.wikipedia.org/wiki/Seven-segment_display][3] (7 Segment Display)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]:  http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&amp;amp;amp;amp;amp;amp;type=P&amp;amp;amp;amp;amp;amp;query=A%2Fd5621A%2FB "7 Segment Display (D5621A/B) Datasheet"
+[2]:  http://datasheet.datasheetarchive.com/originals/library/Datasheets-SL3/DSASL0045733.pdf "7 Segment Display (D5621A/B) Datasheet"
 [3]: https://en.wikipedia.org/wiki/Seven-segment_display "7 Segment Display"

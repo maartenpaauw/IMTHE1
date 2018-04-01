@@ -16,7 +16,7 @@
 
 ## Video's
 
-Van elke opdracht is er een video gemaakt. Alle video's zijn terug te vinden in de volgende YouTube afspeellijst:
+Van elke opdracht is er een video gemaakt. Alle video's zijn terug te vinden in de volgende **YouTube** afspeellijst:
 
 [https://www.youtube.com/playlist?list=PLPLYbKevU2EqD9QFGL1oaw_gqJ3Caq-WH](https://www.youtube.com/playlist?list=PLPLYbKevU2EqD9QFGL1oaw_gqJ3Caq-WH)
 
