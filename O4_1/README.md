@@ -14,13 +14,13 @@ Tijdens de les heb ik geleerd hoe je timers maakt een PWM waarde kan sturen naar
 
 ### Common Cathode of Common Anode
 
-Eerst moest er uitgezocht worden wat voor soort RGB led het is. Het kan namelijk een **Common Cathode** of een **Common Anode** led zijn. Ik sloot pin 2 aan op 5v5 op de Arduino en pin 1 via een weerstand op de *ground* van de Arduino. De led ging meteen rood branden. Hierdoor wist ik dat het een **Common Anode** led is. De pinout is te vinden in het hoofdstuk over de datasheets.
+Eerst moest er uitgezocht worden wat voor soort RGB led het is. Het kan namelijk een **Common Cathode** of een **Common Anode** led zijn. Ik sloot pin 2 aan op 5v5 op de Arduino en pin 1 via een weerstand op de *ground* van de Arduino. De led ging meteen rood branden. Hierdoor wist ik dat het een **Common Anode** led is. De pinout is te vinden in het hoofdstuk over de **datasheets**.
 
-### Code uit boek
+### Code uit Boek
 
 In de les hadden we de PWM OC2A gebruikt om de led te laten dimmen. Om een RGB led van kleur te laten veranderen zijn er 3 PWM pinnen nodig om de rode, groene en blauwe waardes aan te passen. Ik wist niet precies de instellingen die nodig waren om dit te regelen voor PWM OC1A en OC1B. Gelukkig was er een hoofdstuk in het boek hieraan besteed. De code uit het boek heb ik gebruikt om groen en blauw van de RGB led aan te passen.
 
-### Kleuren patroon
+### Kleuren Patroon
 
 Het patroon dat ik gemaakt heb is het volgende. De led begint vol rood (255). Daarna gaat rood aftellen van 255 naar 0. Tegelijkertijd telt groen op naar 255. Dit zorgt ervoor dat de led overvloeid van rood naar groen. Als uiteindelijk groen op 255 is gaat groen weer aftellen naar 0. Als groen begint met aftellen begint de waarde van blauw op te tellen van 0 naar 255. Dit zorgt ervoor dat de led overvloeid van groen naar blauw. Als blauw eenmaal op 255 staat gaat deze waarde weer aftellen naar 0. Tergelijkertijd begint rood op te tellen van 0 naar 255. Dit zorgt ervoor dat de led overvloeid van blauw naar rood. Als dit gebeurd is zijn we weer aangekomen bij het begin. Deze code staat in de Interrupt Service Routine.
 

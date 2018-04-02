@@ -7,9 +7,9 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 1. **Elke IMTHE-Box bevat unieke componenten. Zoek naar de datasheets van deze componenten en maak een kort verslag per component over de protocollen die gebruikt worden en hoe je dit moet gebruiken vanuit de AVR code.**
 2. Zoek naar een library op internet om het HD44780 display te kunnen besturen en maak een programma dat jouw naam en studentnummer op het display laat zien.
 
-## De unieke componenten
+## De Unieke Componenten
 
-In de IMTHE-Box zitten 2 unieke componenten. Één uniek input component en één uniek output component. De componenten die in mijn IMTHE-Box zitten zijn één **DHT11**, dit is een temperatuur en luchtvochtigheid sensor, en twee **LED 8×8 Matrix**.
+In de IMTHE-Box zitten 2 unieke componenten. Één uniek input component en één uniek output component. De componenten die in mijn IMTHE-Box zitten zijn één **DHT11**, dit is een temperatuur en luchtvochtigheid sensor, en twee **led 8×8 Matrix**.
 
 ### DHT11
 
@@ -43,7 +43,7 @@ Nadat er een ***response*** is gegeven volgt direct de data. De data wordt verst
 - Decimaal van de temperatuur (in celsius) .
 - Checksum over de 4 vorige waardes.
 
-Elke bit wordt via de volgende manier gecommuniceerd; eerst wordt de **pin** op **low** gezet voor **54 microseconden**. Vervolgens wordt de **pin** op high **gezet** voor **24 microseconden** als het **0** is en **70 microseconden** als het **1** is. Aan het einde van 8 bit wordt er vervolgens de **pin** op **low** gezet voor **54 microseconden**.
+Elke bit wordt via de volgende manier gecommuniceerd; eerst wordt de **pin** op **low** gezet voor **54 microseconden**. Vervolgens wordt de **pin** op high **gezet** voor **24 microseconden** als het **0** is en **70 microseconden** als het **1** is. Aan het einde van 8-bit wordt er vervolgens de **pin** op **low** gezet voor **54 microseconden**.
 
 *Alle informatie heb ik gewonnen uit de datasheet van het component:*
 

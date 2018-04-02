@@ -108,7 +108,7 @@ De code kan ook gevonden worden in mijn **GitHub** *repository* via de volgende 
 
 [https://github.com/maartenpaauw/IMTHE1/blob/master/O5_2/src/main.c](https://github.com/maartenpaauw/IMTHE1/blob/master/O5_2/src/main.c)
 
-### Library
+### Library Instellingen
 
 De library die ik gebruikt heb heeft ook een aantal instellingen nodig. De instellingen heb ik hieronder opgenomen.
 

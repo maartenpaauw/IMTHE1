@@ -2,7 +2,7 @@
 
 > Show Your Moves
 
-In opdracht 5 heb je jouw unieke IMTHE-Box componenten uitgezocht. Het doel van de eindopdracht is dat je iets unieks gaat maken met die componenten. Wat je gaat maken is aan jou, zolang het maar voldoet aan de volgend is en:
+In opdracht 5 heb je jouw unieke IMTHE-Box componenten uitgezocht. Het doel van de eindopdracht is dat je iets unieks gaat maken met die componenten. Wat je gaat maken is aan jou, zolang het maar voldoet aan de volgende eisen:
 
 * Je maakt correct gebruik van minimaal 1 uniek input en 1 uniek output component. Het staat je vrij om daarnaast elk ander onderdeel uit je IMTHE-Box te gebruiken in je oplossing.
 * De afhandeling van je in- en output gebeurt asynchroon door bijvoorbeeld ISR toe te passen.
@@ -20,7 +20,7 @@ Om er voor te zorgen dat de 8×8 Matrix aangestuurd kan worden met zo min mogeli
 
 ### Het Concept
 
-Het concept zelf is niet origineel maar wel effectief. Met mijn concept wordt er door de DHT11 sensor de temperatuur en de luchtvochtigheid in mijn kamer gemeten. Deze waarde gaat door een formule heen. Deze formule kijkt of de luchtvochtigheid tussen de 40 en 60 procent is en de temperatuur tussen de 18 en de 22 graden is. Deze luchtvochtigheid en temperatuur zorgt voor een aangenaamde omgeving. Dit is vooral belangrijk als je, net zoals ik, astma hebt. Als deze omstandigheden goed zijn wordt er een blij gezichtje op de 8×8 Matrix getoond. Zo niet wordt er een verdrietig gezichtje op de 8×8 Matrix getoond.
+Het concept zelf is niet origineel maar wel effectief. Met mijn concept wordt er door de DHT11 sensor de temperatuur en de luchtvochtigheid in een ruimte / kamer gemeten. Deze waarde gaat door een formule heen. Deze formule kijkt of de luchtvochtigheid tussen de 40 en 60 procent is en de temperatuur tussen de 18 en de 22 graden is. Deze luchtvochtigheid en temperatuur zorgt voor een aangenaamde omgeving. Dit is vooral belangrijk als je, net zoals ik, astma hebt. Als deze omstandigheden goed zijn wordt er een blij gezichtje op de 8×8 Matrix getoond. Zo niet wordt er een verdrietig gezichtje op de 8×8 Matrix getoond.
 
 ## Afbeelding
 
