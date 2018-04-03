@@ -9,9 +9,9 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 
 ## Aanpak & Uitvoering
 
-Om het display werkend te krijgen mocht ik gebruik maken van een library. Na een tijdje Googelen kwam ik terrecht bij een post op het forum van Atmel. De post ging over een library die gemaakt was voor dit display. De library had ook een settings bestand. Hier moesten aan aantal variabelen aangepast worden. Dit waren pin nummers, CPU snelheid en het aantal bits. Dit instellingen zijn opgenomen in het hoofdstuk code. Via een andere blogpost kwam ik erachter hoe ik de pinnen moest aansluiten en dat er een potentiometer nodig was. 
+Om het display werkend te krijgen mocht ik gebruik maken van een library. Na een tijdje Googelen kwam ik terrecht bij een post op het forum van Atmel. De post ging over een library die gemaakt was voor dit display. De library had ook een settings bestand. Hier moest een aantal variabelen aangepast worden. Dit waren pin nummers, CPU snelheid en het aantal bits. Deze instellingen zijn opgenomen in het hoofdstuk code. Via een andere blogpost kwam ik erachter hoe ik de pinnen moest aansluiten en dat er een potentiometer nodig was. 
 
-De code zelf is vrij kort. Er zijn maar een aantal functies die aangeroepen hoeven worden:
+De code zelf is vrij kort. Er is maar een aantal functies die aangeroepen hoeven worden:
 
 * Een functie die het display initialiseert.
 * Een functie die het display leeg maakt.

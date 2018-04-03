@@ -13,7 +13,7 @@ In de IMTHE-Box zitten 2 unieke componenten. Één uniek input component en éé
 
 ### DHT11
 
-De DHT11 is een temperatuur en luchtvochtigheid sensor. De DHT11 meet de  temperatuur en luchtvochtigheid van de nabijne lucht en vertaald het naar een digitaal signaal. De sensor is nauwkeurig gekalibreerd in een labratorium en deze kalibratie wordt opgeslagen op het component zelf. Er zijn geen analoge pinnen nodig om het signaal uit te lezen. Alle data van de sensor wordt verzonden over één digitale pin. Het beste is om de bedrading tussen de DHT11 en de AVR korter te houden dan 20 meter. Ook wordt er aangeraden om de DHT11 op 5 volt aan te sluiten.
+De DHT11 is een temperatuur en luchtvochtigheid sensor. De DHT11 meet de  temperatuur en luchtvochtigheid van de nabijne lucht en vertaald het naar een digitaal signaal. De sensor is nauwkeurig gekalibreerd in een labratorium en deze kalibratie wordt opgeslagen op het component zelf. Er zijn geen analoge pinnen nodig om het signaal uit te lezen. Alle data van de sensor wordt verzonden over één digitale pin. Het beste is om de bedrading tussen de DHT11 en de AVR korter te houden dan 20 meter. Ook wordt aangeraden om de DHT11 op 5 volt aan te sluiten.
 
 Het enigste nadeel van de DHT11 is dat de sensor maar 1 keer per 2 seconden de omliggende lucht meet.
 
@@ -35,12 +35,12 @@ De DHT11 stuurt een ***response*** terug nadat er een ***request*** gemaakt is. 
 
 ##### Data Reading
 
-Nadat er een ***response*** is gegeven volgt direct de data. De data wordt verstuurd in **5 pakketen**. Ieder van **8-bit**. In totaal zijn die **40-bits**. Hieronder is per **8-bit** uitgelegd wat de data betekent:
+Nadat een ***response*** is gegeven volgt direct de data. De data wordt verstuurd in **5 pakketen**. Ieder van **8-bit**. In totaal zijn die **40-bits**. Hieronder is per **8-bit** uitgelegd wat de data betekent:
 
 - Integraal van de luchtvochtigheid.
-- Decimaal van de luchtvochtigheid .
+- Decimaal van de luchtvochtigheid.
 - Integraal van de temperatuur (in celsius).
-- Decimaal van de temperatuur (in celsius) .
+- Decimaal van de temperatuur (in celsius).
 - Checksum over de 4 vorige waardes.
 
 Elke bit wordt via de volgende manier gecommuniceerd; eerst wordt de **pin** op **low** gezet voor **54 microseconden**. Vervolgens wordt de **pin** op high **gezet** voor **24 microseconden** als het **0** is en **70 microseconden** als het **1** is. Aan het einde van 8-bit wordt er vervolgens de **pin** op **low** gezet voor **54 microseconden**.
@@ -51,7 +51,7 @@ Elke bit wordt via de volgende manier gecommuniceerd; eerst wordt de **pin** op 
 
 ### 8×8 Matrix
 
-De 8×8 Matrix is een component waar 64 leds in zitten. Deze 64 leds zijn gerankschikt in 8 rijen van 8. Dit vormt samen een vierkant. Alle pinnen van de leds zijn verbonden met 8 rij pinnen en 8 kolom pinnen. Een combinatie van één rij en één kolom pin zorgt voor het aan gaan van één led. Over de 8×8 matrix valt minder te vertellen vergeleken met de DHT11 component met betrekking tot het programmeren. De volgorde van de pinnen kan alleen een beetje verwarrend zijn. De pinnen lopen in de vorm van de letter U 90 graden gedraaid tegen de klok in. De pin linksonder is pin 1 en de pin linksboven is pin 16. De pinnen zelf staan niet op vorgorde van de rijen en kolommen. Welke pin voor welke rij of kolom is kan terug gevonden worden in de afbeelding van de pinout.
+De 8×8 Matrix is een component waar 64 leds in zitten. Deze 64 leds zijn gerankschikt in 8 rijen van 8. Dit vormt samen een vierkant. Alle pinnen van de leds zijn verbonden met 8 rij pinnen en 8 kolom pinnen. Een combinatie van één rij en één kolom pin zorgt voor het aan gaan van één led. Over de 8×8 matrix valt minder te vertellen vergeleken met de DHT11 component met betrekking tot het programmeren. De volgorde van de pinnen kan alleen een beetje verwarrend zijn. De pinnen lopen in de vorm van de letter U 90 graden gedraaid tegen de klok in. De pin linksonder is pin 1 en de pin linksboven is pin 16. De pinnen zelf staan niet op vorgorde van de rijen en kolommen. Welke pin voor welke rij of kolom is kan teruggevonden worden in de afbeelding van de pinout.
 
 *Bij het aansluiten moet er wel rekening gehouden worden dat er bij elke pin van de rijen of bij elke pin van de kolommen er een resistor aangesloten moet worden. Het component zelf heeft deze niet ingebouwd.*
 

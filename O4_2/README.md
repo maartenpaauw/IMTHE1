@@ -10,7 +10,7 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 
 ## Aanpak & Uitvoering
 
-Tijdens de les ben ik op weg geholpen met seriële communicatie. Dit was code die de seriele verbinding uit leest en het karakter terug geeft wat verstuurd werd. Deze code die tijdens de les gemaakt is heb ik verder uitgewerkt voor deze opdracht. De code die gemaakt is controleert of er een 'a' of 'u' ontvangen wordt via de seriële communicatie. Als er een 'a' ontvangen wordt gaat de led aan en als er een 'u' ontvangen wordt gaat de led uit. Ook wordt er feedback gegeven via de seriële communicatie of het gelukt is of niet.
+Tijdens de les ben ik op weg geholpen met seriële communicatie. Dit was code die de seriele verbinding uit leest en het karakter terug geeft wat verstuurd werd. Deze code, die tijdens de les gemaakt is, heb ik verder uitgewerkt voor deze opdracht. De code die gemaakt is controleert of er een 'a' of 'u' ontvangen wordt via de seriële communicatie. Als er een 'a' ontvangen wordt gaat de led aan en als er een 'u' ontvangen wordt gaat de led uit. Ook wordt er feedback gegeven via de seriële communicatie of het gelukt is of niet.
 
 ## Afbeelding
 

@@ -13,7 +13,7 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 
 Tijdens de les van week 3 zijn wij bezig geweest met de *push button* en één led. Als de knop ingedrukt werd ging de led aan en als de knop weer werd losgelaten ging de led uit. Deze code heb ik verder uitgebreid om deze opdracht te halen. 
 
-In plaats van dat ik gebruik maak van 9 losse led's heb ik ervoor gekozen om het 8×8 matrix te gebruiken. Een oog van de dobbelsteen is 2×2 op het matrix. Zo hou je tussen de ogen één enkele led over. Om ervoor te zorgen dat er maar één oog aangaat staat elke oog, ook al zijn er meerdere nodig, 1 miliseconden aan. Dit is niet te zien met het blote oog.
+In plaats van dat ik gebruik maak van 9 losse led's heb ik ervoor gekozen om het 8×8 matrix te gebruiken. Een oog van de dobbelsteen is 2×2 op het matrix. Zo houd je tussen de ogen één enkele led over. Om ervoor te zorgen dat er maar één oog aangaat staat elke oog, ook al zijn er meerdere nodig, 1 miliseconden aan. Dit is niet te zien met het blote oog.
 
 ### 8×8 Matrix Pinnen
 
@@ -58,7 +58,7 @@ De video kan ook gedownload worden via de volgende **Google Drive** link:
 
 [![Opdracht 3.1 - ADC Baby! - Schema](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_1/assets/fritzing/schema.png)](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O3_1/assets/fritzing/schema.png)
 
-***LET OP:*** *In het programma **Fritzing** was er geen kleine 8×8 Matrix te vinden. Ik heb daarom heb ik een grote gepakt en deze aangesloten op een appart breadboard zodat de pinnen van het component te verbinden zijn met de Arduino.*
+***LET OP:*** *In het programma **Fritzing** was er geen kleine 8×8 Matrix te vinden. Ik heb daarom een grote gepakt en deze aangesloten op een appart breadboard zodat de pinnen van het component te verbinden zijn met de Arduino.*
 
 Het **Fritzing** schema kan ook gedownload worden via de volgende link:
 

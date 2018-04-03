@@ -10,7 +10,7 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 
 ## Aanpak & Uitvoering
 
-Tijdens de les heb ik geleerd hoe je timers maakt een PWM waarde kan sturen naar een bepaalde pin. Met deze code werd er een led steeds gedimd. Deze code kon ik mooi gebruiken voor deze opdracht. 
+Tijdens de les heb ik geleerd hoe je timers maakt en een PWM waarde kan sturen naar een bepaalde pin. Met deze code werd er een led steeds gedimd. Deze code kon ik mooi gebruiken voor deze opdracht. 
 
 ### Common Cathode of Common Anode
 
@@ -22,7 +22,7 @@ In de les hadden we de PWM OC2A gebruikt om de led te laten dimmen. Om een RGB l
 
 ### Kleuren Patroon
 
-Het patroon dat ik gemaakt heb is het volgende. De led begint vol rood (255). Daarna gaat rood aftellen van 255 naar 0. Tegelijkertijd telt groen op naar 255. Dit zorgt ervoor dat de led overvloeid van rood naar groen. Als uiteindelijk groen op 255 is gaat groen weer aftellen naar 0. Als groen begint met aftellen begint de waarde van blauw op te tellen van 0 naar 255. Dit zorgt ervoor dat de led overvloeid van groen naar blauw. Als blauw eenmaal op 255 staat gaat deze waarde weer aftellen naar 0. Tergelijkertijd begint rood op te tellen van 0 naar 255. Dit zorgt ervoor dat de led overvloeid van blauw naar rood. Als dit gebeurd is zijn we weer aangekomen bij het begin. Deze code staat in de Interrupt Service Routine.
+Het patroon dat ik gemaakt heb is het volgende. De led begint vol rood (255). Daarna gaat rood aftellen van 255 naar 0. Tegelijkertijd telt groen op naar 255. Dit zorgt ervoor dat de led overvloeid van rood naar groen. Als uiteindelijk groen op 255 is gaat groen weer aftellen naar 0. Als groen begint met aftellen begint de waarde van blauw op te tellen van 0 naar 255. Dit zorgt ervoor dat de led overvloeid van groen naar blauw. Als blauw eenmaal op 255 staat gaat deze waarde weer aftellen naar 0. Tergelijkertijd begint rood op te tellen van 0 naar 255. Dit zorgt ervoor dat de led overvloeid van blauw naar rood. Als dit is gebeurd zijn we weer aangekomen bij het begin. Deze code staat in de Interrupt Service Routine.
 
 ## Afbeelding
 

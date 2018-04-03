@@ -11,17 +11,17 @@ Deze opdracht bestaat uit twee kleinere opdrachten:
 
 ## Aanpak & Uitvoering
 
-Tijdens de les van week 3 zijn we aan de slag geweest met de potentiometer. We hebben een led van langzaam naar snel laten knipperen. Ik heb de led vervangen door de speaker en de code iets aangepast en extra functies toegevoegd:
+Tijdens de les van week 3 zijn we aan de slag gegaan met de potentiometer. We hebben een led van langzaam naar snel laten knipperen. Ik heb de led vervangen door de speaker en de code iets aangepast en extra functies toegevoegd:
 
-- Ik heb een functie gemaakt die een waarde van 1 tot en met 1024 in de juiste verhouding teruggeeft tussen de 100 en 10.000. Dit zijn het aantal microseconden dat de speaker moet wachten voordat het weer stroom krijgt. Deze functie wordt ook wel map genoemd. Een groot deel van de code heb ik gevonden op [Stack Overflow][3].
-- Ook moest ik bereken hoe lang de speaker moest wachten om weer stroom te krijgen. Dit is te zien in onderstaande tabel.
+- Ik heb een functie gemaakt die een waarde van 1 tot en met 1024 in de juiste verhouding teruggeeft tussen de 100 en 10.000. Dit zijn het aantal microseconden dat de speaker moet wachten voordat het weer stroom krijgt. Deze functie wordt ook wel *map* genoemd. Een groot deel van de code heb ik gevonden op [Stack Overflow][3].
+- Ook moest ik bereken hoe lang de speaker moet wachten om weer stroom te krijgen. Dit is te zien in onderstaande tabel.
 
 | Hz (hertz) | ms (milliseconden) | µs (microseconden) |
 | ---------- | ------------------ | ------------------ |
 | 100        | 10                 | 10.000             |
 | 10.000     | 0.1                | 100                |
 
-*Door het aanmaken van deze tabel kwam ik erachter dat de waardes geflipt werden bij het omrekenen. Door deze ontdekking heb ik de map functie laten mappen van de waarde 10.000 tot 100 in plaats van 100 tot 10.000. Hierdoor was er geen verdere berekening nodig.*
+*Door het aanmaken van deze tabel kwam ik erachter dat de waardes omgewisseld werden bij het omrekenen. Door deze ontdekking heb ik de map functie laten mappen van de waarde 10.000 tot 100 in plaats van 100 tot 10.000. Hierdoor was er geen verdere berekening nodig.*
 
 ## Afbeelding
 

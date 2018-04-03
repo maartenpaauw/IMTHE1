@@ -21,7 +21,7 @@ In het datasheet stond aangegeven dat pin 13 en 14 op de *ground* of op de 5v5 p
 
 ### Het Vormen van Getallen
 
-Op de wikipedia van het [7 Segment Display][3] was een lijst opgenomen hoe je met welke segmenten welk getal kan vormen. Voor het gemak heb ik deze waardes (**on** of **off**) omgezet naar binair (**1** of **0**). Dit heb ik gedaan voor elk getal en dit in een array gestopt.
+Op de wikipedia pagina van het [7 Segment Display][3] was een lijst opgenomen hoe je met welke segmenten welk getal kan vormen. Voor het gemak heb ik deze waardes (**on** of **off**) omgezet naar binair (**1** of **0**). Dit heb ik gedaan voor elk getal en dit in een array gestopt.
 
 ## Afbeelding
 

@@ -10,7 +10,7 @@ Deze opdracht bestaat uit drie kleinere opdrachten:
 
 ## Aanpak & Uitvoering
 
-Deze opdracht is een combinatie van opdracht [4.1](https://github.com/maartenpaauw/IMTHE1/blob/master/O4_1/README.md) en [4.2](https://github.com/maartenpaauw/IMTHE1/blob/master/O4_2/README.md). De componenten zijn precies hetzelfde aangesloten als in opdracht [4.1](https://github.com/maartenpaauw/IMTHE1/blob/master/O4_1/README.md). Een van de voorwaarde van de opdracht was dat de seriele communicatie code via interrupt moest werken. Om er voor te zorgen dat deze interrupt ook werkt op input van een enkele karakter moest de initUSART functie iets aangepast worden. `(1 << RXCIE0)` zorgt er voor dat dit werkt. Dit stukje code had ik gevonden in een snippet op GitHub Gist:
+Deze opdracht is een combinatie van opdracht [4.1](https://github.com/maartenpaauw/IMTHE1/blob/master/O4_1/README.md) en [4.2](https://github.com/maartenpaauw/IMTHE1/blob/master/O4_2/README.md). De componenten zijn precies hetzelfde aangesloten als in opdracht [4.1](https://github.com/maartenpaauw/IMTHE1/blob/master/O4_1/README.md). Een van de voorwaarde van de opdracht was dat de seriele communicatie code via een interrupt moest werken. Om er voor te zorgen dat deze interrupt ook werkt op input van een enkel karakter moest de initUSART functie iets aangepast worden. De code `(1 << RXCIE0)` zorgt ervoor dat dit werkt. Dit stukje code had ik gevonden in een code snippet op GitHub Gist:
 
 [https://gist.github.com/3XX0/5524477][3]
 
