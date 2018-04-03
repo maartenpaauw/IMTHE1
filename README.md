@@ -20,6 +20,10 @@ Van elke opdracht is er een video gemaakt. Alle video's zijn terug te vinden in 
 
 [https://www.youtube.com/playlist?list=PLPLYbKevU2EqD9QFGL1oaw_gqJ3Caq-WH](https://www.youtube.com/playlist?list=PLPLYbKevU2EqD9QFGL1oaw_gqJ3Caq-WH)
 
+Alle video's kunnen ook gedownload worden via **Google Drive**. Dit kan via de volgende link:
+
+[https://drive.google.com/drive/folders/17MYynUWKTpw2-whVy4PLMjWbyfZeJhk0?usp=sharing](https://drive.google.com/drive/folders/17MYynUWKTpw2-whVy4PLMjWbyfZeJhk0?usp=sharing)
+
 ## Platform IO
 
 In plaats van Eclipse maak ik gebruik van Platform IO. Dit omdat ik dan kan blijven programmeren in mijn favoriete editor Visual Studio Code. De mapindeling (voor alle opdrachten) ziet er daarom iets anders uit vergeleken met de mapindeling van een Eclipse project.
