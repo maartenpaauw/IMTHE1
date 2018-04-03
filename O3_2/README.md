@@ -35,9 +35,13 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 [![Opdracht 3.2 - ADC Baby! - Video](https://img.youtube.com/vi/gUwsOV7sM_M/maxresdefault.jpg)](https://www.youtube.com/watch?v=gUwsOV7sM_M)
 
-Deze video is ook te vinden op **YouTube**:
+Deze video is te vinden op **YouTube**:
 
 [https://www.youtube.com/watch?v=gUwsOV7sM_M](https://www.youtube.com/watch?v=gUwsOV7sM_M)
+
+De video kan ook gedownload worden via de volgende **Google Drive** link:
+
+[https://drive.google.com/file/d/1mjFM4OpC9Dd9Y_Kjeu3PEqG8_SEXUMys/view?usp=sharing](https://drive.google.com/file/d/1mjFM4OpC9Dd9Y_Kjeu3PEqG8_SEXUMys/view?usp=sharing)
 
 ## Breadboard Schema
 

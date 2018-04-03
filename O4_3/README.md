@@ -28,9 +28,13 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 [![Opdracht 4.3 - Led There Be Light - Video](https://img.youtube.com/vi/SoOWLMDic2s/maxresdefault.jpg)](https://www.youtube.com/watch?v=SoOWLMDic2s)
 
-Deze video is ook te vinden op **YouTube**:
+Deze video is te vinden op **YouTube**:
 
 [https://www.youtube.com/watch?v=SoOWLMDic2s](https://www.youtube.com/watch?v=SoOWLMDic2s)
+
+De video kan ook gedownload worden via de volgende **Google Drive** link:
+
+[https://drive.google.com/file/d/1fCSqjYDm0ywL_T1UsD3XLfDOt0hFpRpt/view?usp=sharing](https://drive.google.com/file/d/1fCSqjYDm0ywL_T1UsD3XLfDOt0hFpRpt/view?usp=sharing)
 
 ## Breadboard Schema
 

@@ -34,9 +34,13 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 [![Eindopdracht - Show Your Moves - Video](https://img.youtube.com/vi/Fws1fKBU__s/maxresdefault.jpg)](https://www.youtube.com/watch?v=Fws1fKBU__s)
 
-Deze video is ook te vinden op **YouTube**:
+Deze video is te vinden op **YouTube**:
 
 [https://www.youtube.com/watch?v=Fws1fKBU__s](https://www.youtube.com/watch?v=Fws1fKBU__s)
+
+De video kan ook gedownload worden via de volgende **Google Drive** link:
+
+[https://drive.google.com/file/d/1I-y5v60qYhmbd6CQqKD0_loOBw4m0HeY/view?usp=sharing](https://drive.google.com/file/d/1I-y5v60qYhmbd6CQqKD0_loOBw4m0HeY/view?usp=sharing)
 
 ## Breadboard Schema
 

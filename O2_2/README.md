@@ -23,9 +23,13 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 [![Opdracht 2.2 - Count Me In - Video](https://img.youtube.com/vi/ND9IHuDUiyA/maxresdefault.jpg)](https://www.youtube.com/watch?v=ND9IHuDUiyA)
 
-Deze video is ook te vinden op **YouTube**:
+Deze video is te vinden op **YouTube**:
 
 [https://www.youtube.com/watch?v=ND9IHuDUiyA](https://www.youtube.com/watch?v=ND9IHuDUiyA)
+
+De video kan ook gedownload worden via de volgende **Google Drive** link:
+
+[https://drive.google.com/file/d/1HCzOda-WpJVXxGflwUg4APn55wWwOhXX/view?usp=sharing](https://drive.google.com/file/d/1HCzOda-WpJVXxGflwUg4APn55wWwOhXX/view?usp=sharing)
 
 ## Breadboard Schema
 
@@ -217,14 +221,15 @@ De [Arduino Nano Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/m
 
 De [7 Segment Display Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O2_2/assets/data_sheets/D5621A_B.png) heb ik gevonden in de datasheet van het 7 Segment Display. De datasheet is terug te vinden via de volgende link:
 
-[http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&type=P&query=A%2Fd5621A%2FB][2]
+[http://datasheet.datasheetarchive.com/originals/library/Datasheets-SL3/DSASL0045733.pdf][2]
 
 ## Bronvermelding
 
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
-* [http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&type=P&query=A%2Fd5621A%2FB][2] (7 Segment Display (D5621A/B) Datasheet)
+* [http://datasheet.datasheetarchive.com/originals/library/Datasheets-SL3/DSASL0045733.pdf
+* ][2] (7 Segment Display (D5621A/B) Datasheet)
 * [https://en.wikipedia.org/wiki/Seven-segment_display][3] (7 Segment Display)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
-[2]: http://www.datasheetarchive.com/pdf/download.php?id=2e413cb5ea82e53f65ba9873ced61ae74e9e4a&amp;amp;amp;amp;amp;amp;amp;amp;type=P&amp;amp;amp;amp;amp;amp;amp;amp;query=A%2Fd5621A%2FB "7 Segment Display (D5621A/B) Datasheet"
+[2]: http://datasheet.datasheetarchive.com/originals/library/Datasheets-SL3/DSASL0045733.pdf "7 Segment Display (D5621A/B) Datasheet"
 [3]: https://en.wikipedia.org/wiki/Seven-segment_display "7 Segment Display"

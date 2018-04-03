@@ -35,9 +35,13 @@ De afbeelding van de setup kan ook gedownload worden via de volgende link:
 
 [![Opdracht 2.1 - Count Me In - Video](https://img.youtube.com/vi/wHO4zX4rpPY/maxresdefault.jpg)](https://www.youtube.com/watch?v=wHO4zX4rpPY)
 
-Deze video is ook te vinden op **YouTube**:
+Deze video is te vinden op **YouTube**:
 
 [https://www.youtube.com/watch?v=wHO4zX4rpPY](https://www.youtube.com/watch?v=wHO4zX4rpPY)
+
+De video kan ook gedownload worden via de volgende **Google Drive** link:
+
+[https://drive.google.com/file/d/1ph_m7KxTQp7U6tLeJVHFOjUYs3lxtdCl/view?usp=sharing](https://drive.google.com/file/d/1ph_m7KxTQp7U6tLeJVHFOjUYs3lxtdCl/view?usp=sharing)
 
 ## Breadboard Schema
 
