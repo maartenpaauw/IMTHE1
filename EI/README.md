@@ -663,7 +663,7 @@ De [SN74HC595 Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/mast
 
 De [DHT11 Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/EI/assets/data_sheets/dht11.png) is te vinden in de datasheet. Deze datasheet heb ik via Google gevonden en is terug te vinden via de volgende link:
 
-[https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][5]
+[http://robocraft.ru/files/datasheet/DHT11.pdf][5]
 
 ### 8×8 Matrix
 
@@ -679,12 +679,12 @@ De [8×8 Matrix Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/ma
 * [https://protostack.com.au/2010/05/introduction-to-74hc595-shift-register-controlling-16-leds/][2] (Shift Register Controlling 16 Leds)
 * [http://www.electronicwings.com/avr-atmega/dht11-sensor-interfacing-with-atmega16-32][3] (DHT11 Sensor Interfacing with AVR ATmega16/ATmega32)
 * [http://www.ti.com/lit/ds/symlink/sn74hc595.pdf][4] (SN74HC595 Datasheet)
-* [https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][5] (DHT11 Datasheet)
+* [http://robocraft.ru/files/datasheet/DHT11.pdf][5] (DHT11 Datasheet)
 * [https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF][6] (8×8 Matrix Datasheet)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
 [2]: https://protostack.com.au/2010/05/introduction-to-74hc595-shift-register-controlling-16-leds/ "Shift Register Controlling 16 Leds"
 [3]: http://www.electronicwings.com/avr-atmega/dht11-sensor-interfacing-with-atmega16-32 "DHT11 Sensor Interfacing with AVR ATmega16/ATmega32"
 [4]: http://www.ti.com/lit/ds/symlink/sn74hc595.pdf "SN74HC595"
-[5]: https://akizukidenshi.com/download/ds/aosong/DHT11.pdf "DHT11 Datasheet"
+[5]: http://robocraft.ru/files/datasheet/DHT11.pdf "DHT11 Datasheet"
 [6]: https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF "8×8 Matrix Datasheet"

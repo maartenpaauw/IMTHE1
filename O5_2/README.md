@@ -221,7 +221,7 @@ De [Potentiometer Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
 * [https://community.atmel.com/projects/hd44780-library][2] (HD44780 Library)
 * [https://www.electronicshub.org/wp-content/uploads/2013/09/HD44780_16x2_Character_LCD_Display.pdf][3] (HD44780 Datasheet)
-* [https://cdn-learn.adafruit.com/assets/assets/000/027/586/original/light_control-pot.png][4] (Potentiometer Datasheet)
+* [https://components101.com/sites/default/files/component_datasheet/potentiometer%20datasheet.pdf ][4] (Potentiometer Datasheet)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
 [2]: https://community.atmel.com/projects/hd44780-library "HD44780 Library"

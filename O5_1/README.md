@@ -47,7 +47,7 @@ Elke bit wordt via de volgende manier gecommuniceerd; eerst wordt de **pin** op 
 
 *Alle informatie heb ik gewonnen uit de datasheet van het component:*
 
-*[https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][1]*
+*[http://robocraft.ru/files/datasheet/DHT11.pdf][1]*
 
 ### 8×8 Matrix
 
@@ -76,7 +76,7 @@ De compontenten die ik heb zijn hieronder opgenomen in de tabel.
 
 De [DHT11 Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/master/O5_1/assets/data_sheets/dht11.png) is te vinden in de datasheet. Deze datasheet heb ik via Google gevonden en is terug te vinden via de volgende link:
 
-[https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][1]
+[http://robocraft.ru/files/datasheet/DHT11.pdf][1]
 
 ### 8×8 Matrix
 
@@ -88,8 +88,8 @@ De [8×8 Matrix Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/ma
 
 ## Bronvermelding
 
-* [https://akizukidenshi.com/download/ds/aosong/DHT11.pdf][1] (DHT11 Datasheet)
+* [http://robocraft.ru/files/datasheet/DHT11.pdf][1] (DHT11 Datasheet)
 * [https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF][2] (8×8 Matrix Datasheet)
 
-[1]: https://akizukidenshi.com/download/ds/aosong/DHT11.pdf "DHT11 Datasheet"
+[1]: http://robocraft.ru/files/datasheet/DHT11.pdf "DHT11 Datasheet"
 [2]: https://cdn-shop.adafruit.com/datasheets/BL-M07C881.PDF "8×8 Matrix Datasheet"

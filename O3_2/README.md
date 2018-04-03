@@ -215,7 +215,7 @@ De [Potentiometer Pinout](https://raw.githubusercontent.com/maartenpaauw/IMTHE1/
 * [https://forum.arduino.cc/index.php?topic=147582.0][1] (Arduino Nano Pinout)
 * [https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf][2] (RS 7243119 Datasheet)
 * [https://stackoverflow.com/questions/5731863/mapping-a-numeric-range-onto-another][3] (Mapping a Numeric Range Onto Another)
-* [https://cdn-learn.adafruit.com/assets/assets/000/027/586/original/light_control-pot.png][4] (Potentiometer Datasheet)
+* [https://components101.com/sites/default/files/component_datasheet/potentiometer%20datasheet.pdf ][4] (Potentiometer Datasheet)
 
 [1]: https://forum.arduino.cc/index.php?topic=147582.0 "Arduino Nano Pinout"
 [2]: https://www.alliedelec.com/m/d/69ca74a806a82d744141c552ce43700a.pdf "RS 7243119 Datasheet"
